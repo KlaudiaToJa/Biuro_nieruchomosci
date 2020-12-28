@@ -24,5 +24,35 @@ namespace OknoGlowne
         {
             InitializeComponent();
         }
+
+        private void ButtonUtworzNowaUmowe_Click(object sender, RoutedEventArgs e)
+        {
+            OknoUtworzNowaUmowe okno = new OknoUtworzNowaUmowe(); //inicjalizowanie okna
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+        }
+
+        private void ButtonDodajNowegoKlienta_Click(object sender, RoutedEventArgs e)
+        {
+            OknoDodajKlienta okno = new OknoDodajKlienta();
+            bool? ret = okno.ShowDialog(); 
+        }
+
+        private void ButtonDodajNieruchomosc_Click(object sender, RoutedEventArgs e)
+        {
+            OknoDodajNieruchomosc okno = new OknoDodajNieruchomosc();
+            bool? ret = okno.ShowDialog();
+        }
+
+        private void ButtonDodajPracownika_Click(object sender, RoutedEventArgs e)
+        {
+            OknoDodajPracownika okno = new OknoDodajPracownika();
+            bool? ret = okno.ShowDialog();
+        }
+
+        private void ButtonPrzegladajListeNieruchomosci_Click(object sender, RoutedEventArgs e)
+        {
+            OknoListaNieruchomosci okno = new OknoListaNieruchomosci();
+            bool? ret = okno.ShowDialog();
+        }
     }
 }

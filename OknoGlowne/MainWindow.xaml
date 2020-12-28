@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Okno główne" Height="350" Width="850" Background="LavenderBlush">
     <Grid>
-        <Button Name="ButtonUtworzNowaUmowe" Content="Utwórz nową umowę" HorizontalAlignment="Left" Margin="43,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
-        <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="43,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
-        <Button Name="ButtonDodajNieruchomosc" Content="Dodaj  nieruchomość" HorizontalAlignment="Left" Margin="43,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
-        <Button Name="ButtonDodajPracownika" Content="Dodaj pracownika" HorizontalAlignment="Left" Margin="43,248,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
-        <Button Name="ButtonWyswietlArchiwum" Content="Wyświetl archiwum" HorizontalAlignment="Left" Margin="305,156,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
-        <Button Name="ButtonPrzegladajListeNieruchomosci" Content="Przeglądaj listę nieruchomości" HorizontalAlignment="Left" Margin="565,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
-        <Button Name="ButtonPrzegladajListeKlientow" Content="Przeglądaj listę klientów" HorizontalAlignment="Left" Margin="565,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Name="ButtonUtworzNowaUmowe" Content="Utwórz nową umowę" HorizontalAlignment="Left" Margin="43,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonUtworzNowaUmowe_Click"/>
+        <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="43,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonDodajNowegoKlienta_Click"/>
+        <Button Name="ButtonDodajNieruchomosc" Content="Dodaj  nieruchomość" HorizontalAlignment="Left" Margin="43,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonDodajNieruchomosc_Click"/>
+        <Button Name="ButtonDodajPracownika" Content="Dodaj pracownika" HorizontalAlignment="Left" Margin="43,248,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonDodajPracownika_Click"/>
+        <Button Name="ButtonWyswietlArchiwum" Content="Wyświetl archiwum" HorizontalAlignment="Left" Margin="305,156,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonWyswietlArchiwum_Click"/>
+        <Button Name="ButtonPrzegladajListeNieruchomosci" Content="Przeglądaj listę nieruchomości" HorizontalAlignment="Left" Margin="565,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonPrzegladajListeNieruchomosci_Click"/>
+        <Button Name="ButtonPrzegladajListeKlientow" Content="Przeglądaj listę klientów" HorizontalAlignment="Left" Margin="565,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet" Click="ButtonPrzegladajListeKlientow_Click"/>
         <Button Name="ButtonPrzegladajListePracownikow" Content="Przeglądaj listę pracowników" HorizontalAlignment="Left" Margin="565,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
         <Button Name="ButtonPrzegladajAktualneOferty" Content="Przeglądaj aktualne oferty" HorizontalAlignment="Left" Margin="565,246,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
 
