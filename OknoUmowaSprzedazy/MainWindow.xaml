@@ -1,0 +1,31 @@
+﻿<Window x:Class="OknoUmowaSprzedazy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OknoUmowaSprzedazy"
+        mc:Ignorable="d"
+        Title="Tworzenie umowy pośrednictwa sprzedaży" Height="400" Width="800">
+    <Grid>
+        <Button Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="199,25,0,0" VerticalAlignment="Top" Width="168" Height="40"/>
+        <Button Content="Dodaj nową nieruchomość" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="173" Height="40"/>
+        <ComboBox Name="Pracownik" HorizontalAlignment="Left" Margin="153,128,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="Klient" HorizontalAlignment="Left" Margin="153,177,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="Nieruchomość" HorizontalAlignment="Left" Margin="153,222,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Pracownik" HorizontalAlignment="Left" Margin="51,128,0,0" VerticalAlignment="Top"/>
+        <Label Content="Klient" HorizontalAlignment="Left" Margin="51,174,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nieruchomość" HorizontalAlignment="Left" Margin="51,222,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prowizja" HorizontalAlignment="Left" Margin="313,126,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="Prowizja" HorizontalAlignment="Left" Height="23" Margin="471,131,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Data zawarcia umowy" HorizontalAlignment="Left" Margin="313,174,0,0" VerticalAlignment="Top" Width="137"/>
+        <TextBox Name="DataZawarciaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Data zakończenia umowy" HorizontalAlignment="Left" Margin="313,219,0,0" VerticalAlignment="Top" Width="150"/>
+        <TextBox Name="DataZakonczeniaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,219,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="(dd-MM-yyyy)" HorizontalAlignment="Left" Margin="602,172,0,0" VerticalAlignment="Top"/>
+        <Label Content="(dd-MM-yyyy)" HorizontalAlignment="Left" Margin="602,218,0,0" VerticalAlignment="Top"/>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="292,288,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="388,288,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <Button Content="Auto prowizja 2%" HorizontalAlignment="Left" Margin="602,131,0,0" VerticalAlignment="Top" Width="106" Height="23"/>
+
+    </Grid>
+</Window>

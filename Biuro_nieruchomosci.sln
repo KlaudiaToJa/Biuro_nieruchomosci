@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoDodajNowegoKlienta", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoUtworzNowaUmowe", "OknoUtworzNowaUmowe\OknoUtworzNowaUmowe.csproj", "{A8767D26-7258-489D-8312-1A73108577FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoUmowaSprzedazy", "OknoUmowaSprzedazy\OknoUmowaSprzedazy.csproj", "{C4B20F96-1D10-43A1-8F59-3967EB6595E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoUmowaKupna", "OknoUmowaKupna\OknoUmowaKupna.csproj", "{45A19426-265D-4118-BC42-2F305835C02B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{A8767D26-7258-489D-8312-1A73108577FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8767D26-7258-489D-8312-1A73108577FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8767D26-7258-489D-8312-1A73108577FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B20F96-1D10-43A1-8F59-3967EB6595E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B20F96-1D10-43A1-8F59-3967EB6595E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B20F96-1D10-43A1-8F59-3967EB6595E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B20F96-1D10-43A1-8F59-3967EB6595E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A19426-265D-4118-BC42-2F305835C02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A19426-265D-4118-BC42-2F305835C02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A19426-265D-4118-BC42-2F305835C02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A19426-265D-4118-BC42-2F305835C02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
