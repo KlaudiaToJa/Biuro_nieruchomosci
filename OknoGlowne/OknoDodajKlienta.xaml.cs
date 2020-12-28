@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using Biuro_nieruchomosci;
 
 namespace OknoGlowne
 {
@@ -9,7 +8,6 @@ namespace OknoGlowne
     /// </summary>
     public partial class OknoDodajKlienta : Window
     {
-        Klient _klient;
         public OknoDodajKlienta()
         {
             InitializeComponent();
