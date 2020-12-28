@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoUmowaSprzedazy", "OknoU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoUmowaKupna", "OknoUmowaKupna\OknoUmowaKupna.csproj", "{45A19426-265D-4118-BC42-2F305835C02B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoDodajNieruchomosc", "OknoDodajNieruchomosc\OknoDodajNieruchomosc.csproj", "{91A80ECE-C389-46BA-9946-2809A271BB6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{45A19426-265D-4118-BC42-2F305835C02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A19426-265D-4118-BC42-2F305835C02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A19426-265D-4118-BC42-2F305835C02B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91A80ECE-C389-46BA-9946-2809A271BB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A80ECE-C389-46BA-9946-2809A271BB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A80ECE-C389-46BA-9946-2809A271BB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A80ECE-C389-46BA-9946-2809A271BB6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
