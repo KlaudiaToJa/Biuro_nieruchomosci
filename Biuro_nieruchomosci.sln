@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoDodajNieruchomosc", "Ok
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoDodajPracownika", "OknoDodajPracownika\OknoDodajPracownika.csproj", "{2A991162-122D-43F4-B969-EA18813D81A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OknoPrzegladajListeNieruchomosci", "OknoPrzegladajListeNieruchomosci\OknoPrzegladajListeNieruchomosci.csproj", "{C3C5D86F-5194-497D-9B63-FDE3564F7B65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{2A991162-122D-43F4-B969-EA18813D81A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A991162-122D-43F4-B969-EA18813D81A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A991162-122D-43F4-B969-EA18813D81A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C5D86F-5194-497D-9B63-FDE3564F7B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C5D86F-5194-497D-9B63-FDE3564F7B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C5D86F-5194-497D-9B63-FDE3564F7B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C5D86F-5194-497D-9B63-FDE3564F7B65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
