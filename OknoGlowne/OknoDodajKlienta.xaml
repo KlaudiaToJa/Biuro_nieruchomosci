@@ -10,8 +10,8 @@
         <Label Content="Imię" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top" Width="116"/>
         <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="50,106,0,0" VerticalAlignment="Top" Width="116"/>
         <Label Content="Data urodzenia" HorizontalAlignment="Left" Margin="50,143,0,0" VerticalAlignment="Top" Width="116"/>
-        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="119,454,0,0" VerticalAlignment="Top" Width="107" Height="33"/>
-        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="339,454,0,0" VerticalAlignment="Top" Width="103" Height="33"/>
+        <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="119,454,0,0" VerticalAlignment="Top" Width="107" Height="33" Click="ButtonZatwierdz_Click" />
+        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="339,454,0,0" VerticalAlignment="Top" Width="103" Height="33" Click="ButtonAnuluj_Click"/>
         <Label Content="PESEL" HorizontalAlignment="Left" Margin="50,177,0,0" VerticalAlignment="Top" Width="116"/>
         <Label Content="Miejscowość" HorizontalAlignment="Left" Margin="50,211,0,0" VerticalAlignment="Top" Width="116"/>
         <Label Content="Ulica" HorizontalAlignment="Left" Margin="50,246,0,0" VerticalAlignment="Top" Width="116"/>

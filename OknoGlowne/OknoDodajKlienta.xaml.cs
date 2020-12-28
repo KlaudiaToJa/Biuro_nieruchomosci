@@ -23,5 +23,15 @@ namespace OknoGlowne
         {
             InitializeComponent();
         }
+
+        private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ButtonZatwierdz_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
