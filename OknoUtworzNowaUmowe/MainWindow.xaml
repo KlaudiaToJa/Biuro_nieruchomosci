@@ -1,0 +1,14 @@
+﻿<Window x:Class="OknoUtworzNowaUmowe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OknoUtworzNowaUmowe"
+        mc:Ignorable="d"
+        Title="Utwórz nową umowę" Height="450" Width="800">
+    <Grid>
+        <Button Content="Umowa pośrednictwa sprzedaży" HorizontalAlignment="Left" Margin="144,180,0,0" VerticalAlignment="Top" Width="190" Height="58"/>
+        <Button Content="Umowa pośrednictwa w kupnie" HorizontalAlignment="Left" Margin="442,180,0,0" VerticalAlignment="Top" Width="190" Height="58"/>
+
+    </Grid>
+</Window>

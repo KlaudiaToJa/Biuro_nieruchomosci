@@ -1,0 +1,21 @@
+﻿<Window x:Class="OknoGlowne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OknoGlowne"
+        mc:Ignorable="d"
+        Title="Okno główne" Height="350" Width="850" Background="LavenderBlush">
+    <Grid>
+        <Button Content="Utwórz nową umowę" HorizontalAlignment="Left" Margin="43,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="43,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Dodaj  nieruchomość" HorizontalAlignment="Left" Margin="43,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Dodaj pracownika" HorizontalAlignment="Left" Margin="43,248,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Wyświetl archiwum" HorizontalAlignment="Left" Margin="305,156,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Przeglądaj listę nieruchomości" HorizontalAlignment="Left" Margin="565,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Przeglądaj listę klientów" HorizontalAlignment="Left" Margin="565,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Przeglądaj listę pracowników" HorizontalAlignment="Left" Margin="565,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+        <Button Content="Przeglądaj aktualne oferty" HorizontalAlignment="Left" Margin="565,246,0,0" VerticalAlignment="Top" Width="231" Height="40" Background="Thistle" BorderBrush="BlueViolet"/>
+
+    </Grid>
+</Window>
