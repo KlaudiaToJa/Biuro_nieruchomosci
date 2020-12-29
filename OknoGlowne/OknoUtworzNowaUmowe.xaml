@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Utwórz nową umowę" Height="350" Width="500">
     <Grid>
-        <Button Name="ButtonUmowaPosrednictwaSprzedazy" Content="Umowa pośrednictwa sprzedaży" HorizontalAlignment="Left" Margin="157,103,0,0" VerticalAlignment="Top" Width="190" Height="58"/>
-        <Button Name="ButtonUmowaPosrednictwaKupna" Content="Umowa pośrednictwa w kupnie" HorizontalAlignment="Left" Margin="157,178,0,0" VerticalAlignment="Top" Width="190" Height="58"/>
+        <Button Name="ButtonUmowaPosrednictwaSprzedazy" Content="Umowa pośrednictwa sprzedaży" HorizontalAlignment="Left" Margin="157,103,0,0" VerticalAlignment="Top" Width="190" Height="58" Click="ButtonUmowaPosrednictwaSprzedazy_Click"/>
+        <Button Name="ButtonUmowaPosrednictwaKupna" Content="Umowa pośrednictwa w kupnie" HorizontalAlignment="Left" Margin="157,178,0,0" VerticalAlignment="Top" Width="190" Height="58" Click="ButtonUmowaPosrednictwaKupna_Click"/>
         <Label Content="Wybierz rodzaj umowy" FontSize="17" HorizontalAlignment="Left" Margin="157,33,0,0" VerticalAlignment="Top" Width="190"/>
 
     </Grid>

@@ -60,6 +60,9 @@ namespace OknoGlowne
                         }
                     }
                     DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
+                    string message = "Właśnie dodałeś nowego klienta!";
+                    string title = "Sukces";
+                    System.Windows.MessageBox.Show(message, title, MessageBoxButton.OK);
                 }
             }
             else

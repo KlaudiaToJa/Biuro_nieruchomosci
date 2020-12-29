@@ -23,5 +23,17 @@ namespace OknoGlowne
         {
             InitializeComponent();
         }
+
+        private void ButtonUmowaPosrednictwaSprzedazy_Click(object sender, RoutedEventArgs e)
+        {
+            OknoUmowaSprzedazy okno = new OknoUmowaSprzedazy(); //inicjalizowanie okna
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+        }
+
+        private void ButtonUmowaPosrednictwaKupna_Click(object sender, RoutedEventArgs e)
+        {
+            OknoUmowaKupna okno = new OknoUmowaKupna(); //inicjalizowanie okna
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+        }
     }
 }
