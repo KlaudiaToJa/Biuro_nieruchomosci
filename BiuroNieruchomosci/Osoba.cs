@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class Osoba
     {
         string _imie;

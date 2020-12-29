@@ -1,6 +1,7 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class Klient : Osoba
     {
         public Klient() : base()

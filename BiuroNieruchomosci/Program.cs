@@ -10,6 +10,10 @@ namespace BiuroNieruchomosci
     {
         static void Main(string[] args)
         {
+            Klienci lista = new Klienci();
+            Klient k = new Klient();
+            lista.DodajOsobe(k);
+            lista.ZapiszXML("zespol.xml");
         }
     }
 }

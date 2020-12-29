@@ -12,17 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
+        Klienci listaKlientow = new Klienci();
+
         public MainWindow()
         {
             InitializeComponent();
+            listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml");
         }
 
         private void ButtonUtworzNowaUmowe_Click(object sender, RoutedEventArgs e)
@@ -33,8 +38,15 @@ namespace OknoGlowne
 
         private void ButtonDodajNowegoKlienta_Click(object sender, RoutedEventArgs e)
         {
-            OknoDodajKlienta okno = new OknoDodajKlienta();
-            bool? ret = okno.ShowDialog(); 
+            Klient k = new Klient();
+            OknoDodajKlienta okno = new OknoDodajKlienta(k);
+            bool? ret = okno.ShowDialog();
+            if (ret == true)
+            {
+                listaKlientow.DodajOsobe(k); //dodajemy klienta
+                listaKlientow.ZapiszXML("listaKlientow.xml");
+
+            }
         }
 
         private void ButtonDodajNieruchomosc_Click(object sender, RoutedEventArgs e)

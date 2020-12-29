@@ -28,7 +28,7 @@ namespace OknoGlowne
 
         private void ButtonZatwierdz_Click(object sender, RoutedEventArgs e)
         {
-            if (txtBoxPESEL.Text != "" && txtBoxImie.Text != "" && txtBoxNazwisko.Text != "")
+            if (txtBoxPESEL.Text != "" && txtBoxImie.Text != "" && txtBoxNazwisko.Text != "" && txtBoxDataUrodzenia.Text != "")
             {
                 string[] formatDaty = { "dd-MM-yyyy" };
                 DateTime.TryParseExact(txtBoxDataUrodzenia.Text, formatDaty, null, System.Globalization.DateTimeStyles.None, out DateTime dataUr);
