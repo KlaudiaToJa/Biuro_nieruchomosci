@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BiuroNieruchomosci
 {
-    public class OfertyRazem : ArchiwumOfert
+    public class OfertyRazem : IOferuje
     {
         List<Oferta> _listaOfert;
 
