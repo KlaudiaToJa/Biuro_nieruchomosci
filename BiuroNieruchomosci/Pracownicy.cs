@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class Pracownicy:Zbiorowosc
+    public class Pracownicy : Zbiorowosc
     {
         List<Pracownik> _listaPracownikow = new List<Pracownik>();
 

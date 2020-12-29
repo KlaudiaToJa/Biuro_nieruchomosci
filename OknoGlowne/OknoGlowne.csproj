@@ -143,5 +143,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiuroNieruchomosci\BiuroNieruchomosci.csproj">
+      <Project>{72e1f303-f4bb-472e-bd36-d82529575ada}</Project>
+      <Name>BiuroNieruchomosci</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

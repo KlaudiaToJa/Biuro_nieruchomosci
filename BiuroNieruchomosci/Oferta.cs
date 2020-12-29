@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public class Oferta
     {
@@ -31,7 +31,7 @@ namespace Biuro_nieruchomosci
             Numer++;
         }
 
-        public Oferta (string opis, string dataWystawienia, Status status)
+        public Oferta(string opis, string dataWystawienia, Status status)
         {
             Opis = opis;
             DateTime.TryParseExact(dataWystawienia, new[] { "dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataWystawienia);

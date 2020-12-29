@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class UmowaPosrednictwaKupna:Umowa
+    public class UmowaPosrednictwaKupna : Umowa
     {
         Klient _nabywca;
         static int _numer = 0;

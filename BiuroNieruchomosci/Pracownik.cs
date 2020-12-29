@@ -1,14 +1,14 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class Pracownik:Osoba
+    public class Pracownik : Osoba
     {
-        public Pracownik():base()
+        public Pracownik() : base()
         {
 
         }
 
-        public Pracownik(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu) : base(imie,nazwisko,dataurodzenia,pesel,miejscowosc,numerdomu,email,nrtelefonu)
+        public Pracownik(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu) : base(imie, nazwisko, dataurodzenia, pesel, miejscowosc, numerdomu, email, nrtelefonu)
         {
 
         }

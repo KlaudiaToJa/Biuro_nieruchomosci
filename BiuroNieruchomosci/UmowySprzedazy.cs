@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class UmowySprzedazy:GrupaUmow
+    public class UmowySprzedazy : GrupaUmow
     {
         public UmowySprzedazy()
         {

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public class Nieruchomosc
     {

@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public class Osoba
     {
@@ -37,7 +37,7 @@ namespace Biuro_nieruchomosci
                 {
                     throw new FormatException();
                 }
-               
+
             }
 
         }
@@ -70,7 +70,7 @@ namespace Biuro_nieruchomosci
                 {
                     _email = value;
                 }
-                
+
             }
         }
 
@@ -78,7 +78,7 @@ namespace Biuro_nieruchomosci
         public string Ulica { get => _ulica; set => _ulica = value; }
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
         public int NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
-        
+
 
         public Osoba()
         {
@@ -94,11 +94,11 @@ namespace Biuro_nieruchomosci
             NrTelefonu = new string('0', 9);
         }
 
-        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu):this()
+        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu) : this()
         {
             Imie = imie;
             Nazwisko = nazwisko;
-            DateTime.TryParseExact(dataurodzenia, new[] {"dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataUrodzenia);
+            DateTime.TryParseExact(dataurodzenia, new[] { "dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataUrodzenia);
             PESEL = pesel;
             Miejscowosc = miejscowosc;
             NumerDomu = numerdomu;
@@ -113,7 +113,7 @@ namespace Biuro_nieruchomosci
 
 
 
-        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, int numermieszkania):this(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu)
+        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, int numermieszkania) : this(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu)
         {
             NumerMieszkania = numermieszkania;
         }
@@ -122,12 +122,12 @@ namespace Biuro_nieruchomosci
         {
             TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
 
-            if (Ulica==null)
+            if (Ulica == null)
             {
                 return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {NumerDomu} {Email} {NrTelefonu}";
             }
 
-            if (NumerMieszkania==0)
+            if (NumerMieszkania == 0)
             {
                 return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {myTI.ToTitleCase(Ulica)} {NumerDomu} {Email} {NrTelefonu}";
             }

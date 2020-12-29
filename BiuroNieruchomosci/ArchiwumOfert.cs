@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public class ArchiwumOfert
     {
@@ -12,16 +12,16 @@ namespace Biuro_nieruchomosci
 
         }
 
-        public void DodajArchiwum (Oferta o)
+        public void DodajArchiwum(Oferta o)
         {
             ListaOfertArchiwum.Add(o);
         }
 
-        public void UsunArchiwum (string idOferty)
+        public void UsunArchiwum(string idOferty)
         {
             foreach (Oferta o in ListaOfertArchiwum)
             {
-                if (o.IdOferty==idOferty)
+                if (o.IdOferty == idOferty)
                 {
                     ListaOfertArchiwum.Remove(o);
                 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class OfertyRazem:ArchiwumOfert
+    public class OfertyRazem : ArchiwumOfert
     {
         List<Oferta> _listaOfert;
 
@@ -17,22 +17,22 @@ namespace Biuro_nieruchomosci
             ListaOfert.Add(o);
         }
 
-        public void UsunOferte (string idOferty)
+        public void UsunOferte(string idOferty)
         {
             foreach (Oferta o in ListaOfert)
             {
-                if (o.IdOferty==idOferty)
+                if (o.IdOferty == idOferty)
                 {
                     ListaOfert.Remove(o);
                 }
             }
         }
 
-        public void ArchiwizujOferte (string idOferty)
+        public void ArchiwizujOferte(string idOferty)
         {
             foreach (Oferta o in ListaOfert)
             {
-                if (o.IdOferty==idOferty)
+                if (o.IdOferty == idOferty)
                 {
                     DodajArchiwum(o);
                 }

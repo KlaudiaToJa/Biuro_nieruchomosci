@@ -1,16 +1,16 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public interface IOferuje
     {
         public void DodajOferte(Oferta o)
         {
-           
+
         }
 
         public void UsunOferte(string idOferty)
         {
-           
+
         }
     }
 }

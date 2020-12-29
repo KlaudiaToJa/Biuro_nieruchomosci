@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class UmowyKupna:GrupaUmow
+    public class UmowyKupna : GrupaUmow
     {
         public UmowyKupna()
         {

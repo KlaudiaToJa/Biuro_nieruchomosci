@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public abstract class Umowa
     {
@@ -19,7 +19,7 @@ namespace Biuro_nieruchomosci
 
         }
 
-        public Umowa (Pracownik opiekunKlienta, double prowizja, string dataZawarcia, string dataZakonczenia):this()
+        public Umowa(Pracownik opiekunKlienta, double prowizja, string dataZawarcia, string dataZakonczenia) : this()
         {
             OpiekunKlienta = opiekunKlienta;
             Prowizja = prowizja;
@@ -35,13 +35,13 @@ namespace Biuro_nieruchomosci
         public Pracownik OpiekunKlienta { get => _opiekunKlienta; set => _opiekunKlienta = value; }
         public double Prowizja { get => _prowizja; set => _prowizja = value; }
         public DateTime DataZawarcia { get => _dataZawarcia; set => _dataZawarcia = value; }
-        public DateTime DataZakonczenia 
+        public DateTime DataZakonczenia
         {
             get => _dataZakonczenia;
             set
             {
                 int iledni = (_dataZakonczenia - _dataZawarcia).Days;
-                if (iledni>0)
+                if (iledni > 0)
                 {
                     throw new Exception();
                 }

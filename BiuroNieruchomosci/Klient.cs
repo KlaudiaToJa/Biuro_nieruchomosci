@@ -1,9 +1,9 @@
 ﻿using System;
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
-    public class Klient:Osoba
+    public class Klient : Osoba
     {
-        public Klient():base()
+        public Klient() : base()
         {
 
         }

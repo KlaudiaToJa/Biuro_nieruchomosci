@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public class WszystkieNieruchomosci
     {

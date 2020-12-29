@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Biuro_nieruchomosci
+namespace BiuroNieruchomosci
 {
     public abstract class GrupaUmow
     {
@@ -30,7 +30,7 @@ namespace Biuro_nieruchomosci
 
         }*/
 
-        public List<Umowa> UmowyDataZawarcia (string dataSzukana)
+        public List<Umowa> UmowyDataZawarcia(string dataSzukana)
         {
             List<Umowa> _szukaneUmowy = new List<Umowa>();
             foreach (Umowa u in _listaUmow)
@@ -43,12 +43,12 @@ namespace Biuro_nieruchomosci
             return _szukaneUmowy;
         }
 
-        public List <Umowa> UmowyPracownika (string PESEL)
+        public List<Umowa> UmowyPracownika(string PESEL)
         {
             List<Umowa> _umowyPracownika = new List<Umowa>();
             foreach (Umowa u in _listaUmow)
             {
-                if (u.OpiekunKlienta.PESEL==PESEL)
+                if (u.OpiekunKlienta.PESEL == PESEL)
                 {
                     _umowyPracownika.Add(u);
                 }
