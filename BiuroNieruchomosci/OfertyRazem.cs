@@ -27,7 +27,7 @@ namespace BiuroNieruchomosci
                 }
             }
         }
-
+        /*
         public void ArchiwizujOferte(string idOferty)
         {
             foreach (Oferta o in ListaOfert)
@@ -37,7 +37,7 @@ namespace BiuroNieruchomosci
                     DodajArchiwum(o);
                 }
             }
-        }
+        }*/
 
         public List<Oferta> ListaOfert { get => _listaOfert; set => _listaOfert = value; }
     }
