@@ -1,16 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace BiuroNieruchomosci
 {
-    public interface IOferuje
+    interface IOferuje
     {
-        public void DodajOferte(Oferta o)
-        {
-
-        }
-
-        public void UsunOferte(string idOferty)
-        {
-
-        }
+        void DodajOferte(Oferta o);
+        void UsunOferte(string idOferty);
     }
 }
