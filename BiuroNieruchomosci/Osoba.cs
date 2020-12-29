@@ -39,7 +39,6 @@ namespace BiuroNieruchomosci
                 }
 
             }
-
         }
 
         public string PESEL

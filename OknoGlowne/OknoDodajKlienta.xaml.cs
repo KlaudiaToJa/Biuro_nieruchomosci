@@ -9,7 +9,7 @@ namespace OknoGlowne
     /// </summary>
     public partial class OknoDodajKlienta : Window
     {
-        Klient _klient;
+        Klient _klient = new Klient();
 
         public OknoDodajKlienta()
         {
@@ -44,17 +44,20 @@ namespace OknoGlowne
                     _klient.Nazwisko = txtBoxNazwisko.Text;
                     _klient.DataUrodzenia = dataUr;
                     _klient.PESEL = txtBoxPESEL.Text;
-                    _klient.Miejscowosc = txtBoxMiejscowosc.Text;
-                    _klient.NumerDomu = txtBoxNumerDomu.Text;
-                    _klient.Email = txtBoxEmail.Text;
-                    _klient.NrTelefonu = txtBoxNumerTelefonu.Text;
-                    if (txtBoxUlica.Text != "")
+                    if (txtBoxMiejscowosc.Text != "") //wystarczy ten warunek, bo wtedy obowiązkowo trzeba podać resztę do wywołania konstruktora
                     {
-                        _klient.Ulica = txtBoxUlica.Text;
-                    }
-                    if(txtBoxNumerMieszkania.Text != "")
-                    {
-                        _klient.NumerMieszkania = txtBoxNumerMieszkania.Text;
+                        _klient.Miejscowosc = txtBoxMiejscowosc.Text;
+                        _klient.NumerDomu = txtBoxNumerDomu.Text;
+                        _klient.Email = txtBoxEmail.Text;
+                        _klient.NrTelefonu = txtBoxNumerTelefonu.Text;
+                        if (txtBoxUlica.Text != "")
+                        {
+                            _klient.Ulica = txtBoxUlica.Text;
+                        }
+                        if (txtBoxNumerMieszkania.Text != "")
+                        {
+                            _klient.NumerMieszkania = txtBoxNumerMieszkania.Text;
+                        }
                     }
                     DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
                 }
