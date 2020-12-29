@@ -8,6 +8,11 @@ namespace BiuroNieruchomosci
 
         }
 
+        public Klient(string imie, string nazwisko, string PESEL, string dataUrodzenia) : base(imie, nazwisko, PESEL, dataUrodzenia)
+        {
+
+        }
+
         public Klient(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu) : base(imie, nazwisko, dataurodzenia, pesel, miejscowosc, numerdomu, email, nrtelefonu)
         {
 
@@ -18,7 +23,7 @@ namespace BiuroNieruchomosci
 
         }
 
-        public Klient(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, int numermieszkania) : base(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu, numermieszkania)
+        public Klient(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, string numermieszkania) : base(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu, numermieszkania)
         {
 
         }

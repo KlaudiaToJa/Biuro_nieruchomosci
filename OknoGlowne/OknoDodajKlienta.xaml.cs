@@ -16,9 +16,14 @@ namespace OknoGlowne
             InitializeComponent();
         }
 
+        public OknoDodajKlienta(Klient klient) : this()
+        {
+            _klient = klient;
+        }
+
         private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            DialogResult = false;
         }
 
         private void ButtonZatwierdz_Click(object sender, RoutedEventArgs e)
@@ -35,10 +40,14 @@ namespace OknoGlowne
                 }
                 else
                 {
-                    _klient.PESEL = txtBoxPESEL.Text;
                     _klient.Imie = txtBoxImie.Text;
                     _klient.Nazwisko = txtBoxNazwisko.Text;
                     _klient.DataUrodzenia = dataUr;
+                    _klient.PESEL = txtBoxPESEL.Text;
+                    _klient.Miejscowosc = txtBoxMiejscowosc.Text;
+                    _klient.NumerDomu = txtBoxNumerDomu.Text;
+                    _klient.Email = txtBoxEmail.Text;
+                    _klient.NrTelefonu = txtBoxNumerTelefonu.Text;
                     if (txtBoxUlica.Text != "")
                     {
                         _klient.Ulica = txtBoxUlica.Text;
@@ -47,9 +56,14 @@ namespace OknoGlowne
                     {
                         _klient.NumerMieszkania = txtBoxNumerMieszkania.Text;
                     }
-                    
                     DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
                 }
+            }
+            else
+            {
+                string message = "Nie wprowadzono istotnych danych";
+                string title = "Brak danych";
+                System.Windows.MessageBox.Show(message, title, MessageBoxButton.OK);
             }
         }
     }

@@ -79,7 +79,6 @@ namespace BiuroNieruchomosci
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
         public string NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
 
-
         public Osoba()
         {
             Imie = string.Empty;
@@ -94,12 +93,16 @@ namespace BiuroNieruchomosci
             NrTelefonu = new string('0', 9);
         }
 
-        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu) : this()
+        public Osoba(string imie, string nazwisko, string dataUrodzenia, string Pesel) : this()
         {
             Imie = imie;
             Nazwisko = nazwisko;
-            DateTime.TryParseExact(dataurodzenia, new[] { "dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataUrodzenia);
-            PESEL = pesel;
+            PESEL = Pesel;
+            DateTime.TryParseExact(dataUrodzenia, new[] { "dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataUrodzenia);
+        }
+
+        public Osoba(string imie, string nazwisko, string pesel, string dataUrodzenia, string miejscowosc, string numerdomu, string email, string nrtelefonu) : this(imie, nazwisko, dataUrodzenia, pesel)
+        {
             Miejscowosc = miejscowosc;
             NumerDomu = numerdomu;
             Email = email;
@@ -110,8 +113,6 @@ namespace BiuroNieruchomosci
         {
             Ulica = ulica;
         }
-
-
 
         public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, string numermieszkania) : this(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu)
         {

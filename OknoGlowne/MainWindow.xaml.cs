@@ -54,5 +54,25 @@ namespace OknoGlowne
             OknoListaNieruchomosci okno = new OknoListaNieruchomosci();
             bool? ret = okno.ShowDialog();
         }
+
+        private void ButtonWyswietlArchiwum_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonPrzegladajListeKlientow_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonPrzegladajListePracownikow_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonPrzegladajAktualneOferty_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
