@@ -13,7 +13,7 @@ namespace BiuroNieruchomosci
         string _miejscowosc;
         string _ulica;
         string _numerDomu;
-        int _numerMieszkania;
+        string _numerMieszkania;
         string _email;
         string _nrTelefonu;
 
@@ -77,7 +77,7 @@ namespace BiuroNieruchomosci
         public string Miejscowosc { get => _miejscowosc; set => _miejscowosc = value; }
         public string Ulica { get => _ulica; set => _ulica = value; }
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
-        public int NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
+        public string NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
 
 
         public Osoba()
@@ -89,7 +89,7 @@ namespace BiuroNieruchomosci
             Miejscowosc = string.Empty;
             Ulica = string.Empty;
             NumerDomu = string.Empty;
-            NumerMieszkania = 0;
+            NumerMieszkania = string.Empty;
             Email = string.Empty;
             NrTelefonu = new string('0', 9);
         }
@@ -113,7 +113,7 @@ namespace BiuroNieruchomosci
 
 
 
-        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, int numermieszkania) : this(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu)
+        public Osoba(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string ulica, string numerdomu, string email, string nrtelefonu, string numermieszkania) : this(imie, nazwisko, dataurodzenia, pesel, miejscowosc, ulica, numerdomu, email, nrtelefonu)
         {
             NumerMieszkania = numermieszkania;
         }
@@ -127,7 +127,7 @@ namespace BiuroNieruchomosci
                 return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {NumerDomu} {Email} {NrTelefonu}";
             }
 
-            if (NumerMieszkania == 0)
+            if (NumerMieszkania == "")
             {
                 return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {myTI.ToTitleCase(Ulica)} {NumerDomu} {Email} {NrTelefonu}";
             }
