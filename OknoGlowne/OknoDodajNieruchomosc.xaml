@@ -15,23 +15,23 @@
         <ComboBox Name="ComboBoxWlasciciel" HorizontalAlignment="Left" Margin="156,54,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Miejscowość" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
         <Label Content="Wpisz dane nieruchomości" HorizontalAlignment="Left" Margin="346,8,0,0" VerticalAlignment="Top" FontSize="15"/>
-        <TextBox Name="txtBoxMiejscowosc" HorizontalAlignment="Left" Height="23" Margin="156,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxMiejscowosc" HorizontalAlignment="Left" Height="23" Margin="156,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Ulica" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxUlica" HorizontalAlignment="Left" Height="23" Margin="156,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxUlica" HorizontalAlignment="Left" Height="23" Margin="156,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Numer domu" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxNumerDomu" HorizontalAlignment="Left" Height="23" Margin="156,184,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxNumerDomu" HorizontalAlignment="Left" Height="23" Margin="156,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Numer mieszkania" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxNumerMieszkania" HorizontalAlignment="Left" Height="23" Margin="156,230,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxNumerMieszkania" HorizontalAlignment="Left" Height="23" Margin="156,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Cena" HorizontalAlignment="Left" Margin="521,383,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxCena" HorizontalAlignment="Left" Height="23" Margin="586,384,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxCena" HorizontalAlignment="Left" Height="23" Margin="586,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Powierzchnia całkowita" HorizontalAlignment="Left" Margin="10,271,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxPowierzchniaCalkowita" HorizontalAlignment="Left" Height="23" Margin="156,274,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxPowierzchniaCalkowita" HorizontalAlignment="Left" Height="23" Margin="156,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Liczba pokojów" HorizontalAlignment="Left" Margin="10,314,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxLiczbaPokojow" HorizontalAlignment="Left" Height="23" Margin="156,314,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxLiczbaPokojow" HorizontalAlignment="Left" Height="23" Margin="156,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Piętro/Liczba pięter" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxPietro" HorizontalAlignment="Left" Height="23" Margin="156,360,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxPietro" HorizontalAlignment="Left" Height="23" Margin="156,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Wysokość opłat" HorizontalAlignment="Left" Margin="10,403,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,403,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="156,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Typ nieruchomości" HorizontalAlignment="Left" Margin="320,92,0,0" VerticalAlignment="Top"/>
         <Label Content="Rodzaj nieruchomości" HorizontalAlignment="Left" Margin="320,136,0,0" VerticalAlignment="Top"/>
         <ComboBox Name="ComboBoxTypNieruchomosci" HorizontalAlignment="Left" Margin="460,95,0,0" VerticalAlignment="Top" Width="120"/>

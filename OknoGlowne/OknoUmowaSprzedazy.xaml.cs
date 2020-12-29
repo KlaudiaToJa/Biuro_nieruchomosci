@@ -23,5 +23,17 @@ namespace OknoGlowne
         {
             InitializeComponent();
         }
+
+        private void ButtonDodajNowegoKlienta_Click(object sender, RoutedEventArgs e)
+        {
+            OknoDodajKlienta okno = new OknoDodajKlienta(); //inicjalizowanie okna
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+        }
+
+        private void ButtonDodajNowaNieruchomosc_Click(object sender, RoutedEventArgs e)
+        {
+            OknoDodajNieruchomosc okno = new OknoDodajNieruchomosc(); //inicjalizowanie okna
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+        }
     }
 }

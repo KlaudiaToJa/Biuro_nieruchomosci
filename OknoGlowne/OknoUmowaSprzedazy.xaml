@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Tworzenie umowy pośrednictwa sprzedaży" Height="400" Width="800">
     <Grid>
-        <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="199,25,0,0" VerticalAlignment="Top" Width="168" Height="40"/>
-        <Button Name="ButtonDodajNowaNieruchomosc" Content="Dodaj nową nieruchomość" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="173" Height="40"/>
+        <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="199,25,0,0" VerticalAlignment="Top" Width="168" Height="40" Click="ButtonDodajNowegoKlienta_Click"/>
+        <Button Name="ButtonDodajNowaNieruchomosc" Content="Dodaj nową nieruchomość" HorizontalAlignment="Left" Margin="388,25,0,0" VerticalAlignment="Top" Width="173" Height="40" Click="ButtonDodajNowaNieruchomosc_Click"/>
         <ComboBox Name="ComboBoxPracownik" HorizontalAlignment="Left" Margin="153,128,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox Name="ComboBoxKlient" HorizontalAlignment="Left" Margin="153,177,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox Name="ComboBoxNieruchomość" HorizontalAlignment="Left" Margin="153,222,0,0" VerticalAlignment="Top" Width="120"/>
@@ -16,11 +16,11 @@
         <Label Content="Klient" HorizontalAlignment="Left" Margin="51,174,0,0" VerticalAlignment="Top"/>
         <Label Content="Nieruchomość" HorizontalAlignment="Left" Margin="51,222,0,0" VerticalAlignment="Top"/>
         <Label Content="Prowizja" HorizontalAlignment="Left" Margin="313,126,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxProwizja" HorizontalAlignment="Left" Height="23" Margin="471,131,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxProwizja" HorizontalAlignment="Left" Height="23" Margin="471,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Data zawarcia umowy" HorizontalAlignment="Left" Margin="313,174,0,0" VerticalAlignment="Top" Width="137"/>
-        <TextBox Name="txtBoxDataZawarciaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxDataZawarciaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Data zakończenia umowy" HorizontalAlignment="Left" Margin="313,219,0,0" VerticalAlignment="Top" Width="150"/>
-        <TextBox Name="txtBoxDataZakonczeniaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,219,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxDataZakonczeniaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="(dd-MM-yyyy)" HorizontalAlignment="Left" Margin="602,172,0,0" VerticalAlignment="Top"/>
         <Label Content="(dd-MM-yyyy)" HorizontalAlignment="Left" Margin="602,218,0,0" VerticalAlignment="Top"/>
         <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="292,288,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
