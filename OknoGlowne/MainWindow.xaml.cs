@@ -45,7 +45,6 @@ namespace OknoGlowne
             {
                 listaKlientow.DodajOsobe(k); //dodajemy klienta
                 listaKlientow.ZapiszXML("listaKlientow.xml");
-
             }
         }
 

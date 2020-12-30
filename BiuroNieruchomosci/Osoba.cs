@@ -52,7 +52,6 @@ namespace BiuroNieruchomosci
                 {
                     _PESEL = value;
                 }
-
                 else
                 {
                     throw new FormatException();
@@ -119,6 +118,8 @@ namespace BiuroNieruchomosci
             NumerMieszkania = numermieszkania;
         }
 
+
+        //TO MOZE BYC DO POPRAWKI BO NIE WIEM CZY BEDZIE OKEJ JAK UZYJEMY NIEZNANYCH METOD XD
         public override string ToString()
         {
             TextInfo myTI = new CultureInfo("en-US", false).TextInfo;

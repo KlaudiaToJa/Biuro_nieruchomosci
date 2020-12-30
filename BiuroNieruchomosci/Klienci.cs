@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace BiuroNieruchomosci
@@ -10,24 +11,12 @@ namespace BiuroNieruchomosci
     {
         List<Klient> _listaKlientow = new List<Klient>();
 
-        public Klienci()
+        public Klienci() : base()
         {
-
+            
         }
 
         public List<Klient> ListaKlientow { get => _listaKlientow; set => _listaKlientow = value; }
-
-        public bool CzyJestWBazie(string pesel)
-        {
-            foreach (Klient k in ListaKlientow)
-            {
-                if (k.PESEL == pesel)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
 
         public void ZapiszXML(string plik)
         {
@@ -49,6 +38,21 @@ namespace BiuroNieruchomosci
                 XmlSerializer serializer = new XmlSerializer(typeof(Klienci));
                 return (Klienci)serializer.Deserialize(reader);
             }
+        }
+
+        public void DodajKlienta(Klient k)
+        {
+            ListaKlientow.Add(k);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder s = new StringBuilder();
+            foreach(Osoba k in ListaKlientow)
+            {
+                s.AppendLine(k.ToString());
+            }
+            return s.ToString();
         }
     }
 }

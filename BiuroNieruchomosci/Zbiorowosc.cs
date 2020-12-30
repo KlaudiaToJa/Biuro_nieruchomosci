@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class Zbiorowosc
     {
         List<Osoba> _listaOsob = new List<Osoba>();
@@ -30,8 +33,16 @@ namespace BiuroNieruchomosci
             }
         }
 
-
-
-
+        public bool CzyJestWBazie(string pesel)
+        {
+            foreach (Osoba k in _listaOsob)
+            {
+                if (k.PESEL == pesel)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

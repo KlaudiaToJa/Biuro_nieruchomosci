@@ -12,8 +12,12 @@ namespace BiuroNieruchomosci
         {
             Klienci lista = new Klienci();
             Klient k = new Klient();
-            lista.DodajOsobe(k);
-            lista.ZapiszXML("zespol.xml");
+            lista.DodajKlienta(k);
+            lista.ZapiszXML("listaKlientow.xml");
+            Klienci nowa = new Klienci();
+            nowa = Klienci.OdczytajXML("listaKlientow.xml");
+            Console.WriteLine(nowa);
+            Console.ReadLine();
         }
     }
 }
