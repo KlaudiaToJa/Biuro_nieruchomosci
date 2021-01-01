@@ -23,48 +23,12 @@ namespace BiuroNieruchomosci
         public string Nazwisko { get => _nazwisko; set => _nazwisko = value; }
         public DateTime DataUrodzenia { get => _dataUrodzenia; set => _dataUrodzenia = value; }
 
-        public string NrTelefonu
-        {
-            get => _nrTelefonu;
-            set
-            {
-                Regex wzorzec = new Regex(@"^\d{9}$");
-                if (wzorzec.IsMatch(value))
-                {
-                    _nrTelefonu = value;
-                }
-
-                else
-                {
-                    throw new FormatException();
-                }
-
-            }
-        }
-
-        public string PESEL
-        {
-            get => _PESEL;
-            set
-            {
-                Regex wzorzec1 = new Regex(@"^\d{11}$");
-                if (wzorzec1.IsMatch(value))
-                {
-                    _PESEL = value;
-                }
-                else
-                {
-                    throw new FormatException();
-                }
-            }
-        }
-
         public string Email
         {
             get => _email;
             set
             {
-                Regex wzorzec2 = new Regex("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$");
+                Regex wzorzec2 = new Regex(@"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
                 if (wzorzec2.IsMatch(value))
                 {
                     _email = value;
@@ -77,6 +41,8 @@ namespace BiuroNieruchomosci
         public string Ulica { get => _ulica; set => _ulica = value; }
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
         public string NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
+        public string NrTelefonu { get => _nrTelefonu; set => _nrTelefonu = value; }
+        public string PESEL { get => _PESEL; set => _PESEL = value; }
 
         public Osoba()
         {

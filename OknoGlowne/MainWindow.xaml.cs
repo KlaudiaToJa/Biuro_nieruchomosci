@@ -22,12 +22,11 @@ namespace OknoGlowne
     
     public partial class MainWindow : Window
     {
-        Klienci listaKlientow = new Klienci();
+        Klienci listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml"); // staly plik w ktorym przechowywane sa dane klientow
 
         public MainWindow()
         {
             InitializeComponent();
-            listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml");
         }
 
         private void ButtonUtworzNowaUmowe_Click(object sender, RoutedEventArgs e)
@@ -43,7 +42,7 @@ namespace OknoGlowne
             bool? ret = okno.ShowDialog();
             if (ret == true)
             {
-                listaKlientow.DodajOsobe(k); //dodajemy klienta
+                listaKlientow.DodajKlienta(k); //dodajemy klienta
                 listaKlientow.ZapiszXML("listaKlientow.xml");
             }
         }

@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 namespace BiuroNieruchomosci
 {
     [Serializable]
-    public class Klienci
+    public class Klienci 
     {
         List<Klient> _listaKlientow = new List<Klient>();
 
@@ -43,6 +43,34 @@ namespace BiuroNieruchomosci
         public void DodajKlienta(Klient k)
         {
             ListaKlientow.Add(k);
+        }
+
+        public void UsunKlienta(string pesel)
+        {
+            foreach (Klient o in ListaKlientow)
+            {
+                if (o.PESEL == pesel)
+                {
+                    ListaKlientow.Remove(o);
+                }
+            }
+        }
+
+        public bool CzyJestWBazie(string pesel)
+        {
+            foreach (Osoba k in ListaKlientow)
+            {
+                if (k.PESEL == pesel)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void WyczyscListe()
+        {
+            ListaKlientow.Clear();
         }
 
         public override string ToString()
