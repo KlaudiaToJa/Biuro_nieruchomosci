@@ -7,11 +7,11 @@ using System.Xml.Serialization;
 namespace BiuroNieruchomosci
 {
     [Serializable]
-    public class Klienci : Zbiorowosc
+    public class Klienci
     {
         List<Klient> _listaKlientow = new List<Klient>();
 
-        public Klienci() : base()
+        public Klienci() 
         {
             
         }

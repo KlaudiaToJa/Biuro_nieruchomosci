@@ -28,7 +28,7 @@ namespace BiuroNieruchomosci
             get => _nrTelefonu;
             set
             {
-                Regex wzorzec = new Regex("^\\d{9}$");
+                Regex wzorzec = new Regex(@"^\d{9}$");
                 if (wzorzec.IsMatch(value))
                 {
                     _nrTelefonu = value;
@@ -47,7 +47,7 @@ namespace BiuroNieruchomosci
             get => _PESEL;
             set
             {
-                Regex wzorzec1 = new Regex("^\\d{11}$");
+                Regex wzorzec1 = new Regex(@"^\d{11}$");
                 if (wzorzec1.IsMatch(value))
                 {
                     _PESEL = value;
