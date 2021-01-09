@@ -2,6 +2,9 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
+
+//NIE WIEM CZY STRING OVERRIDE NIE DO POPRAWKI, BO NIE UZYWALISMY TAKICH CUDOW XD
+
 namespace BiuroNieruchomosci
 {
     [Serializable]
@@ -84,8 +87,6 @@ namespace BiuroNieruchomosci
             NumerMieszkania = numermieszkania;
         }
 
-
-        //TO MOZE BYC DO POPRAWKI BO NIE WIEM CZY BEDZIE OKEJ JAK UZYJEMY NIEZNANYCH METOD XD
         public override string ToString()
         {
             TextInfo myTI = new CultureInfo("en-US", false).TextInfo;

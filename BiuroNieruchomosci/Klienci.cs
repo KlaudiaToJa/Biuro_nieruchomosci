@@ -4,6 +4,10 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 
+
+//WYRZUCONE DZIEDZIECZENIE PO ZBIOROWOSC BO NIE DZIALALO JAK POWINNO
+
+
 namespace BiuroNieruchomosci
 {
     [Serializable]

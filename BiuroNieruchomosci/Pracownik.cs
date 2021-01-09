@@ -1,6 +1,7 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class Pracownik : Osoba
     {
         public Pracownik() : base()
@@ -25,7 +26,7 @@ namespace BiuroNieruchomosci
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"{Imie} {Nazwisko} {NrTelefonu}"; // potrzebne do odpowiedniego wyswietlania w combobox
         }
 
 

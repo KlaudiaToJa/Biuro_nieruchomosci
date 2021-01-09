@@ -21,10 +21,16 @@ namespace OknoGlowne
     public partial class OknoUmowaKupna : Window
     {
         UmowaPosrednictwaKupna _umowa = new UmowaPosrednictwaKupna();
+        Pracownicy DanePracownikow = (Pracownicy)Pracownicy.OdczytajXML("listaPracownikow.xml");
+        Klienci DaneKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml");
 
         public OknoUmowaKupna()
         {
             InitializeComponent();
+            foreach (Klient k in DaneKlientow.ListaKlientow)
+            {
+                ComboBoxKlient.Items.Add(k); // dodawanie elementow listy rozwijanej
+            }
         }
 
         public OknoUmowaKupna(UmowaPosrednictwaKupna u) : this()
@@ -53,6 +59,28 @@ namespace OknoGlowne
                 txtBoxProwizja.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
                 return;
             }
+            else if(txtBoxDataZawarciaUmowy.Text == "")
+            {
+                string message = "Nie wpisano daty zawarcia umowy.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                txtBoxDataZawarciaUmowy.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
+                return;
+            }
+            else if(txtBoxDataZakonczeniaUmowy.Text == "")
+            {
+                string message = "Nie wpisano daty zakończenia umowy.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                txtBoxDataZakonczeniaUmowy.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
+                return;
+            }
+        }
+
+        private void ButtonDodajNowegoPracownika(object sender, RoutedEventArgs e)
+        {
+            OknoDodajPracownika okno = new OknoDodajPracownika();
+            bool? ret = okno.ShowDialog();
         }
     }
 }

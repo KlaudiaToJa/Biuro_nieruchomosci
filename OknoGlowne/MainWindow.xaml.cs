@@ -27,14 +27,7 @@ public partial class MainWindow : Window
         public MainWindow()
         {
             InitializeComponent();
-            if (!File.Exists("listaKlientow.xml")) // sprawdzenie, czy plik został już utworzony
-            {
-                Klienci K = new Klienci();
-                K.ZapiszXML("listaKlientow.xml"); // tworzenie nowego pliku xml do zapisu listy klientow
-            }
         }
-
-        Klienci listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml"); // plik o stalej nazwie, w ktorym przechowywane sa dane klientow
 
         private void ButtonUtworzNowaUmowe_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +37,13 @@ public partial class MainWindow : Window
 
         private void ButtonDodajNowegoKlienta_Click(object sender, RoutedEventArgs e)
         {
+            Klienci listaKlientow = new Klienci();
+
+            if (File.Exists("listaKlientow.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
+            }
+
             Klient k = new Klient();
             OknoDodajKlienta okno = new OknoDodajKlienta(k);
             bool? ret = okno.ShowDialog();
@@ -62,6 +62,12 @@ public partial class MainWindow : Window
 
         private void ButtonDodajPracownika_Click(object sender, RoutedEventArgs e)
         {
+            Pracownicy listaPracownikow = new Pracownicy();
+            if (File.Exists("listaPracownikow.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                listaPracownikow = (Pracownicy)Pracownicy.OdczytajXML("listaPracownikow.ZapiszXML");
+            }
+
             OknoDodajPracownika okno = new OknoDodajPracownika();
             bool? ret = okno.ShowDialog();
         }
