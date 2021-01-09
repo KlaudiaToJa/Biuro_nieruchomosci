@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
+// DO POPRAWIENIA
+
+
 namespace BiuroNieruchomosci
 {
     public abstract class GrupaUmow

@@ -4,7 +4,7 @@ using System.Windows;
 using BiuroNieruchomosci;
 
 
-//SKONCZONE I DZIALA 
+//SKONCZONE I DZIALA (Klaudia)
 
 
 namespace OknoGlowne
@@ -76,7 +76,7 @@ namespace OknoGlowne
                     {
                         string messagedom = "Nie wpisano numeru domu.";
                         string titledom = "Brak danych";
-                        MessageBox.Show(messagedom, titledom, MessageBoxButton.OK);
+                        MessageBox.Show(messagedom, titledom, MessageBoxButton.OK, MessageBoxImage.Error);
                         txtBoxNumerDomu.Focus();
                         return;
                     }
@@ -84,7 +84,7 @@ namespace OknoGlowne
                     {
                         string messageemail = "Nie wpisano adresu e-mail.";
                         string titleemail = "Brak danych";
-                        MessageBox.Show(messageemail, titleemail, MessageBoxButton.OK);
+                        MessageBox.Show(messageemail, titleemail, MessageBoxButton.OK, MessageBoxImage.Error);
                         txtBoxEmail.Focus();
                         return;
                     }
@@ -92,7 +92,7 @@ namespace OknoGlowne
                     {
                         string messagetelefon = "Nie wpisano numeru telefonu.";
                         string titletelefon = "Brak danych";
-                        MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK);
+                        MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK, MessageBoxImage.Error);
                         txtBoxNumerTelefonu.Focus();
                         return;
                     }
@@ -120,9 +120,9 @@ namespace OknoGlowne
             }
             else
             {
-                string message = "Nie wprowadzono istotnych danych";
+                string message = "Nie wprowadzono istotnych danych - wymagane: imię, nazwisko, data urodzenia, PESEL.";
                 string title = "Brak danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK);
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

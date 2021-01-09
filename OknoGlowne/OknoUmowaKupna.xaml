@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="Tworzenie umowy kupna" Height="350" Width="840">
     <Grid>
-        <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="186,49,0,0" VerticalAlignment="Top" Width="154" Height="34"/>
-        <Button Name="ButtonDodajNowaNieruchomosc" Content="Dodaj nową nieruchomość" HorizontalAlignment="Left" Margin="440,49,0,0" VerticalAlignment="Top" Width="156" Height="34"/>
+        <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="59,38,0,0" VerticalAlignment="Top" Width="154" Height="34" Click="ButtonDodajNowegoKlienta_Click"/>
         <ComboBox Name="ComboBoxPracownik" HorizontalAlignment="Left" Margin="157,129,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Pracownik" HorizontalAlignment="Left" Margin="59,129,0,0" VerticalAlignment="Top" Width="75"/>
         <ComboBox Name="ComboBoxKlient" HorizontalAlignment="Left" Margin="157,169,0,0" VerticalAlignment="Top" Width="120"/>
@@ -20,8 +19,8 @@
         <TextBox Name="txtBoxDataZawarciaUmowy" HorizontalAlignment="Left" Height="23" Margin="524,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Data zakończenia umowy" HorizontalAlignment="Left" Margin="361,203,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtBoxDataZakonczeniaUmowy" HorizontalAlignment="Left" Height="23" Margin="524,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="265,262,0,0" VerticalAlignment="Top" Width="75" Height="32"/>
-        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="440,262,0,0" VerticalAlignment="Top" Width="75" Height="32"/>
+        <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="265,262,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="ButtonZatwierdz_Click"/>
+        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="440,262,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="ButtonAnuluj_Click"/>
 
     </Grid>
 </Window>

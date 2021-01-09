@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,21 @@ namespace OknoGlowne
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
-    
-    public partial class MainWindow : Window
-    {
-        Klienci listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml"); // staly plik w ktorym przechowywane sa dane klientow
+    /// 
 
+public partial class MainWindow : Window
+    {
         public MainWindow()
         {
             InitializeComponent();
+            if (!File.Exists("listaKlientow.xml")) // sprawdzenie, czy plik został już utworzony
+            {
+                Klienci K = new Klienci();
+                K.ZapiszXML("listaKlientow.xml"); // tworzenie nowego pliku xml do zapisu listy klientow
+            }
         }
+
+        Klienci listaKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml"); // plik o stalej nazwie, w ktorym przechowywane sa dane klientow
 
         private void ButtonUtworzNowaUmowe_Click(object sender, RoutedEventArgs e)
         {
