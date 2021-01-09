@@ -9,8 +9,8 @@
 
     <Grid>
         <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140"/>
-        <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="346,492,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="483,492,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="346,472,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="483,472,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Właściciel" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top"/>
         <ComboBox Name="ComboBoxWlasciciel" HorizontalAlignment="Left" Margin="156,54,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Miejscowość" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>

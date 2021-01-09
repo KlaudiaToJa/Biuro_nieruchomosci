@@ -3,6 +3,10 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using BiuroNieruchomosci;
 
+
+//SKONCZONE I DZIALA 
+
+
 namespace OknoGlowne
 {
     /// <summary>
@@ -57,8 +61,42 @@ namespace OknoGlowne
                     }
 
                     _klient.PESEL = txtBoxPESEL.Text;
-                    //czy trzeba dopisac tutaj sprawdzanie czy sa wszystkie pola uzupelnione? Wydaje mi sie ze trzeba cos z tym ogarnac.
-                    if (txtBoxMiejscowosc.Text != "")
+                    
+                    if(txtBoxMiejscowosc.Text == "")
+                    {
+                        string messagedom = "Nie wpisano miejscowosci. Czy chcesz zapisac klienta bez adresu i danych kontaktowych?";
+                        string titledom = "Brak danych";
+                        if (MessageBox.Show(messagedom, titledom, MessageBoxButton.YesNo) == MessageBoxResult.No)
+                        {
+                            return;
+                        }
+                    }
+                    
+                    if(txtBoxMiejscowosc.Text != "" && txtBoxNumerDomu.Text == "")
+                    {
+                        string messagedom = "Nie wpisano numeru domu.";
+                        string titledom = "Brak danych";
+                        MessageBox.Show(messagedom, titledom, MessageBoxButton.OK);
+                        txtBoxNumerDomu.Focus();
+                        return;
+                    }
+                    else if (txtBoxMiejscowosc.Text != "" && txtBoxEmail.Text == "")
+                    {
+                        string messageemail = "Nie wpisano adresu e-mail.";
+                        string titleemail = "Brak danych";
+                        MessageBox.Show(messageemail, titleemail, MessageBoxButton.OK);
+                        txtBoxEmail.Focus();
+                        return;
+                    }
+                    else if (txtBoxMiejscowosc.Text != "" && txtBoxNumerTelefonu.Text == "")
+                    {
+                        string messagetelefon = "Nie wpisano numeru telefonu.";
+                        string titletelefon = "Brak danych";
+                        MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK);
+                        txtBoxNumerTelefonu.Focus();
+                        return;
+                    }
+                    else
                     {
                         _klient.Miejscowosc = txtBoxMiejscowosc.Text;
                         _klient.NumerDomu = txtBoxNumerDomu.Text;
@@ -73,17 +111,18 @@ namespace OknoGlowne
                             _klient.NumerMieszkania = txtBoxNumerMieszkania.Text;
                         }
                     }
+
                     DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
                     string message = "Właśnie dodałeś nowego klienta!";
                     string title = "Sukces";
-                    System.Windows.MessageBox.Show(message, title, MessageBoxButton.OK);
+                    MessageBox.Show(message, title, MessageBoxButton.OK);
                 }
             }
             else
             {
                 string message = "Nie wprowadzono istotnych danych";
                 string title = "Brak danych";
-                System.Windows.MessageBox.Show(message, title, MessageBoxButton.OK);
+                MessageBox.Show(message, title, MessageBoxButton.OK);
             }
         }
     }
