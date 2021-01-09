@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BiuroNieruchomosci;
 
+//SKONCZONE I DZIALA (Klaudia)
+
 namespace OknoGlowne
 {
     /// <summary>

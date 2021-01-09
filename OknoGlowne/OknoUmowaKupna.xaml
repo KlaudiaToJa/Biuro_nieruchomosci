@@ -22,6 +22,8 @@
         <Button Name="ButtonZatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="265,262,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="ButtonZatwierdz_Click"/>
         <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="440,262,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="ButtonAnuluj_Click"/>
         <Button Name="ButtonDodajPracownika" Content="Dodaj nowego pracownika" HorizontalAlignment="Left" Margin="511,38,0,0" VerticalAlignment="Top" Width="154" Height="34" Click="ButtonDodajNowegoPracownika"/>
+        <Label Content="(dd-MM-yyyy)" HorizontalAlignment="Left" Margin="666,163,0,0" VerticalAlignment="Top"/>
+        <Label Content="(dd-MM-yyyy)" HorizontalAlignment="Left" Margin="666,200,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
