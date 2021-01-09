@@ -56,8 +56,21 @@ public partial class MainWindow : Window
 
         private void ButtonDodajNieruchomosc_Click(object sender, RoutedEventArgs e)
         {
-            OknoDodajNieruchomosc okno = new OknoDodajNieruchomosc();
+            WszystkieNieruchomosci listaNieruchomosci = new WszystkieNieruchomosci();
+            if (File.Exists("listaNieruchomosci.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                listaNieruchomosci = (WszystkieNieruchomosci)WszystkieNieruchomosci.OdczytajXML("listaNieruchomosci.xml");
+            }
+
+            Nieruchomosc n = new Nieruchomosc();
+            OknoDodajNieruchomosc okno = new OknoDodajNieruchomosc(n);
             bool? ret = okno.ShowDialog();
+
+            if(ret == true)
+            {
+                listaNieruchomosci.DodajNieruchomosc(n);
+                listaNieruchomosci.ZapiszXML("listaNieruchomosci.xml");
+            }
         }
 
         private void ButtonDodajPracownika_Click(object sender, RoutedEventArgs e)
@@ -65,11 +78,17 @@ public partial class MainWindow : Window
             Pracownicy listaPracownikow = new Pracownicy();
             if (File.Exists("listaPracownikow.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
-                listaPracownikow = (Pracownicy)Pracownicy.OdczytajXML("listaPracownikow.ZapiszXML");
+                listaPracownikow = (Pracownicy)Pracownicy.OdczytajXML("listaPracownikow.xml");
             }
 
-            OknoDodajPracownika okno = new OknoDodajPracownika();
+            Pracownik p = new Pracownik();
+            OknoDodajPracownika okno = new OknoDodajPracownika(p);
             bool? ret = okno.ShowDialog();
+            if (ret == true)
+            {
+                listaPracownikow.DodajPracownika(p); //dodajemy klienta
+                listaPracownikow.ZapiszXML("listaKlientow.xml");
+            }
         }
 
         private void ButtonPrzegladajListeNieruchomosci_Click(object sender, RoutedEventArgs e)

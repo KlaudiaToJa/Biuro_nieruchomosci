@@ -3,12 +3,12 @@ namespace BiuroNieruchomosci
 {
     public class Nieruchomosc
     {
-        public enum TypNieruchomosci { mieszkanie, dzialka, dom, lokal, magazyn, obiekt }
-        public enum RodzajNieruchomosci { wlasnoscHipoteczna, prawoWlasnoscioweBezKsiegi, prawoWlasnoscioweZKsiega }
-        public enum TypTransakcji { sprzedaz, wynajem }
-        public enum RodzajKuchni { aneks, oddzielna }
-        public enum Standard { wysoki, doOdswiezenia, doRemontu, podKlucz, stanDeweloperski, stanSurowy }
-        public enum Rynek { wtorny, pierwotny }
+        public enum TypNieruchomosci { Mieszkanie, Działka, Dom, Lokal, Magazyn, Obiekt }
+        public enum RodzajNieruchomosci { WłasnośćHipoteczna, PrawoWłasnościoweBezKsięgiWieczystej, PrawoWłasnościoweZKsięgą }
+        public enum TypTransakcji { Sprzedaż, Wynajem }
+        public enum RodzajKuchni { Aneks, Oddzielna }
+        public enum Standard { Wysoki, DoOdświeżenia, DoRemontu, PodKlucz, StanDeweloperski, StanSurowy }
+        public enum Rynek { Wtórny, Pierwotny }
 
         static int _numer = 0;
 
@@ -17,7 +17,7 @@ namespace BiuroNieruchomosci
         string _ulica;
         string _miejscowosc;
         string _numerDomu;
-        int _numerMieszkania;
+        string _numerMieszkania;
         double _cena;
         double _powierzchnia;
         int _liczbaPokojow;
@@ -31,6 +31,7 @@ namespace BiuroNieruchomosci
         TypTransakcji _typTransakcji;
         Standard _standard;
         Rynek _rynek;
+        RodzajKuchni _rodzajKuchni;
         Klient _wlasciciel;
 
         public Klient Wlasciciel { get => _wlasciciel; set => _wlasciciel = value; }
@@ -38,7 +39,7 @@ namespace BiuroNieruchomosci
         public string Ulica { get => _ulica; set => _ulica = value; }
         public string Miejscowosc { get => _miejscowosc; set => _miejscowosc = value; }
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
-        public int NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
+        public string NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
         public double Cena { get => _cena; set => _cena = value; }
         public double Powierzchnia { get => _powierzchnia; set => _powierzchnia = value; }
         public int LiczbaPokojow { get => _liczbaPokojow; set => _liczbaPokojow = value; }
@@ -52,6 +53,7 @@ namespace BiuroNieruchomosci
         public TypTransakcji TypTransakcji1 { get => _typTransakcji; set => _typTransakcji = value; }
         public Standard Standard1 { get => _standard; set => _standard = value; }
         public Rynek Rynek1 { get => _rynek; set => _rynek = value; }
+        public RodzajKuchni RodzajKuchni1 { get => _rodzajKuchni; set => _rodzajKuchni = value; }
 
         public Nieruchomosc()
         {
@@ -60,9 +62,9 @@ namespace BiuroNieruchomosci
 
         // nie tworze dodatkowego konstruktora, bo da sie w GUI uzupelniac to ladnie nullami :)
         public Nieruchomosc(Klient wlasciciel, string miejscowosc, string ulica, string numerDomu,
-            int numerMieszkania, double cena, double powierzchnia, int liczbaPokojow, int pietro,
+            string numerMieszkania, double cena, double powierzchnia, int liczbaPokojow, int pietro,
             bool balkon, bool umeblowane, bool parking, double wysokoscOplat, TypNieruchomosci typNieruchomosci,
-            RodzajNieruchomosci rodzajNieruchomosci, TypTransakcji typTransakcji, Standard standard, Rynek rynek)
+            RodzajNieruchomosci rodzajNieruchomosci, TypTransakcji typTransakcji, Standard standard, Rynek rynek, RodzajKuchni rodzajKuchni)
         {
             ++_numer;
             _idNieruchomosci = $"{_numer}/{DateTime.Now.Year}";
@@ -84,6 +86,7 @@ namespace BiuroNieruchomosci
             TypTransakcji1 = typTransakcji;
             Standard1 = standard;
             Rynek1 = rynek;
+            RodzajKuchni1 = rodzajKuchni;
         }
 
         public override string ToString()

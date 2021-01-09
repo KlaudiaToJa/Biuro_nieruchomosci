@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 
 
 // DO POPRAWIENIA
@@ -7,6 +9,7 @@ using System.Collections.Generic;
 
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public abstract class GrupaUmow
     {
         List<Umowa> _listaUmow;
@@ -58,6 +61,28 @@ namespace BiuroNieruchomosci
                 }
             }
             return _umowyPracownika;
+        }
+
+        public void ZapiszXML(string plik)
+        {
+            using (StreamWriter writer = new StreamWriter(plik)) //otwieramy strumien
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(GrupaUmow)); //tworzymy serializator xml
+                serializer.Serialize(writer, this);
+            }
+        }
+
+        public static GrupaUmow OdczytajXML(string plik)
+        {
+            if (!File.Exists(plik))
+            {
+                return null;
+            }
+            using (StreamReader reader = new StreamReader(plik))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(GrupaUmow));
+                return (GrupaUmow)serializer.Deserialize(reader);
+            }
         }
 
         public List<Umowa> ListaUmow { get => _listaUmow; set => _listaUmow = value; }

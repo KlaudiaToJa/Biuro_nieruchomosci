@@ -12,9 +12,9 @@
         <Label Content="Pracownik" HorizontalAlignment="Left" Margin="59,129,0,0" VerticalAlignment="Top" Width="75"/>
         <ComboBox Name="ComboBoxKlient" HorizontalAlignment="Left" Margin="157,169,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Klient" HorizontalAlignment="Left" Margin="59,169,0,0" VerticalAlignment="Top"/>
-        <Label Content="Prowizja" HorizontalAlignment="Left" Margin="361,126,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prowizja [%]" HorizontalAlignment="Left" Margin="361,126,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtBoxProwizja" HorizontalAlignment="Left" Height="23" Margin="524,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Name="ButtonProwizja" Content="Auto prowizja 2%" HorizontalAlignment="Left" Margin="666,131,0,0" VerticalAlignment="Top" Width="104"/>
+        <Button Name="ButtonProwizja" Content="Auto prowizja 2%" HorizontalAlignment="Left" Margin="666,131,0,0" VerticalAlignment="Top" Width="104" Click="ButtonProwizja_Click"/>
         <Label Content="Data zawarcia umowy" HorizontalAlignment="Left" Margin="361,166,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtBoxDataZawarciaUmowy" HorizontalAlignment="Left" Height="23" Margin="524,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Data zakończenia umowy" HorizontalAlignment="Left" Margin="361,203,0,0" VerticalAlignment="Top"/>

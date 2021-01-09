@@ -11,7 +11,7 @@ namespace BiuroNieruchomosci
         public static int Numer { get => _numer; set => _numer = value; }
         public string NumerUmowy { get => _numerUmowy; set => _numerUmowy = value; }
 
-        public UmowaPosrednictwaSprzedazy()
+        public UmowaPosrednictwaSprzedazy() : base()
         {
             NumerUmowy = $"{Numer}/S/{DataZawarcia.Year}";
         }

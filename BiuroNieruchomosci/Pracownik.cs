@@ -9,6 +9,11 @@ namespace BiuroNieruchomosci
 
         }
 
+        public Pracownik(string imie, string nazwisko, string dataurodzenia, string pesel) : base(imie, nazwisko, dataurodzenia, pesel)
+        {
+
+        }
+
         public Pracownik(string imie, string nazwisko, string dataurodzenia, string pesel, string miejscowosc, string numerdomu, string email, string nrtelefonu) : base(imie, nazwisko, dataurodzenia, pesel, miejscowosc, numerdomu, email, nrtelefonu)
         {
 

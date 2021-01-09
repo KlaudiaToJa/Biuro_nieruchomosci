@@ -3,16 +3,50 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 
+
+//WYRZUCILAM ZBIOROWOSC, SPRAWDZCIE MOZE CZY DA SIE JAKOS Z NIĄ ZEBY DZIALALO (Klaudia)
+
+
 namespace BiuroNieruchomosci
 {
     [Serializable]
-    public class Pracownicy : Zbiorowosc
+    public class Pracownicy
     {
         List<Pracownik> _listaPracownikow = new List<Pracownik>();
+
+        public List<Pracownik> ListaPracownikow { get => _listaPracownikow; set => _listaPracownikow = value; }
 
         public Pracownicy()
         {
 
+        }
+
+        public void DodajPracownika(Pracownik p)
+        {
+            ListaPracownikow.Add(p);
+        }
+
+        public void UsunPracownika(string pesel)
+        {
+            foreach (Pracownik o in ListaPracownikow)
+            {
+                if (o.PESEL == pesel)
+                {
+                    ListaPracownikow.Remove(o);
+                }
+            }
+        }
+
+        public bool CzyJestWBazie(string pesel)
+        {
+            foreach (Pracownik k in ListaPracownikow)
+            {
+                if (k.PESEL == pesel)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void ZapiszXML(string plik)
