@@ -24,7 +24,7 @@ namespace OknoGlowne
     {
         WszystkieNieruchomosci _caloscNieruchomosci;
         WszystkieNieruchomosci _nowaLista = new WszystkieNieruchomosci();
-        int razOtworzone = 0;
+
 
         public OknoListaNieruchomosci()
         {
@@ -50,22 +50,19 @@ namespace OknoGlowne
         //filtrowanie zlozone
         private void ButtonFiltruj_Click(object sender, RoutedEventArgs e)
         {
-            if(razOtworzone == 0)
+
+            if (File.Exists("listaNieruchomosci.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
-                if (File.Exists("listaNieruchomosci.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
-                {
-                    _nowaLista = (WszystkieNieruchomosci)WszystkieNieruchomosci.OdczytajXML("listaNieruchomosci.xml");
-                }
-                else
-                {
-                    string message = "Nie znaleziono zadnych nieruchomosci. Sprobuj je najpierw dodac.";
-                    string title = "Brak danych";
-                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
+                _nowaLista = (WszystkieNieruchomosci)WszystkieNieruchomosci.OdczytajXML("listaNieruchomosci.xml");
+            }
+            else
+            {
+                string message = "Nie znaleziono zadnych nieruchomosci. Sprobuj je najpierw dodac.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
             
-            ++razOtworzone;
             //otwiera wszystkie ify po kolei, zatem lista nieruchomosci bedzie sie aktualizowac z kazda kolejna :)
             if (textBoxMiejscowosc.Text != "")
             {
