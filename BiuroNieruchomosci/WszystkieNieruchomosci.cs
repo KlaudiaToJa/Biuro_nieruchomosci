@@ -54,6 +54,129 @@ namespace BiuroNieruchomosci
             }
         }
 
+        // opcje do filtrowania nieruchomosci to filtrowanie po: cenie, ilosci pokojow, miejscowosc, powierzchni, typie nieruchomosci
+        // typie transakcji, standardzie, rynku, rodzaju kuchni
+
+        // czy dodawac szukanie bool jak parking balkon etc.?
+
+        public List<Nieruchomosc> filtrujCena(double cenaDolna, double cenaGorna)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach(Nieruchomosc n in listaNieruchomosci)
+            {
+                if(n.Cena >= cenaDolna && n.Cena <= cenaGorna)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujIloscPokojow(int ilosc)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.LiczbaPokojow == ilosc)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujMiejscowosc(string miejscowosc)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.Miejscowosc.ToUpper() == miejscowosc.ToUpper())
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujPowierzchnia(double powierzchniaDolna, double powierzchniaGorna)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.Powierzchnia >= powierzchniaDolna && n.Powierzchnia <= powierzchniaGorna)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujTypNieruchomosci(Nieruchomosc.TypNieruchomosci typ)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.TypNieruchomosci1 == typ)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujTypTransakcji(Nieruchomosc.TypTransakcji typ)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.TypTransakcji1 == typ)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujStandard(Nieruchomosc.Standard typ)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.Standard1 == typ)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujRynek(Nieruchomosc.Rynek typ)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.Rynek1 == typ)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        public List<Nieruchomosc> filtrujRodzajKuchni(Nieruchomosc.RodzajKuchni typ)
+        {
+            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
+            foreach (Nieruchomosc n in listaNieruchomosci)
+            {
+                if (n.RodzajKuchni1 == typ)
+                {
+                    nowaLista.Add(n);
+                }
+            }
+            return nowaLista;
+        }
+
+        /*
         public override string ToString()
         {
             StringBuilder s = new StringBuilder();
@@ -63,5 +186,6 @@ namespace BiuroNieruchomosci
             }
             return s.ToString();
         }
+        */
     }
 }

@@ -167,10 +167,7 @@ namespace OknoGlowne
             {
                 DanePracownikow.DodajPracownika(p); // dodaje pracownika do listy
                 DanePracownikow.ZapiszXML("listaPracownikow.xml"); // zapisuje nowa liste w pliku xml
-                foreach (Pracownik pr in DanePracownikow.ListaPracownikow) // kazdego pracownika w nowej liscie...
-                {
-                    ComboBoxPracownik.Items.Add(pr); // ...dodaje do combobox
-                }
+                ComboBoxPracownik.Items.Add(p); // ...dodaje nowego do combobox
             }
         }
 
@@ -183,10 +180,7 @@ namespace OknoGlowne
             {
                 DaneKlientow.DodajKlienta(kl);
                 DaneKlientow.ZapiszXML("listaKlientow.xml");
-                foreach (Klient pr in DaneKlientow.ListaKlientow)
-                {
-                    ComboBoxKlient.Items.Add(pr); // dodawanie elementow listy rozwijanej
-                }
+                ComboBoxKlient.Items.Add(kl); // dodawanie elementow listy rozwijanej
             }
         }
 

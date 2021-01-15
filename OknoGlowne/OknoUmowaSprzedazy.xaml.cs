@@ -99,17 +99,28 @@ namespace OknoGlowne
             {
                 DaneKlientow.DodajKlienta(kl);
                 DaneKlientow.ZapiszXML("listaKlientow.xml");
-                foreach (Klient pr in DaneKlientow.ListaKlientow)
-                {
-                    ComboBoxKlient.Items.Add(pr); // dodawanie elementow listy rozwijanej
-                }
+                ComboBoxKlient.Items.Add(kl); // dodawanie elementow listy rozwijanej
             }
         }
 
         private void ButtonDodajNowaNieruchomosc_Click(object sender, RoutedEventArgs e)
         {
-            OknoDodajNieruchomosc okno = new OknoDodajNieruchomosc(); //inicjalizowanie okna
-            bool? ret = okno.ShowDialog(); //wywołanie okna
+            WszystkieNieruchomosci listaNieruchomosci = new WszystkieNieruchomosci();
+            if (File.Exists("listaNieruchomosci.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                listaNieruchomosci = (WszystkieNieruchomosci)WszystkieNieruchomosci.OdczytajXML("listaNieruchomosci.xml");
+            }
+
+            Nieruchomosc n = new Nieruchomosc();
+            OknoDodajNieruchomosc okno = new OknoDodajNieruchomosc(n);
+            bool? ret = okno.ShowDialog();
+
+            if (ret == true)
+            {
+                MessageBox.Show("okejka");
+                listaNieruchomosci.DodajNieruchomosc(n);
+                listaNieruchomosci.ZapiszXML("listaNieruchomosci.xml");
+            }
         }
 
         private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)
@@ -126,10 +137,7 @@ namespace OknoGlowne
             {
                 DanePracownikow.DodajPracownika(p); // dodaje pracownika do listy
                 DanePracownikow.ZapiszXML("listaPracownikow.xml"); // zapisuje nowa liste w pliku xml
-                foreach (Pracownik pr in DanePracownikow.ListaPracownikow) // kazdego pracownika w nowej liscie...
-                {
-                    ComboBoxPracownik.Items.Add(pr); // ...dodaje do combobox
-                }
+                ComboBoxPracownik.Items.Add(p); // ...dodaje do combobox
             }
         }
 

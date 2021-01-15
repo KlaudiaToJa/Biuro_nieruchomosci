@@ -1,6 +1,12 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
+    //NIE DZIALA NADAWANIE ID NIERUCHOMOSCIOM!!!!! PRZYNAJMNIEJ W GUI. DLACZEGO?? XD NO I CZY NUMER BEDZIE SIE ZMIENIAC NA PEWNO?
+    //SKORO OTWIERAMY PROGRAM OD NOWA I OD NOWA. MOZE WARTO TEN NUMER JAKOS SCIAGAC Z OSTATNIEJ DODANEJ NIERUCHOMOSCI CZY COS
+    //TAKIEGO, BO TAK TO CIAGLE MAM WRAZENIE BEDZIE ID Z NUMEREM 1... ALE MOZE SIE MYLE
+
+    //poprawic tez jakos wyswietlanie danych o nieruchomosci, zeby ladnie bylo w okienku w gui. 
+
     public class Nieruchomosc
     {
         public enum TypNieruchomosci { Mieszkanie, Działka, Dom, Lokal, Magazyn, Obiekt }
@@ -91,7 +97,7 @@ namespace BiuroNieruchomosci
 
         public override string ToString()
         {
-            return IdNieruchomosci.ToString();
+            return $"{IdNieruchomosci} {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, {Powierzchnia} m^2, cena: {Cena:C}";
         }
     }
 }

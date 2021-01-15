@@ -68,6 +68,7 @@ public partial class MainWindow : Window
 
             if(ret == true)
             {
+                MessageBox.Show("okejka");
                 listaNieruchomosci.DodajNieruchomosc(n);
                 listaNieruchomosci.ZapiszXML("listaNieruchomosci.xml");
             }
