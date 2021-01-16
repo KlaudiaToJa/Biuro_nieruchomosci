@@ -16,7 +16,7 @@
         <ListBox Name="listBoxNieruchomosci" HorizontalAlignment="Left" Height="306" Margin="285,55,0,0" VerticalAlignment="Top" Width="495"/>
         <Button Name="ButtonSzczegoly" Content="Szczegóły" HorizontalAlignment="Left" Margin="705,366,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Nieruchomości" HorizontalAlignment="Left" Margin="344,2,0,0" VerticalAlignment="Top" FontSize="17"/>
-        <Label Content="Miejscowosc" HorizontalAlignment="Left" Margin="23,17,0,0" VerticalAlignment="Top" Width="81" Height="24"/>
+        <Label Content="Miejscowosc" HorizontalAlignment="Left" Margin="23,17,0,0" VerticalAlignment="Top" Width="81" Height="29"/>
         <TextBox Name="textBoxCenaOd" HorizontalAlignment="Left" Height="23" Margin="117,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
         <Label Content="Cena od..." HorizontalAlignment="Left" Margin="23,51,0,0" VerticalAlignment="Top" Width="81"/>
         <Label Content="Cena do..." HorizontalAlignment="Left" Margin="23,82,0,0" VerticalAlignment="Top" Width="81"/>
