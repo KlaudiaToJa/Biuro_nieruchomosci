@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OknoSzczegolyNieruchomosci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OknoOferty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,6 +123,9 @@
     </Compile>
     <Compile Include="OknoListaNieruchomosci.xaml.cs">
       <DependentUpon>OknoListaNieruchomosci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OknoSzczegolyNieruchomosci.xaml.cs">
+      <DependentUpon>OknoSzczegolyNieruchomosci.xaml</DependentUpon>
     </Compile>
     <Compile Include="OknoOferty.xaml.cs">
       <DependentUpon>OknoOferty.xaml</DependentUpon>

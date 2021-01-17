@@ -7,7 +7,7 @@ namespace BiuroNieruchomosci
 
     //poprawic tez jakos wyswietlanie danych o nieruchomosci, zeby ladnie bylo w okienku w gui. 
 
-    public class Nieruchomosc
+    public class Nieruchomosc : IComparable<Nieruchomosc>
     {
         public enum TypNieruchomosci { Mieszkanie, Działka, Dom, Lokal, Magazyn, Obiekt }
         public enum RodzajNieruchomosci { WłasnośćHipoteczna, PrawoWłasnościoweBezKsięgiWieczystej, PrawoWłasnościoweZKsięgą }
@@ -98,6 +98,11 @@ namespace BiuroNieruchomosci
         public override string ToString()
         {
             return $"{IdNieruchomosci} {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, {Powierzchnia} m^2, cena: {Cena:C}";
+        }
+
+        public int CompareTo(Nieruchomosc other)
+        {
+            return _cena.CompareTo(other.Cena);
         }
     }
 }

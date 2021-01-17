@@ -7,20 +7,43 @@
         mc:Ignorable="d"
         Title="Lista nieruchomości" Height="450" Width="800">
     <Grid>
-        <Button Name="ButtonSortuj" Content="Sortuj" HorizontalAlignment="Left" Margin="569,11,0,0" VerticalAlignment="Top" Width="75"/>
-        <ComboBox Name="ComboBoxOpcjeSortowania" HorizontalAlignment="Left" Margin="660,10,0,0" VerticalAlignment="Top" Width="120"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="350" Margin="10,11,0,0" VerticalAlignment="Top" Width="270">
+        <Button Name="ButtonSortuj" Content="Sortuj" HorizontalAlignment="Left" Margin="557,11,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSortuj_Click"/>
+        <ComboBox Name="ComboBoxOpcjeSortowania" HorizontalAlignment="Left" Margin="649,10,0,0" VerticalAlignment="Top" Width="131">
+            <ComboBoxItem x:Name="PoCenieRosnaco">Po cenie rosnaco</ComboBoxItem>
+            <ComboBoxItem x:Name="PoCenieMalejaco">Po cenie malejaco</ComboBoxItem>
+        </ComboBox>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="399" Margin="10,11,0,0" VerticalAlignment="Top" Width="270">
             <TextBox Name="textBoxMiejscowosc" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" Margin="106,7,0,0"/>
         </Border>
-        <Button Name="ButtonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="205,366,0,0" VerticalAlignment="Top" Width="75" Click="ButtonFiltruj_Click"/>
-        <ListBox Name="listBoxNieruchomosci" HorizontalAlignment="Left" Height="306" Margin="285,55,0,0" VerticalAlignment="Top" Width="495"/>
-        <Button Name="ButtonSzczegoly" Content="Szczegóły" HorizontalAlignment="Left" Margin="705,366,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="ButtonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="285,391,0,0" VerticalAlignment="Top" Width="75" Click="ButtonFiltruj_Click"/>
+        <ListBox Name="listBoxNieruchomosci" HorizontalAlignment="Left" Height="330" Margin="285,55,0,0" VerticalAlignment="Top" Width="495"/>
+        <Button Name="ButtonSzczegoly" Content="Szczegóły" HorizontalAlignment="Left" Margin="705,391,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Nieruchomości" HorizontalAlignment="Left" Margin="344,2,0,0" VerticalAlignment="Top" FontSize="17"/>
-        <Label Content="Miejscowosc" HorizontalAlignment="Left" Margin="23,17,0,0" VerticalAlignment="Top" Width="81" Height="29"/>
-        <TextBox Name="textBoxCenaOd" HorizontalAlignment="Left" Height="23" Margin="117,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
-        <Label Content="Cena od..." HorizontalAlignment="Left" Margin="23,51,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label Content="Cena do..." HorizontalAlignment="Left" Margin="23,82,0,0" VerticalAlignment="Top" Width="81"/>
-        <TextBox Name="textBoxCenaDo" HorizontalAlignment="Left" Height="23" Margin="117,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Miejscowosc" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="81" Height="29"/>
+        <TextBox Name="textBoxCenaOd" HorizontalAlignment="Left" Height="23" Margin="117,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <Label Content="Cena od..." HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label Content="Cena do..." HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="81"/>
+        <TextBox Name="textBoxCenaDo" HorizontalAlignment="Left" Height="23" Margin="117,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="textBoxPowierzchniaOd" HorizontalAlignment="Left" Height="23" Margin="138,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.492,0.509"/>
+        <Label Content="Powierzchnia od..." HorizontalAlignment="Left" Margin="7,136,0,0" VerticalAlignment="Top" Width="110" Height="26"/>
+        <TextBox x:Name="textBoxPowierzchniaDo" HorizontalAlignment="Left" Height="23" Margin="138,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.492,0.509"/>
+        <Label Content="Powierzchnia od..." HorizontalAlignment="Left" Margin="7,162,0,0" VerticalAlignment="Top" Width="110" Height="26"/>
+        <ComboBox Name="ComboBoxTypNieruchomosci" HorizontalAlignment="Left" Height="26" Margin="138,192,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Typ nieruchomości" HorizontalAlignment="Left" Margin="7,192,0,0" VerticalAlignment="Top" Width="128" Height="26"/>
+        <Label Content="Typ transakcji" HorizontalAlignment="Left" Margin="7,223,0,0" VerticalAlignment="Top" Width="128" Height="26"/>
+        <ComboBox x:Name="ComboBoxTypTransakcji" HorizontalAlignment="Left" Height="26" Margin="138,223,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Rynek" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top" Width="128" Height="26"/>
+        <ComboBox x:Name="ComboBoxRynek" HorizontalAlignment="Left" Height="26" Margin="138,254,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Standard" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="128" Height="26"/>
+        <ComboBox x:Name="ComboBoxStandard" HorizontalAlignment="Left" Height="26" Margin="138,285,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Liczba pokoi" HorizontalAlignment="Left" Margin="10,105,0,0" VerticalAlignment="Top" Width="107" Height="26"/>
+        <TextBox x:Name="textBoxIloscPokoi" HorizontalAlignment="Left" Height="23" Margin="117,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" RenderTransformOrigin="0.492,0.509"/>
+        <Label Content="Kuchnia" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" Width="128" Height="26"/>
+        <ComboBox x:Name="ComboBoxRodzajKuchni" HorizontalAlignment="Left" Height="26" Margin="138,316,0,0" VerticalAlignment="Top" Width="132"/>
+        <CheckBox Name="CheckBoxBalkon" Content="Balkon" HorizontalAlignment="Left" Height="24" Margin="17,361,0,0" VerticalAlignment="Top" Width="80"/>
+        <CheckBox Name="CheckBoxParking" Content="Parking" HorizontalAlignment="Left" Height="24" Margin="17,385,0,0" VerticalAlignment="Top" Width="80"/>
+        <CheckBox Name="CheckBoxUmeblowane" Content="Umeblowane" HorizontalAlignment="Left" Height="24" Margin="97,361,0,0" VerticalAlignment="Top" Width="94"/>
+        <Button x:Name="ButtonWyczyscFiltry" Content="Wyczyść filtry" HorizontalAlignment="Left" Margin="382,391,0,0" VerticalAlignment="Top" Width="75" Click="ButtonWyczyscFiltry_Click"/>
 
     </Grid>
 </Window>
