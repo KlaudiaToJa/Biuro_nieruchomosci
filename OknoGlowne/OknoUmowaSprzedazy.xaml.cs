@@ -120,6 +120,7 @@ namespace OknoGlowne
                 MessageBox.Show("okejka");
                 listaNieruchomosci.DodajNieruchomosc(n);
                 listaNieruchomosci.ZapiszXML("listaNieruchomosci.xml");
+                ComboBoxNieruchomosc.Items.Add(n);
             }
         }
 
