@@ -63,17 +63,16 @@ namespace BiuroNieruchomosci
 
         public Nieruchomosc()
         {
-
+            ++_numer;
+            _idNieruchomosci = $"{_numer}/{DateTime.Now.Year}";
         }
 
         // nie tworze dodatkowego konstruktora, bo da sie w GUI uzupelniac to ladnie nullami :)
         public Nieruchomosc(Klient wlasciciel, string miejscowosc, string ulica, string numerDomu,
             string numerMieszkania, double cena, double powierzchnia, int liczbaPokojow, int pietro,
             bool balkon, bool umeblowane, bool parking, double wysokoscOplat, TypNieruchomosci typNieruchomosci,
-            RodzajNieruchomosci rodzajNieruchomosci, TypTransakcji typTransakcji, Standard standard, Rynek rynek, RodzajKuchni rodzajKuchni)
-        {
-            ++_numer;
-            _idNieruchomosci = $"{_numer}/{DateTime.Now.Year}";
+            RodzajNieruchomosci rodzajNieruchomosci, TypTransakcji typTransakcji, Standard standard, Rynek rynek, RodzajKuchni rodzajKuchni):this()
+        { 
             Wlasciciel = wlasciciel;
             Miejscowosc = miejscowosc;
             Ulica = ulica;
@@ -97,7 +96,7 @@ namespace BiuroNieruchomosci
 
         public override string ToString()
         {
-            return $"{IdNieruchomosci} {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, {Powierzchnia} m^2, cena: {Cena:C}";
+            return $"{_idNieruchomosci} {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, {Powierzchnia} m^2, cena: {Cena:C}";
         }
 
         public int CompareTo(Nieruchomosc other)
