@@ -87,7 +87,7 @@ public partial class MainWindow : Window
             if (ret == true)
             {
                 listaPracownikow.DodajPracownika(p); //dodajemy klienta
-                listaPracownikow.ZapiszXML("listaKlientow.xml");
+                listaPracownikow.ZapiszXML("listaPracownikow.xml");
             }
         }
 

@@ -55,9 +55,7 @@ namespace BiuroNieruchomosci
         }
 
         // opcje do filtrowania nieruchomosci to filtrowanie po: cenie, ilosci pokojow, miejscowosc, powierzchni, typie nieruchomosci
-        // typie transakcji, standardzie, rynku, rodzaju kuchni
-
-        // czy dodawac szukanie bool jak parking balkon etc.?
+        // typie transakcji, standardzie, rynku, rodzaju kuchni, i bool parking, balkon, umeblowanie
 
         public List<Nieruchomosc> filtrujCena(double cenaDolna, double cenaGorna)
         {
@@ -74,28 +72,12 @@ namespace BiuroNieruchomosci
 
         public List<Nieruchomosc> filtrujIloscPokojow(int ilosc)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.LiczbaPokojow == ilosc)
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(il => il.LiczbaPokojow.Equals(ilosc));
         }
 
         public List<Nieruchomosc> filtrujMiejscowosc(string miejscowosc)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.Miejscowosc.ToUpper() == miejscowosc.ToUpper())
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(m => m.Miejscowosc.Equals(miejscowosc));
         }
 
         public List<Nieruchomosc> filtrujPowierzchnia(double powierzchniaDolna, double powierzchniaGorna)
@@ -113,67 +95,54 @@ namespace BiuroNieruchomosci
 
         public List<Nieruchomosc> filtrujTypNieruchomosci(Nieruchomosc.TypNieruchomosci typ)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.TypNieruchomosci1 == typ)
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(t => t.TypNieruchomosci1.Equals(typ));
         }
 
         public List<Nieruchomosc> filtrujTypTransakcji(Nieruchomosc.TypTransakcji typ)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.TypTransakcji1 == typ)
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(t => t.TypTransakcji1.Equals(typ));
         }
 
         public List<Nieruchomosc> filtrujStandard(Nieruchomosc.Standard typ)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.Standard1 == typ)
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(t => t.Standard1.Equals(typ));
         }
 
         public List<Nieruchomosc> filtrujRynek(Nieruchomosc.Rynek typ)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.Rynek1 == typ)
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(r => r.Rynek1.Equals(typ));
         }
 
         public List<Nieruchomosc> filtrujRodzajKuchni(Nieruchomosc.RodzajKuchni typ)
         {
-            List<Nieruchomosc> nowaLista = new List<Nieruchomosc>();
-            foreach (Nieruchomosc n in listaNieruchomosci)
-            {
-                if (n.RodzajKuchni1 == typ)
-                {
-                    nowaLista.Add(n);
-                }
-            }
-            return nowaLista;
+            return listaNieruchomosci.FindAll(t => t.TypNieruchomosci1.Equals(typ));
+        }
+
+        public List<Nieruchomosc> filtrujBalkon()
+        { 
+            return listaNieruchomosci.FindAll(t => t.Balkon.Equals(true));
+        }
+
+        public List<Nieruchomosc> filtrujParking()
+        {
+            return listaNieruchomosci.FindAll(t => t.Parking.Equals(true));
+        }
+
+        public List<Nieruchomosc> filtrujUmeblowane()
+        {
+            return listaNieruchomosci.FindAll(t => t.Umeblowane.Equals(true));
+        }
+
+        public void SortujPoCenaRosnaco()
+        {
+            listaNieruchomosci.Sort();
+            
+        }
+
+        public void SortujPoCenaMalejaco()
+        {
+             listaNieruchomosci.Sort((x, y) => x.Cena.CompareTo(y.Cena));
+             ListaNieruchomosci.Reverse();
         }
 
         /*
