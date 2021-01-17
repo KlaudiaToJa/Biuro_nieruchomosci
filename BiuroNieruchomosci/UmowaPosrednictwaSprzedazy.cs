@@ -15,5 +15,10 @@ namespace BiuroNieruchomosci
         {
             NumerUmowy = $"{Numer}/S/{DataZawarcia.Year}";
         }
+
+        public UmowaPosrednictwaSprzedazy(Nieruchomosc nieruchomosc):this()
+        {
+            this._nieruchomosc = nieruchomosc;
+        }
     }
 }

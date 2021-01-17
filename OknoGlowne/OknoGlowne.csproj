@@ -75,11 +75,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OknoDodajOferte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OknoDodajPracownika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OknoListaNieruchomosci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OknoOferty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -103,11 +111,17 @@
     <Compile Include="OknoDodajNieruchomosc.xaml.cs">
       <DependentUpon>OknoDodajNieruchomosc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OknoDodajOferte.xaml.cs">
+      <DependentUpon>OknoDodajOferte.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OknoDodajPracownika.xaml.cs">
       <DependentUpon>OknoDodajPracownika.xaml</DependentUpon>
     </Compile>
     <Compile Include="OknoListaNieruchomosci.xaml.cs">
       <DependentUpon>OknoListaNieruchomosci.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OknoOferty.xaml.cs">
+      <DependentUpon>OknoOferty.xaml</DependentUpon>
     </Compile>
     <Compile Include="OknoUmowaKupna.xaml.cs">
       <DependentUpon>OknoUmowaKupna.xaml</DependentUpon>

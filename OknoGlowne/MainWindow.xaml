@@ -16,6 +16,7 @@
         <Button Name="ButtonPrzegladajListeKlientow" Content="Przeglądaj listę klientów" HorizontalAlignment="Left" Margin="565,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonPrzegladajListeKlientow_Click"/>
         <Button Name="ButtonPrzegladajListePracownikow" Content="Przeglądaj listę pracowników" HorizontalAlignment="Left" Margin="565,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonPrzegladajListePracownikow_Click"/>
         <Button Name="ButtonPrzegladajAktualneOferty" Content="Przeglądaj aktualne oferty" HorizontalAlignment="Left" Margin="565,246,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonPrzegladajAktualneOferty_Click"/>
+        <Button Name="ButtonDodajOferte" Content="Dodaj ofertę" HorizontalAlignment="Left" Margin="305,98,0,0" VerticalAlignment="Top" Width="231" Height="35" Click="ButtonDodajOferte_Click"/>
 
     </Grid>
 </Window>

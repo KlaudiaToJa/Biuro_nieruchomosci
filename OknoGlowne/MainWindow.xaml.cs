@@ -105,6 +105,7 @@ public partial class MainWindow : Window
         private void ButtonPrzegladajListeKlientow_Click(object sender, RoutedEventArgs e)
         {
 
+
         }
 
         private void ButtonPrzegladajListePracownikow_Click(object sender, RoutedEventArgs e)
@@ -114,7 +115,27 @@ public partial class MainWindow : Window
 
         private void ButtonPrzegladajAktualneOferty_Click(object sender, RoutedEventArgs e)
         {
+            OknoOferty okno = new OknoOferty();
+            bool? ret = okno.ShowDialog();
 
         }
+
+       /* private void ButtonDodajOferte_Click(object sender, RoutedEventArgs e)
+        {
+            OfertyRazem listaOfert = new OfertyRazem();
+            if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                listaOfert = OfertyRazem.OdczytajXMLOferty("listaOfert.xml") as OfertyRazem;
+            }
+
+            Oferta oferta = new Oferta();
+            OknoDodajOferte okno = new OknoDodajOferte(oferta);
+            bool? ret = okno.ShowDialog();
+            if (ret == true)
+            {
+                listaOfert.DodajOferte(oferta); //dodajemy oferte
+                listaOfert.ZapiszXMLOferty("listaOfert.xml");
+            }
+        }*/
     }
 }
