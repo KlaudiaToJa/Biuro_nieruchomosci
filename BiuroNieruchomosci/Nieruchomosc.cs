@@ -16,7 +16,7 @@ namespace BiuroNieruchomosci
         public enum Standard { Wysoki, DoOdświeżenia, DoRemontu, PodKlucz, StanDeweloperski, StanSurowy }
         public enum Rynek { Wtórny, Pierwotny }
 
-        static int _numer = 0;
+        private static int numer;
 
         //Klient _wlasciciel;
         string _idNieruchomosci;
@@ -60,11 +60,16 @@ namespace BiuroNieruchomosci
         public Standard Standard1 { get => _standard; set => _standard = value; }
         public Rynek Rynek1 { get => _rynek; set => _rynek = value; }
         public RodzajKuchni RodzajKuchni1 { get => _rodzajKuchni; set => _rodzajKuchni = value; }
+        public static int Numer { get => numer; set => numer = value; }
 
+        static Nieruchomosc()
+        {
+            Numer = 0;
+        }
         public Nieruchomosc()
         {
-            ++_numer;
-            _idNieruchomosci = $"{_numer}/{DateTime.Now.Year}";
+            ++Numer;
+            _idNieruchomosci = $"{Numer}/{DateTime.Now.Year}";
         }
 
         // nie tworze dodatkowego konstruktora, bo da sie w GUI uzupelniac to ladnie nullami :)
