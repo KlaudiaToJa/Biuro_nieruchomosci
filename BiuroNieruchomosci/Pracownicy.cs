@@ -70,5 +70,15 @@ namespace BiuroNieruchomosci
                 return (Pracownicy)serializer.Deserialize(reader);
             }
         }
+
+        public void SortujNazwiskaImiona()
+        {
+            ListaPracownikow.Sort();
+        }
+
+        public void SortujMiejscowosciami()
+        {
+            ListaPracownikow.Sort((x, y) => x.Miejscowosc.CompareTo(y.Miejscowosc));
+        }
     }
 }

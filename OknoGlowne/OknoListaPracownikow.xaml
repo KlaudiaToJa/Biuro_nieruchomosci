@@ -1,0 +1,35 @@
+﻿<Window x:Class="OknoGlowne.OknoListaPracownikow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OknoGlowne"
+        mc:Ignorable="d"
+        Title="OknoListaPracownikow" Height="430" Width="955">
+    <Grid>
+        <ListView Canvas.Top="329" Canvas.Left="30" Name="listViewPracownicy" Margin="10,10,10,116">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Imie}" Header="Imie" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Nazwisko}" Header="Nazwisko" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DataUrodzenia}" Header="Data urodzenia" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=PESEL}" Header="PESEL" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Miejscowosc}" Header="Miejscowosc" Width="82"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Ulica}" Header="Ulica" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NumerDomu}" Header="Nr domu" Width="60"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NumerMieszkania}" Header="Nr mieszkania" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Email}" Header="E-mail" Width="110"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NrTelefonu}" Header="Nr telefonu" Width="90"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Name="buttonSzukajPracownika" Content="Szukaj" HorizontalAlignment="Left" Margin="104,356,0,0" VerticalAlignment="Top" Width="75" Click="buttonSzukajPracownika_Click"/>
+        <Label Content="PESEL:" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wyszukiwanie:" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" Width="94"/>
+        <TextBox Name="textBoxPESEL" HorizontalAlignment="Left" Height="23" Margin="59,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="buttonSortujNazwiskami"  Content="Sortuj nazwiskami" HorizontalAlignment="Left" Margin="812,296,0,0" VerticalAlignment="Top" Width="120" Height="41" RenderTransformOrigin="1.875,0.671" Click="buttonSortujNazwiskami_Click"/>
+        <Button Name="buttonSortujMiastami" Content="Sortuj miastami" HorizontalAlignment="Left" Margin="812,343,0,0" VerticalAlignment="Top" Width="120" Height="41" Click="buttonSortujMiastami_Click"/>
+        <Button Name="buttonUsunPracownika" Content="Usun pracownika" HorizontalAlignment="Left" Margin="659,296,0,0" VerticalAlignment="Top" Width="120" Height="41" Click="buttonUsunPracownika_Click"/>
+
+    </Grid>
+</Window>
