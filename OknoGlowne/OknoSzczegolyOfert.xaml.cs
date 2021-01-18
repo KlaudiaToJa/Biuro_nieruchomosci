@@ -44,6 +44,12 @@ namespace OknoGlowne
             txtBoxOpis.Text = _oferta.Opis;
         }
 
+        private void buttonSzczegolyNieruchomosci_Click(object sender, RoutedEventArgs e)
+        {
+            OknoSzczegolyNieruchomosci okno = new OknoSzczegolyNieruchomosci(_oferta.Umowa.Nieruchomosc);
+            bool? ret = okno.ShowDialog();
+        }
+
         //dodac mozliwosc edytowania!
     }
 }
