@@ -1,0 +1,19 @@
+﻿<Window x:Class="OknoGlowne.OknoListaKlientow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OknoGlowne"
+        mc:Ignorable="d"
+        Title="Lista klientow" Height="430" Width="800">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="266" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
+        <Button Name="buttonSzukajKlienta" Content="Szukaj" HorizontalAlignment="Left" Margin="104,356,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="PESEL:" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wyszukiwanie:" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top" Width="94"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="59,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="buttonSortujNazwiskami"  Content="Sortuj nazwiskami" HorizontalAlignment="Left" Margin="662,292,0,0" VerticalAlignment="Top" Width="120" Height="41"/>
+        <Button Name="buttonSortujMiastami" Content="Sortuj miastami" HorizontalAlignment="Left" Margin="662,346,0,0" VerticalAlignment="Top" Width="120" Height="41"/>
+
+    </Grid>
+</Window>
