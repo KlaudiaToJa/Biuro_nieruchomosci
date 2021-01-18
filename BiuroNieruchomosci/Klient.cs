@@ -2,7 +2,7 @@
 namespace BiuroNieruchomosci
 {
     [Serializable]
-    public class Klient : Osoba
+    public class Klient : Osoba, IComparable<Klient>
     {
         public Klient() : base()
         {
@@ -29,9 +29,19 @@ namespace BiuroNieruchomosci
 
         }
 
+        public int CompareTo(Klient other) //moze zwrocic 3 wartosci. porownuje 2 elementy i zwraca -1 jesli A<B 0 jesli A=B oraz 1 jesli A>B
+        {
+            int wynik = Nazwisko.CompareTo(other.Nazwisko);
+            if (wynik != 0) 
+            {
+                return wynik;
+            }
+            return Imie.CompareTo(other.Imie);
+        }
+
         public override string ToString()
         {
-            return $"{Imie} {Nazwisko} {NrTelefonu}"; // potrzebne do odpowiedniego wyswietlania w combobox
+            return $"{Imie} {Nazwisko}, nr telefonu: {NrTelefonu}"; // potrzebne do odpowiedniego wyswietlania w combobox
         }
 
     }

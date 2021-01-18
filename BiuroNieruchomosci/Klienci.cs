@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 namespace BiuroNieruchomosci
 {
     [Serializable]
-    public class Klienci 
+    public class Klienci
     {
         List<Klient> _listaKlientow = new List<Klient>();
 
@@ -74,19 +74,20 @@ namespace BiuroNieruchomosci
             }
             return false;
         }
+
         public void WyczyscListe()
         {
             ListaKlientow.Clear();
         }
 
-        /*public override string ToString()
+        public void SortujNazwiskaImiona()
         {
-            StringBuilder s = new StringBuilder();
-            foreach(Osoba k in ListaKlientow)
-            {
-                s.AppendLine(k.ToString());
-            }
-            return s.ToString();
-        }*/
+            ListaKlientow.Sort();
+        }
+
+        public void SortujMiejscowosciami()
+        {
+            ListaKlientow.Sort((x, y) => x.Miejscowosc.CompareTo(y.Miejscowosc));
+        }
     }
 }

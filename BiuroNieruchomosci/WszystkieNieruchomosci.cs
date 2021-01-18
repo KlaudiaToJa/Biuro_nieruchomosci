@@ -137,7 +137,6 @@ namespace BiuroNieruchomosci
         public void SortujPoCenaRosnaco()
         {
             listaNieruchomosci.Sort();
-            
         }
 
         public void SortujPoCenaMalejaco()
@@ -145,17 +144,5 @@ namespace BiuroNieruchomosci
              listaNieruchomosci.Sort((x, y) => x.Cena.CompareTo(y.Cena));
              ListaNieruchomosci.Reverse();
         }
-
-        /*
-        public override string ToString()
-        {
-            StringBuilder s = new StringBuilder();
-            foreach (Nieruchomosc n in ListaNieruchomosci)
-            {
-                s.AppendLine(n.ToString());
-            }
-            return s.ToString();
-        }
-        */
     }
 }

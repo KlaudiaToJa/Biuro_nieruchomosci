@@ -127,7 +127,8 @@ public partial class MainWindow : Window
 
         private void ButtonPrzegladajListeKlientow_Click(object sender, RoutedEventArgs e)
         {
-
+            OknoListaKlientow okno = new OknoListaKlientow();
+            bool? ret = okno.ShowDialog();
 
         }
 

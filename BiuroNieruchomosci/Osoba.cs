@@ -62,7 +62,6 @@ namespace BiuroNieruchomosci
         {
             Imie = string.Empty;
             Nazwisko = string.Empty;
-            DataUrodzenia = DateTime.Now;
             PESEL = new string('0', 11);
             Miejscowosc = string.Empty;
             Ulica = string.Empty;
@@ -97,23 +96,5 @@ namespace BiuroNieruchomosci
         {
             NumerMieszkania = numermieszkania;
         }
-
-        /*
-         public override string  ToString()
-        {
-            TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
-
-            if (Ulica == null)
-            {
-                return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {NumerDomu} {Email} {NrTelefonu}";
-            }
-
-            if (NumerMieszkania == "")
-            {
-                return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {myTI.ToTitleCase(Ulica)} {NumerDomu} {Email} {NrTelefonu}";
-            }
-            return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {myTI.ToTitleCase(Ulica)} {NumerDomu}/{NumerMieszkania} {Email} {NrTelefonu}";
-
-        }*/
     }
 }
