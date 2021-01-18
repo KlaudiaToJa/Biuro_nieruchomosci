@@ -15,7 +15,7 @@
         <TextBox Name="txtBoxIdOferty" HorizontalAlignment="Left" Height="23" Margin="113,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
         <TextBox Name="txtBoxDataWystawienia" HorizontalAlignment="Left" Height="23" Margin="220,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
         <Label Content="Opis:" HorizontalAlignment="Left" Margin="11,202,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="176" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="771" Margin="11,233,0,0"/>
+        <TextBox Name="txtBoxOpis" HorizontalAlignment="Left" Height="176" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="771" Margin="11,233,0,0"/>
 
     </Grid>
 </Window>

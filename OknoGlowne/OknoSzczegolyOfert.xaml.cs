@@ -41,6 +41,9 @@ namespace OknoGlowne
             {
                 txtBoxStatus.Text = "Zakonczona";
             }
+            txtBoxOpis.Text = _oferta.Opis;
         }
+
+        //dodac mozliwosc edytowania!
     }
 }
