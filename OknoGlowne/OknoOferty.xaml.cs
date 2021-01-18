@@ -23,8 +23,8 @@ namespace OknoGlowne
     /// </summary>
     public partial class OknoOferty : Window
     {
-        OfertyRazem _wszystkieOferty;
-        OfertyRazem _nowaLista = new OfertyRazem();
+       OfertyRazem _wszystkieOferty = new OfertyRazem();
+       //OfertyRazem _nowaLista = new OfertyRazem();
 
 
         public OknoOferty()
@@ -45,7 +45,8 @@ namespace OknoGlowne
 
             if (_wszystkieOferty is object)
             {
-                ListBoxOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
+                
+                ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
             }
         }
 
@@ -74,27 +75,37 @@ namespace OknoGlowne
                 
                 if (TextBoxImieKlienta.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujImieKlienta(TextBoxImieKlienta.Text, true);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujImieKlienta(TextBoxImieKlienta.Text, true);
+                    _wszystkieOferty.filtrujImieKlienta(TextBoxImieKlienta.Text, true);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxNazwiskoKlienta.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, true);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, true);
+                    _wszystkieOferty.filtrujNazwiskoKlienta(TextBoxNazwiskoKlienta.Text, true);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxImieOpiekuna.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text, true);
+                    //   _nowaLista.ListaOfert = _nowaLista.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text, true);
+                    _wszystkieOferty.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text, true);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxNazwiskoKlienta.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, true);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, true);
+                    _wszystkieOferty.filtrujNazwiskoOpiekuna(TextBoxNazwiskoOpiekuna.Text, true);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxData.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujDate(TextBoxData.Text, true);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujDate(TextBoxData.Text, true);
+                    _wszystkieOferty.filtrujDate(TextBoxData.Text, true);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
             }
 
@@ -102,27 +113,38 @@ namespace OknoGlowne
             {
                 if (TextBoxImieKlienta.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujImieKlienta(TextBoxImieKlienta.Text, false);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujImieKlienta(TextBoxImieKlienta.Text, false);
+                    _wszystkieOferty.filtrujImieKlienta(TextBoxImieKlienta.Text, false);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
+
                 }
 
                 if (TextBoxNazwiskoKlienta.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, false);
+                    // _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, false);
+                    _wszystkieOferty.filtrujNazwiskoKlienta(TextBoxNazwiskoKlienta.Text, false);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxImieOpiekuna.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text,false);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text,false);
+                    _wszystkieOferty.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text, false);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxNazwiskoKlienta.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, false);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text, false);
+                    _wszystkieOferty.filtrujNazwiskoOpiekuna(TextBoxNazwiskoOpiekuna.Text, false);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
                 if (TextBoxData.Text != "")
                 {
-                    _nowaLista.ListaOfert = _nowaLista.filtrujDate(TextBoxData.Text, false);
+                    //_nowaLista.ListaOfert = _nowaLista.filtrujDate(TextBoxData.Text, false);
+                    _wszystkieOferty.filtrujDate(TextBoxData.Text, false);
+                    ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
 
             }

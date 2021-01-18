@@ -13,7 +13,7 @@ namespace BiuroNieruchomosci
 
         public OfertyRazem()
         {
-
+            
         }
 
         public void DodajOferte(Oferta o)
@@ -62,10 +62,12 @@ namespace BiuroNieruchomosci
                 if(oferta.Umowa.Klient.Imie.ToUpper() == imie.ToUpper()  && oferta.CzyAktywna == czyAktywna)
                 {
                     wyniki.Add(oferta);
+                    
                 }
             }
             return wyniki;
         }
+        
 
         public List<Oferta> filtrujNazwiskoKlienta(string nazwisko, bool czyAktywna)
         {

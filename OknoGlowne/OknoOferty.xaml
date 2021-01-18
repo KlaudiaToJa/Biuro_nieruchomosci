@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OknoGlowne"
         mc:Ignorable="d"
-        Title="OknoOferty" Height="450" Width="800">
+        Title="OknoOferty" Height="450" Width="1104.959">
     <Grid>
         <Label Content="Oferty" HorizontalAlignment="Left" Margin="495,24,0,0" VerticalAlignment="Top" Width="79" Height="36" FontSize="17"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="362" Margin="10,10,0,0" VerticalAlignment="Top" Width="280">
@@ -13,9 +13,9 @@
         </Border>
         <Label Content="Imię klienta" HorizontalAlignment="Left" Margin="16,26,0,0" VerticalAlignment="Top"/>
         <Label Content="Nazwisko klienta" HorizontalAlignment="Left" Margin="16,52,0,0" VerticalAlignment="Top"/>
-        
+
         <TextBox Name="TextBoxNazwiskoKlienta" HorizontalAlignment="Left" Height="23" Margin="152,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox Name="ListBoxOferty" HorizontalAlignment="Left" Height="291" Margin="323,81,0,0" VerticalAlignment="Top" Width="420"/>
+
         <Button Name="ButtonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="196,377,0,0" VerticalAlignment="Top" Width="76"/>
         <Label Name="Label" Content="Imię opiekuna" HorizontalAlignment="Left" Margin="16,83,0,0" VerticalAlignment="Top"/>
         <TextBox Name="TextBoxImieOpiekuna" HorizontalAlignment="Left" Height="23" Margin="152,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -25,6 +25,19 @@
         <TextBox Name="TextBoxData" HorizontalAlignment="Left" Height="23" Margin="152,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <CheckBox Name="CheckBoxArchiwum" Content="Filtruj Archiwum" HorizontalAlignment="Left" Margin="166,344,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBoxImieKlienta" HorizontalAlignment="Left" Height="23" Margin="152,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListView x:Name="ListViewOferty" HorizontalAlignment="Left" Height="285" Margin="312,87,0,0" VerticalAlignment="Top" Width="753">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Klient.Imie}" Header="Imię klienta" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Klient.Nazwisko}" Header="Nazwisko klienta" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Imie}" Header="Imię opiekuna" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Nazwisko}" Header="Nazwisko opiekuna" Width="110"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Oferta.DataWystawienia}" Header="Data" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=UmowaPosrednictwaSprzedazy.Nieruchomosc}" Header="Nieruchomość" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Nieruchomosc.Miejscowosc}" Header="Miejscowość" Width="70"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

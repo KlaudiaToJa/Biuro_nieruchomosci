@@ -54,6 +54,7 @@ namespace BiuroNieruchomosci
                 {
                     _nrTelefonu = value;
                 }
+                else throw new FormatException();
             }
         }
         public string PESEL { get => _PESEL; set => _PESEL = value; }
