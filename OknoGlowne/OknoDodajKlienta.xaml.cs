@@ -102,8 +102,35 @@ namespace OknoGlowne
                     {
                         _klient.Miejscowosc = txtBoxMiejscowosc.Text;
                         _klient.NumerDomu = txtBoxNumerDomu.Text;
-                        _klient.Email = txtBoxEmail.Text;
-                        _klient.NrTelefonu = txtBoxNumerTelefonu.Text;
+
+                        Regex wzorzec2 = new Regex(@"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
+                        if (wzorzec2.IsMatch(txtBoxEmail.Text))
+                        {
+                            _klient.Email = txtBoxEmail.Text;
+                        }
+                        else
+                        {
+                            string messagetelefon = "Email zostal wpisany w zlej formie.";
+                            string titletelefon = "Niepoprawna forma";
+                            MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK, MessageBoxImage.Error);
+                            txtBoxEmail.Focus();
+                            return;
+                        }
+
+                        Regex wzorzec = new Regex(@"^[0-9]{9}$");
+                        if (wzorzec.IsMatch(txtBoxNumerTelefonu.Text))
+                        {
+                            _klient.NrTelefonu = txtBoxNumerTelefonu.Text;
+                        }
+                        else
+                        {
+                            string messagetelefon = "Numer telefonu zostal wpisany w zlej formie.";
+                            string titletelefon = "Niepoprawna forma";
+                            MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK, MessageBoxImage.Error);
+                            txtBoxNumerTelefonu.Focus();
+                            return;
+                        }
+                        
                         if (txtBoxUlica.Text != "")
                         {
                             _klient.Ulica = txtBoxUlica.Text;
@@ -114,10 +141,7 @@ namespace OknoGlowne
                         }
                     }
 
-                    DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
-                    //string message = "Właśnie dodałeś nowego klienta!";
-                    //string title = "Sukces";
-                    //MessageBox.Show(message, title, MessageBoxButton.OK);
+                    DialogResult = true; 
                 }
             }
             else

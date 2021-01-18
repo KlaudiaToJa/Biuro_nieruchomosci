@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -40,7 +41,7 @@ namespace OknoGlowne
                 if (dataUr.Year == 1)
                 {
                     string message = "Data urodzenia powinna zostać wpisana w formacie dd-MM-yyyy";
-                    string title = "Zła forma";
+                    string title = "Niepoprawna forma";
                     MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                     txtBoxDataUrodzenia.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
                     return;
@@ -54,7 +55,7 @@ namespace OknoGlowne
                     if (txtBoxPESEL.Text.Length != 11)
                     {
                         string message1 = "Niepoprawna forma nr PESEL";
-                        string title1 = "Zła forma";
+                        string title1 = "Niepoprawna forma";
                         MessageBox.Show(message1, title1, MessageBoxButton.OK, MessageBoxImage.Error);
                         txtBoxPESEL.Focus();
                         return;
@@ -100,8 +101,35 @@ namespace OknoGlowne
                     {
                         _pracownik.Miejscowosc = txtBoxMiejscowosc.Text;
                         _pracownik.NumerDomu = txtBoxNumerDomu.Text;
-                        _pracownik.Email = txtBoxEmail.Text;
-                        _pracownik.NrTelefonu = txtBoxNumerTelefonu.Text;
+
+                        Regex wzorzec2 = new Regex(@"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$");
+                        if (wzorzec2.IsMatch(txtBoxEmail.Text))
+                        {
+                            _pracownik.Email = txtBoxEmail.Text;
+                        }
+                        else
+                        {
+                            string messagetelefon = "Email zostal wpisany w zlej formie.";
+                            string titletelefon = "Niepoprawna forma";
+                            MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK, MessageBoxImage.Error);
+                            txtBoxEmail.Focus();
+                            return;
+                        }
+
+                        Regex wzorzec = new Regex(@"^[0-9]{9}$");
+                        if (wzorzec.IsMatch(txtBoxNumerTelefonu.Text))
+                        {
+                            _pracownik.NrTelefonu = txtBoxNumerTelefonu.Text;
+                        }
+                        else
+                        {
+                            string messagetelefon = "Numer telefonu zostal wpisany w zlej formie.";
+                            string titletelefon = "Niepoprawna forma";
+                            MessageBox.Show(messagetelefon, titletelefon, MessageBoxButton.OK, MessageBoxImage.Error);
+                            txtBoxNumerTelefonu.Focus();
+                            return;
+                        }
+
                         if (txtBoxUlica.Text != "")
                         {
                             _pracownik.Ulica = txtBoxUlica.Text;

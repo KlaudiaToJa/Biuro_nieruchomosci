@@ -209,6 +209,13 @@ namespace OknoGlowne
 
         private void ButtonSzczegoly_Click(object sender, RoutedEventArgs e)
         {
+            if(listBoxNieruchomosci.SelectedIndex == -1)
+            {
+                string message = "Nie zaznaczono zadnej nieruchomosci.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
            Nieruchomosc n = listBoxNieruchomosci.SelectedItem as Nieruchomosc;
            
            OknoSzczegolyNieruchomosci okno = new OknoSzczegolyNieruchomosci(n);

@@ -44,7 +44,18 @@ namespace BiuroNieruchomosci
         public string Ulica { get => _ulica; set => _ulica = value; }
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
         public string NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
-        public string NrTelefonu { get => _nrTelefonu; set => _nrTelefonu = value; }
+        public string NrTelefonu 
+        { 
+            get => _nrTelefonu;
+            set
+            {
+                Regex wzorzec = new Regex(@"^[0-9]{9}$");
+                if (wzorzec.IsMatch(value))
+                {
+                    _nrTelefonu = value;
+                }
+            }
+        }
         public string PESEL { get => _PESEL; set => _PESEL = value; }
 
         public Osoba()

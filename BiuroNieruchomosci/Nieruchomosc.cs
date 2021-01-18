@@ -18,7 +18,6 @@ namespace BiuroNieruchomosci
 
         private static int numer;
 
-        //Klient _wlasciciel;
         string _idNieruchomosci;
         string _ulica;
         string _miejscowosc;

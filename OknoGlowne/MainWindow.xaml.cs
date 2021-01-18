@@ -61,12 +61,18 @@ public partial class MainWindow : Window
                         listaKlientow.UsunKlienta(k.PESEL);
                         listaKlientow.DodajKlienta(k);
                         listaKlientow.ZapiszXML("listaKlientow.xml");
+                        string mes = "Dane klienta zostaly poprawnie zamienione.";
+                        string tit = "Sukces";
+                        MessageBox.Show(mes, tit, MessageBoxButton.OK);
                     }
                 }
                 else
                 {
                     listaKlientow.DodajKlienta(k); //dodajemy klienta
                     listaKlientow.ZapiszXML("listaKlientow.xml");
+                    string mes = "Właśnie dodałeś nowego klienta!";
+                    string tit = "Sukces";
+                    MessageBox.Show(mes, tit, MessageBoxButton.OK);
                 }
             }
         }
