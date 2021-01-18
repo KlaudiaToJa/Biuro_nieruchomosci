@@ -123,7 +123,7 @@ namespace OknoGlowne
             string title = "Usuwanie klienta";
             if(MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                _klienci.UsunKlienta(k.PESEL);
+                _klienci.UsunKlienta(k);
                 _klienci.ZapiszXML("listaKlientow.xml");
                 string m = "Pomyslnie usunieto klienta.";
                 string t = "Sukces";

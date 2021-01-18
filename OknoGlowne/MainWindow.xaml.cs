@@ -58,7 +58,7 @@ public partial class MainWindow : Window
                     string title = "TakNie";
                     if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
-                        listaKlientow.UsunKlienta(k.PESEL);
+                        listaKlientow.UsunKlienta(k);
                         listaKlientow.DodajKlienta(k);
                         listaKlientow.ZapiszXML("listaKlientow.xml");
                         string mes = "Dane klienta zostaly poprawnie zamienione.";
@@ -134,7 +134,8 @@ public partial class MainWindow : Window
 
         private void ButtonPrzegladajListePracownikow_Click(object sender, RoutedEventArgs e)
         {
-
+            OknoListaPracownikow okno = new OknoListaPracownikow();
+            bool? ret = okno.ShowDialog();
         }
 
         private void ButtonPrzegladajAktualneOferty_Click(object sender, RoutedEventArgs e)

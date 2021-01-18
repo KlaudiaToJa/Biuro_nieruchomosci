@@ -26,13 +26,14 @@ namespace BiuroNieruchomosci
             ListaPracownikow.Add(p);
         }
 
-        public void UsunPracownika(string pesel)
+        public void UsunPracownika(Pracownik p)
         {
             foreach (Pracownik o in ListaPracownikow)
             {
-                if (o.PESEL == pesel)
+                if (o.Equals(p))
                 {
                     ListaPracownikow.Remove(o);
+                    break;
                 }
             }
         }

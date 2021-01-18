@@ -52,7 +52,7 @@ namespace OknoGlowne
             int check = 0;
             if (wzorzec.IsMatch(textBoxPESEL.Text))
             {
-                foreach (Klient k in listViewPracownicy.Items)
+                foreach (Pracownik k in listViewPracownicy.Items)
                 {
                     if (k.PESEL == textBoxPESEL.Text)
                     {
@@ -110,7 +110,26 @@ namespace OknoGlowne
 
         private void buttonUsunPracownika_Click(object sender, RoutedEventArgs e)
         {
+            if (listViewPracownicy.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnego pracownika.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            Pracownik k = (Pracownik)listViewPracownicy.SelectedItem;
 
+            string message = $"Czy na pewno chcesz usunac pracownika {k.Imie} {k.Nazwisko} PESEL: {k.PESEL}?";
+            string title = "Usuwanie pracownika";
+            if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _pracownicy.UsunPracownika(k);
+                _pracownicy.ZapiszXML("listaPracownikow.xml");
+                string m = "Pomyslnie usunieto pracownika.";
+                string t = "Sukces";
+                listViewPracownicy.ItemsSource = new ObservableCollection<Pracownik>(_pracownicy.ListaPracownikow);
+                MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }

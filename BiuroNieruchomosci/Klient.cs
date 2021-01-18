@@ -2,7 +2,7 @@
 namespace BiuroNieruchomosci
 {
     [Serializable]
-    public class Klient : Osoba, IComparable<Klient>
+    public class Klient : Osoba, IComparable<Klient>, IEquatable<Klient>
     {
         public Klient() : base()
         {
@@ -37,6 +37,11 @@ namespace BiuroNieruchomosci
                 return wynik;
             }
             return Imie.CompareTo(other.Imie);
+        }
+
+        public bool Equals(Klient other)
+        {
+            return PESEL.Equals(other.PESEL);
         }
 
         public override string ToString()

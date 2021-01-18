@@ -49,18 +49,16 @@ namespace BiuroNieruchomosci
             ListaKlientow.Add(k);
         }
 
-        public void UsunKlienta(string pesel)
+        public void UsunKlienta(Klient klient)
         {
-            Klient klient = new Klient();
-            foreach (Klient item in _listaKlientow)
+            foreach (Klient k in _listaKlientow)
             {
-                if (item.PESEL.Equals(pesel))
+                if (k.Equals(klient))
                 {
-                    klient = item;
+                    ListaKlientow.Remove(klient);
                     break;
                 }
             }
-            ListaKlientow.Remove(klient);
         }
 
         public bool CzyJestWBazie(string pesel)
