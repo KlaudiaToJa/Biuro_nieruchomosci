@@ -29,23 +29,11 @@ namespace OknoGlowne
         UmowaPosrednictwaSprzedazy _umowa = new UmowaPosrednictwaSprzedazy();
 
         Pracownicy DanePracownikow = new Pracownicy();
-        Klienci DaneKlientow = new Klienci();
         WszystkieNieruchomosci DaneNieruchomosci = new WszystkieNieruchomosci();
 
         public OknoUmowaSprzedazy()
         {
             InitializeComponent();
-
-            if (File.Exists("listaKlientow.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
-            {
-                DaneKlientow = (Klienci)Klienci.OdczytajXML("listaKlientow.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
-            }
-            else
-            {
-                string message = "Nie znaleziono żadnych klientów. Pamiętaj, żeby najpierw ich dodać.";
-                string title = "Brak danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK);
-            }
 
             if (File.Exists("listaPracownikow.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
@@ -69,11 +57,6 @@ namespace OknoGlowne
                 MessageBox.Show(message, title, MessageBoxButton.OK);
             }
 
-            foreach (Klient k in DaneKlientow.ListaKlientow)
-            {
-                ComboBoxKlient.Items.Add(k); // dodawanie elementow listy rozwijanej
-            }
-
             foreach (Pracownik p in DanePracownikow.ListaPracownikow)
             {
                 ComboBoxPracownik.Items.Add(p); // dodawanie elementow listy rozwijanej
@@ -90,19 +73,6 @@ namespace OknoGlowne
             _umowa = u;
         }
 
-        private void ButtonDodajNowegoKlienta_Click(object sender, RoutedEventArgs e)
-        {
-            Klient kl = new Klient();
-            OknoDodajKlienta okno = new OknoDodajKlienta(kl);
-            bool? ret = okno.ShowDialog();
-            if (ret == true)
-            {
-                DaneKlientow.DodajKlienta(kl);
-                DaneKlientow.ZapiszXML("listaKlientow.xml");
-                ComboBoxKlient.Items.Add(kl); // dodawanie elementow listy rozwijanej
-            }
-        }
-
         private void ButtonDodajNowaNieruchomosc_Click(object sender, RoutedEventArgs e)
         {
             WszystkieNieruchomosci listaNieruchomosci = new WszystkieNieruchomosci();
@@ -117,7 +87,6 @@ namespace OknoGlowne
 
             if (ret == true)
             {
-                MessageBox.Show("okejka");
                 listaNieruchomosci.DodajNieruchomosc(n);
                 listaNieruchomosci.ZapiszXML("listaNieruchomosci.xml");
                 ComboBoxNieruchomosc.Items.Add(n);
@@ -166,13 +135,6 @@ namespace OknoGlowne
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 txtBoxDataZakonczeniaUmowy.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
-                return;
-            }
-            else if (ComboBoxKlient.SelectedIndex == -1)
-            {
-                string message = "Nie wybrano żadnego klienta.";
-                string title = "Brak danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             else if (ComboBoxPracownik.SelectedIndex == -1)
@@ -224,10 +186,23 @@ namespace OknoGlowne
             _umowa.DataZakonczenia = dataZakonczenia;
             _umowa.DataZawarcia = dataZawarcia;
 
+            if (DateTime.Compare(dataZakonczenia, dataZawarcia) < 0)
+            {
+                string message = "Data zakonczenia trwania umowy nie moze byc wczesniejsza od daty rozpoczecia.";
+                string title = "Niepoprawna data";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
             string message1 = "Właśnie dodałeś nową umowę!";
             string title1 = "Sukces";
             MessageBox.Show(message1, title1, MessageBoxButton.OK);
+        }
+
+        private void ButtonProwizja_Click(object sender, RoutedEventArgs e)
+        {
+            txtBoxProwizja.Text = "2,00";
         }
     }
 }

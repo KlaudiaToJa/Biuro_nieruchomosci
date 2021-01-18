@@ -120,12 +120,12 @@ public partial class MainWindow : Window
 
         }
 
-       /* private void ButtonDodajOferte_Click(object sender, RoutedEventArgs e)
+        private void ButtonDodajOferte_Click(object sender, RoutedEventArgs e)
         {
             OfertyRazem listaOfert = new OfertyRazem();
             if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
-                listaOfert = OfertyRazem.OdczytajXMLOferty("listaOfert.xml") as OfertyRazem;
+                listaOfert = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
             }
 
             Oferta oferta = new Oferta();
@@ -134,8 +134,8 @@ public partial class MainWindow : Window
             if (ret == true)
             {
                 listaOfert.DodajOferte(oferta); //dodajemy oferte
-                listaOfert.ZapiszXMLOferty("listaOfert.xml");
+                listaOfert.ZapiszXMLOferty("listaOfert.xml"); // zapisujemy nowy plik z taka sama nazwa, wiec sie zastepuje
             }
-        }*/
+        }
     }
 }

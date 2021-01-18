@@ -5,6 +5,7 @@ using System.Xml.Serialization;
 
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class OfertyRazem : IOferuje
     {
         List<Oferta> _listaOfert;
@@ -52,19 +53,6 @@ namespace BiuroNieruchomosci
                 return (OfertyRazem)serializer.Deserialize(reader);
             }
         }
-
-        /*
-        public void ArchiwizujOferte(string idOferty)
-        {
-            foreach (Oferta o in ListaOfert)
-            {
-                if (o.IdOferty == idOferty)
-                {
-                    DodajArchiwum(o);
-                }
-            }
-        }*/
-
 
         public List<Oferta> filtrujImieKlienta(string imie, bool czyAktywna)
         {

@@ -136,7 +136,7 @@ namespace OknoGlowne
             if (dataZawarcia.Year == 1)
             {
                 string message = "Data urodzenia powinna zostać wpisana w formacie dd-MM-yyyy";
-                string title = "Zła forma";
+                string title = "Niepoprawna forma";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 txtBoxDataZawarciaUmowy.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
                 return;
@@ -144,13 +144,21 @@ namespace OknoGlowne
             else if (dataZakonczenia.Year == 1)
             {
                 string message = "Data urodzenia powinna zostać wpisana w formacie dd-MM-yyyy";
-                string title = "Zła forma";
+                string title = "Niepoprawna forma";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 txtBoxDataZakonczeniaUmowy.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
                 return;
             }
             _umowa.DataZakonczenia = dataZakonczenia;
             _umowa.DataZawarcia = dataZawarcia;
+
+            if(DateTime.Compare(dataZakonczenia, dataZawarcia) < 0)
+            {
+                string message = "Data zakonczenia trwania umowy nie moze byc wczesniejsza od daty rozpoczecia.";
+                string title = "Niepoprawna data";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
 
             DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
             string message1 = "Właśnie dodałeś nową umowę!";

@@ -1,6 +1,7 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class UmowaPosrednictwaSprzedazy : Umowa
     {
         Nieruchomosc _nieruchomosc;
@@ -16,9 +17,9 @@ namespace BiuroNieruchomosci
             NumerUmowy = $"{Numer}/S/{DataZawarcia.Year}";
         }
 
-        public UmowaPosrednictwaSprzedazy(Nieruchomosc nieruchomosc):this()
+        public UmowaPosrednictwaSprzedazy(Nieruchomosc nieruchomosc) : this()
         {
-            this._nieruchomosc = nieruchomosc;
+            Nieruchomosc = nieruchomosc;
         }
     }
 }

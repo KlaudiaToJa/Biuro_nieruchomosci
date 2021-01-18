@@ -31,26 +31,13 @@ namespace BiuroNieruchomosci
 
         public override string ToString()
         {
-            return $"{OpiekunKlienta} {Prowizja} {DataZawarcia.ToString("dd-MM-yyyy")} {DataZakonczenia.ToString("dd-MM-yyyy")}";
+            return $"Pracownik: {OpiekunKlienta}, prowizja: {Prowizja}, {DataZawarcia.ToString("dd-MM-yyyy")}-{DataZakonczenia.ToString("dd-MM-yyyy")}";
         }
 
         public Pracownik OpiekunKlienta { get => _opiekunKlienta; set => _opiekunKlienta = value; }
         public double Prowizja { get => _prowizja; set => _prowizja = value; }
         public DateTime DataZawarcia { get => _dataZawarcia; set => _dataZawarcia = value; }
-        public DateTime DataZakonczenia
-        {
-            get => _dataZakonczenia;
-            set
-            {
-                int iledni = (_dataZakonczenia - _dataZawarcia).Days;
-                if (iledni > 0)
-                {
-                    throw new Exception();
-                }
-                _dataZakonczenia = value;
-
-            }
-        }
+        public DateTime DataZakonczenia { get => _dataZakonczenia; set => _dataZakonczenia = value; }
 
         public Klient Klient { get => _klient; set => _klient = value; }
     }

@@ -64,7 +64,6 @@
     <Compile Include="UmowyKupna.cs" />
     <Compile Include="UmowySprzedazy.cs" />
     <Compile Include="WszystkieNieruchomosci.cs" />
-    <Compile Include="Zbiorowosc.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

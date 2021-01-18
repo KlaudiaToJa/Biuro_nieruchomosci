@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OknoGlowne"
         mc:Ignorable="d"
-        Title="OknoDodajOferte" Height="450" Width="800">
+        Title="Dodawanie nowej oferty" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Oferta dotyczy nieruchomosci:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBoxNieruchomosci" HorizontalAlignment="Left" Margin="227,13,0,0" VerticalAlignment="Top" Width="555"/>
+        <Label Content="Opis:" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textBoxOpis" HorizontalAlignment="Left" Height="249" Margin="10,84,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="772"/>
+        <Button Name="ButtonZatwierdz" Content="Zatwierdz" HorizontalAlignment="Left" Margin="272,369,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="ButtonZatwierdz_Click"/>
+        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="434,369,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="ButtonAnuluj_Click"/>
     </Grid>
 </Window>

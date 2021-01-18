@@ -113,7 +113,7 @@ namespace OknoGlowne
                     }
 
                     DialogResult = true; // to co wpisalismy jest okej, dlatego tez wczesniej przypisalismy wszystko do odpowiednich zmiennych
-                    string message = "Właśnie dodałeś nowego klienta!";
+                    string message = "Właśnie dodałeś nowego pracownika!";
                     string title = "Sukces";
                     MessageBox.Show(message, title, MessageBoxButton.OK);
                 }

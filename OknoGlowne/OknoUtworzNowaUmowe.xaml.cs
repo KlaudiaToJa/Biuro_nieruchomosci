@@ -33,13 +33,13 @@ namespace OknoGlowne
         {
             UmowySprzedazy umowy = new UmowySprzedazy();
 
-            if (File.Exists("listaUmowKupna.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            if (File.Exists("listaUmowySprzedazy.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
                 umowy = (UmowySprzedazy)UmowySprzedazy.OdczytajXML("listaUmowySprzedazy.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
             }
 
             UmowaPosrednictwaSprzedazy um = new UmowaPosrednictwaSprzedazy();
-            OknoUmowaSprzedazy okno = new OknoUmowaSprzedazy(); //inicjalizowanie okna
+            OknoUmowaSprzedazy okno = new OknoUmowaSprzedazy(um); //inicjalizowanie okna
             bool? ret = okno.ShowDialog(); //wywołanie okna
 
             if (ret == true)
@@ -53,7 +53,7 @@ namespace OknoGlowne
         {
             UmowyKupna umowy = new UmowyKupna();
 
-            if (File.Exists("listaUmowKupna.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            if (File.Exists("listaUmowyKupna.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
                 umowy = (UmowyKupna)UmowyKupna.OdczytajXML("listaUmowyKupna.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
             }

@@ -1,6 +1,7 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
+    [Serializable]
     public class UmowaPosrednictwaKupna : Umowa
     {
         static int _numer = 0;

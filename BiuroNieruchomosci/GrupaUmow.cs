@@ -32,11 +32,6 @@ namespace BiuroNieruchomosci
             }
         }*/
 
-        /*public void ArchiwizujUmowe (string numerUmowy)
-        {
-
-        }*/
-
         public List<Umowa> UmowyDataZawarcia(string dataSzukana)
         {
             List<Umowa> _szukaneUmowy = new List<Umowa>();
@@ -61,28 +56,6 @@ namespace BiuroNieruchomosci
                 }
             }
             return _umowyPracownika;
-        }
-
-        public void ZapiszXML(string plik)
-        {
-            using (StreamWriter writer = new StreamWriter(plik)) //otwieramy strumien
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(GrupaUmow)); //tworzymy serializator xml
-                serializer.Serialize(writer, this);
-            }
-        }
-
-        public static GrupaUmow OdczytajXML(string plik)
-        {
-            if (!File.Exists(plik))
-            {
-                return null;
-            }
-            using (StreamReader reader = new StreamReader(plik))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(GrupaUmow));
-                return (GrupaUmow)serializer.Deserialize(reader);
-            }
         }
 
         public List<Umowa> ListaUmow { get => _listaUmow; set => _listaUmow = value; }
