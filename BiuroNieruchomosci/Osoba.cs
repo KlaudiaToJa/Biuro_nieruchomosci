@@ -87,7 +87,8 @@ namespace BiuroNieruchomosci
             NumerMieszkania = numermieszkania;
         }
 
-        public override string ToString()
+        /*
+         public override string  ToString()
         {
             TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
 
@@ -102,6 +103,6 @@ namespace BiuroNieruchomosci
             }
             return $"{myTI.ToTitleCase(Imie)} {myTI.ToTitleCase(Nazwisko)} {DataUrodzenia.ToString("dd-MM-yyyy")} {PESEL} {myTI.ToTitleCase(Miejscowosc)} {myTI.ToTitleCase(Ulica)} {NumerDomu}/{NumerMieszkania} {Email} {NrTelefonu}";
 
-        }
+        }*/
     }
 }

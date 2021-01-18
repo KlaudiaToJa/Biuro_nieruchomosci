@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DialogResult.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -109,6 +110,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageBoxButtons.cs" />
     <Compile Include="OknoDodajKlienta.xaml.cs">
       <DependentUpon>OknoDodajKlienta.xaml</DependentUpon>
     </Compile>

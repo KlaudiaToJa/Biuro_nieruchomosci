@@ -51,13 +51,16 @@ namespace BiuroNieruchomosci
 
         public void UsunKlienta(string pesel)
         {
-            foreach (Klient o in ListaKlientow)
+            Klient klient = new Klient();
+            foreach (Klient item in _listaKlientow)
             {
-                if (o.PESEL == pesel)
+                if (item.PESEL.Equals(pesel))
                 {
-                    ListaKlientow.Remove(o);
+                    klient = item;
+                    break;
                 }
             }
+            ListaKlientow.Remove(klient);
         }
 
         public bool CzyJestWBazie(string pesel)
@@ -71,13 +74,12 @@ namespace BiuroNieruchomosci
             }
             return false;
         }
-
         public void WyczyscListe()
         {
             ListaKlientow.Clear();
         }
 
-        public override string ToString()
+        /*public override string ToString()
         {
             StringBuilder s = new StringBuilder();
             foreach(Osoba k in ListaKlientow)
@@ -85,6 +87,6 @@ namespace BiuroNieruchomosci
                 s.AppendLine(k.ToString());
             }
             return s.ToString();
-        }
+        }*/
     }
 }

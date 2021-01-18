@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 using BiuroNieruchomosci;
 
 namespace OknoGlowne
@@ -24,6 +25,8 @@ namespace OknoGlowne
 
 public partial class MainWindow : Window
     {
+        public object MessageBoxButtons { get; private set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -49,8 +52,22 @@ public partial class MainWindow : Window
             bool? ret = okno.ShowDialog();
             if (ret == true)
             {
-                listaKlientow.DodajKlienta(k); //dodajemy klienta
-                listaKlientow.ZapiszXML("listaKlientow.xml");
+                if (listaKlientow.CzyJestWBazie(k.PESEL))
+                {
+                    string message = "Klient o podanym numerze pesel już istnieje. Czy chcesz zamienić jego dane?";
+                    string title = "TakNie";
+                    if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        listaKlientow.UsunKlienta(k.PESEL);
+                        listaKlientow.DodajKlienta(k);
+                        listaKlientow.ZapiszXML("listaKlientow.xml");
+                    }
+                }
+                else
+                {
+                    listaKlientow.DodajKlienta(k); //dodajemy klienta
+                    listaKlientow.ZapiszXML("listaKlientow.xml");
+                }
             }
         }
 

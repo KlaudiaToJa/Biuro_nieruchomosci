@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Equatable.cs" />
     <Compile Include="GrupaUmow.cs" />
     <Compile Include="IOferuje.cs" />
     <Compile Include="Klienci.cs" />

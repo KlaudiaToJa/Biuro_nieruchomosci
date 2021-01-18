@@ -17,7 +17,7 @@
         </Border>
         <Button Name="ButtonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="285,391,0,0" VerticalAlignment="Top" Width="75" Click="ButtonFiltruj_Click"/>
         <ListBox Name="listBoxNieruchomosci" HorizontalAlignment="Left" Height="330" Margin="285,55,0,0" VerticalAlignment="Top" Width="495"/>
-        <Button Name="ButtonSzczegoly" Content="Szczegóły" HorizontalAlignment="Left" Margin="705,391,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="ButtonSzczegoly" Content="Szczegóły" HorizontalAlignment="Left" Margin="705,391,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSzczegoly_Click"/>
         <Label Content="Nieruchomości" HorizontalAlignment="Left" Margin="344,2,0,0" VerticalAlignment="Top" FontSize="17"/>
         <Label Content="Miejscowosc" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="81" Height="29"/>
         <TextBox Name="textBoxCenaOd" HorizontalAlignment="Left" Height="23" Margin="117,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>

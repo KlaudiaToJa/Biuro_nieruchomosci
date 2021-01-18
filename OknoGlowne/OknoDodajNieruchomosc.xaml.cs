@@ -24,7 +24,7 @@ namespace OknoGlowne
     public partial class OknoDodajNieruchomosc : Window
     {
         Nieruchomosc _nieruchomosc = new Nieruchomosc();
-        WszystkieNieruchomosci _caloscNieruchomosci;
+        //WszystkieNieruchomosci _caloscNieruchomosci;
 
         Klienci DaneKlientow = new Klienci();
 

@@ -11,6 +11,7 @@ namespace BiuroNieruchomosci
         List<Nieruchomosc> listaNieruchomosci;
 
         public List<Nieruchomosc> ListaNieruchomosci { get => listaNieruchomosci; set => listaNieruchomosci = value; }
+        public Nieruchomosc SelectedItem { get; set; }
 
         public WszystkieNieruchomosci()
         {

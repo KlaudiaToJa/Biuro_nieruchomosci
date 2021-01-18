@@ -192,7 +192,6 @@ namespace OknoGlowne
             ComboBoxStandard.Text = "";
             ComboBoxRodzajKuchni.Text = "";
             textBoxIloscPokoi.Text = "";
-            // nie wiem jak wyczyścić checkboxa
         }
 
         private void ButtonSortuj_Click(object sender, RoutedEventArgs e)
@@ -206,6 +205,16 @@ namespace OknoGlowne
                 _caloscNieruchomosci.SortujPoCenaMalejaco();
             }
             listBoxNieruchomosci.ItemsSource = new ObservableCollection<Nieruchomosc>(_caloscNieruchomosci.ListaNieruchomosci);
+        }
+
+        private void ButtonSzczegoly_Click(object sender, RoutedEventArgs e)
+        {
+           Nieruchomosc n = listBoxNieruchomosci.SelectedItem as Nieruchomosc;
+           
+           OknoSzczegolyNieruchomosci okno = new OknoSzczegolyNieruchomosci(n);
+            if ((bool)okno.ShowDialog())
+                MessageBox.Show("Udalo sie");
+
         }
     }
 }
