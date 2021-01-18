@@ -29,6 +29,7 @@
         <TextBox Name="textBoxPESEL" HorizontalAlignment="Left" Height="23" Margin="59,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Name="buttonSortujNazwiskami"  Content="Sortuj nazwiskami" HorizontalAlignment="Left" Margin="812,296,0,0" VerticalAlignment="Top" Width="120" Height="41" RenderTransformOrigin="1.875,0.671" Click="buttonSortujNazwiskami_Click"/>
         <Button Name="buttonSortujMiastami" Content="Sortuj miastami" HorizontalAlignment="Left" Margin="812,343,0,0" VerticalAlignment="Top" Width="120" Height="41" Click="buttonSortujMiastami_Click"/>
+        <Button Name="buttonUsunKlienta" Content="Usun klienta" HorizontalAlignment="Left" Margin="659,296,0,0" VerticalAlignment="Top" Width="120" Height="41" Click="buttonUsunKlienta_Click"/>
 
     </Grid>
 </Window>

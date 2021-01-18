@@ -107,5 +107,29 @@ namespace OknoGlowne
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void buttonUsunKlienta_Click(object sender, RoutedEventArgs e)
+        {
+            if(listViewKlienci.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnego klienta.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            Klient k = (Klient)listViewKlienci.SelectedItem;
+
+            string message = $"Czy na pewno chcesz usunac klienta {k.Imie} {k.Nazwisko} PESEL: {k.PESEL}?";
+            string title = "Usuwanie klienta";
+            if(MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _klienci.UsunKlienta(k.PESEL);
+                _klienci.ZapiszXML("listaKlientow.xml");
+                string m = "Pomyslnie usunieto klienta.";
+                string t = "Sukces";
+                listViewKlienci.ItemsSource = new ObservableCollection<Klient>(_klienci.ListaKlientow);
+                MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
     }
 }
