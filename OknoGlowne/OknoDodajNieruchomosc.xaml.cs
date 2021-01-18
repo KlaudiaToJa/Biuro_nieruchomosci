@@ -24,6 +24,8 @@ namespace OknoGlowne
     public partial class OknoDodajNieruchomosc : Window
     {
         Nieruchomosc _nieruchomosc = new Nieruchomosc();
+        WszystkieNieruchomosci _caloscNieruchomosci;
+
         Klienci DaneKlientow = new Klienci();
 
         public OknoDodajNieruchomosc()
@@ -77,6 +79,7 @@ namespace OknoGlowne
 
         private void ButtonZatwierdz_Click(object sender, RoutedEventArgs e)
         {
+
             // trzeba dodac sprawdzanie czy zadne z okienek nie jest puste, a jesli puste to ustawic na null (ale trzeba
             // w miare logicznie, zeby nie dalo sie na przyklad dodac bez ceny albo miejscowosci bo szanujmy sie xD
             _nieruchomosc.Wlasciciel = (Klient)ComboBoxWlasciciel.SelectedItem;
