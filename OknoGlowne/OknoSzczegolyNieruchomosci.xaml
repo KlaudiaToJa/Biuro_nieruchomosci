@@ -30,7 +30,7 @@
         <Label x:Name ="LblWysokoscOplat" Content="Wysokość opłat" HorizontalAlignment="Left" Height="26" Margin="11.4,271,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <TextBox x:Name ="TextBoxTypNieruchomosci" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblTypNieruchomosci" Content="Typ nieruchomości" HorizontalAlignment="Left" Height="26" Margin="11.4,302,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxRodzajNieruchomosci" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+        <TextBox x:Name ="TextBoxRodzajNieruchomosci" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
         <Label x:Name ="LblRodzajNieruchomosci" Content="Rodzaj nieruchomości" HorizontalAlignment="Left" Height="26" Margin="11.4,364,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <TextBox x:Name ="TextBoxTypTransakcji" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblTypTransakcji" Content="Typ transakcji" HorizontalAlignment="Left" Height="26" Margin="11.4,338,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
