@@ -103,6 +103,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OknoSzczegolyOfert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OknoUmowaKupna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,6 +147,9 @@
     </Compile>
     <Compile Include="OknoOferty.xaml.cs">
       <DependentUpon>OknoOferty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OknoSzczegolyOfert.xaml.cs">
+      <DependentUpon>OknoSzczegolyOfert.xaml</DependentUpon>
     </Compile>
     <Compile Include="OknoUmowaKupna.xaml.cs">
       <DependentUpon>OknoUmowaKupna.xaml</DependentUpon>
