@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OknoGlowne"
         mc:Ignorable="d"
-        Title="Przegladanie ofert" Height="450" Width="1104.959">
-    <Grid>
+        Title="Przegladanie ofert" Height="450" Width="1173.477">
+    <Grid Margin="0,0,70,0">
         <Label Content="Oferty" HorizontalAlignment="Left" Margin="660,10,0,0" VerticalAlignment="Top" Width="79" Height="36" FontSize="17"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="362" Margin="10,10,0,0" VerticalAlignment="Top" Width="280">
             <Label Content=""/>
@@ -25,7 +25,7 @@
         <TextBox Name="TextBoxData" HorizontalAlignment="Left" Height="23" Margin="152,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <CheckBox Name="CheckBoxArchiwum" Content="Wyswietl Archiwum" HorizontalAlignment="Left" Margin="158,344,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBoxImieKlienta" HorizontalAlignment="Left" Height="23" Margin="152,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListView x:Name="ListViewOferty" HorizontalAlignment="Left" Height="317" Margin="312,55,0,0" VerticalAlignment="Top" Width="753">
+        <ListView x:Name="ListViewOferty" HorizontalAlignment="Left" Height="317" Margin="312,55,0,0" VerticalAlignment="Top" Width="810">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Wlasciciel.Imie}" Header="Imię klienta" Width="100"/>
@@ -35,6 +35,7 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=DataWystawienia}" Header="Data" Width="70"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Cena}" Header="Cena" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Miejscowosc}" Header="Miejscowość" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.IdNieruchomosci}" Header="Ïd Nieruchomosci" Width="120"/>
                 </GridView>
             </ListView.View>
         </ListView>

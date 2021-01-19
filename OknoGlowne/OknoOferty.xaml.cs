@@ -90,7 +90,7 @@ namespace OknoGlowne
 
             if (TextBoxNazwiskoKlienta.Text != "")
             {
-                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text);
+                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxNazwiskoKlienta.Text);
             }
 
             if (TextBoxImieOpiekuna.Text != "")
@@ -98,9 +98,9 @@ namespace OknoGlowne
                 _nowaLista.ListaOfert = _nowaLista.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text);
             }
 
-            if (TextBoxNazwiskoKlienta.Text != "")
+            if (TextBoxNazwiskoOpiekuna.Text != "")
             {
-                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text);
+                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoOpiekuna(TextBoxNazwiskoOpiekuna.Text);
             }
 
             if (TextBoxData.Text != "")

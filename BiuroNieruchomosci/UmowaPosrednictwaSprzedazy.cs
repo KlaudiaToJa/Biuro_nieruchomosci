@@ -1,6 +1,9 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
+    /// <summary>
+    /// Klasa UmowaPosrednictwaSprzedazy dziedziczy po klasie Umowa oraz komponuje obiekty typu Nieruchomosc.
+    /// </summary>
     [Serializable]
     public class UmowaPosrednictwaSprzedazy : Umowa
     {

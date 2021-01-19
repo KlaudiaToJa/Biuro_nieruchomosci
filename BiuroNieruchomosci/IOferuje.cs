@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BiuroNieruchomosci
-{
+{/// <summary>
+/// Interfejs definiuje tzw. "kontrakt". Wszystkie klasy, które implementują ten kontrakt, 
+/// muszą zapewnić implementację elementów członkowskich zdefiniowanych w interfejsie. 
+/// Ten interfejs zawiera metody, ktore musza zostac zaimplementowane w klasie OfertyRazem.
+/// </summary>
     interface IOferuje
     {
         void DodajOferte(Oferta o);
