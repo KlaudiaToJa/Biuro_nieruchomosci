@@ -41,6 +41,8 @@ namespace BiuroNieruchomosci
             Opis = opis;
             Umowa = umowa;
             _idOferty = $"{Umowa.NumerUmowy}/O{Numer}";
+
+
         }
         /// <summary>
         /// Archiwizowanie oferty poprzed przypisanie polu CzyAktywna wartosci false
