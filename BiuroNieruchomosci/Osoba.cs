@@ -49,12 +49,12 @@ namespace BiuroNieruchomosci
             get => _nrTelefonu;
             set
             {
-                Regex wzorzec = new Regex(@"^[0-9]{9}$");
+                Regex wzorzec = new Regex(@"^\d{9}$");
                 if (wzorzec.IsMatch(value))
                 {
                     _nrTelefonu = value;
                 }
-                else throw new FormatException();
+                //else throw new FormatException();
             }
         }
         public string PESEL { get => _PESEL; set => _PESEL = value; }

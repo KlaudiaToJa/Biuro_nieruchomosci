@@ -67,10 +67,11 @@ namespace OknoGlowne
                     {
                         string messagedom = "Nie wpisano miejscowosci. Czy chcesz zapisac pracownika bez adresu i danych kontaktowych?";
                         string titledom = "Brak danych";
-                        if (MessageBox.Show(messagedom, titledom, MessageBoxButton.YesNo) == MessageBoxResult.No)
+                        if (MessageBox.Show(messagedom, titledom, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                         {
-                            return;
+                            DialogResult = true;
                         }
+                        return; // bez return wyswietla messagebox o blednych wpisaniu pozostalych danych
                     }
 
                     if (txtBoxMiejscowosc.Text != "" && txtBoxNumerDomu.Text == "")
@@ -116,7 +117,7 @@ namespace OknoGlowne
                             return;
                         }
 
-                        Regex wzorzec = new Regex(@"^[0-9]{9}$");
+                        Regex wzorzec = new Regex(@"^\d{9}$");
                         if (wzorzec.IsMatch(txtBoxNumerTelefonu.Text))
                         {
                             _pracownik.NrTelefonu = txtBoxNumerTelefonu.Text;

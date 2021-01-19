@@ -8,7 +8,7 @@ namespace BiuroNieruchomosci
     [Serializable]
     public class OfertyRazem : IOferuje
     {
-        List<Oferta> _listaOfert;
+        List<Oferta> _listaOfert = new List<Oferta>();
         public List<Oferta> ListaOfert { get => _listaOfert; set => _listaOfert = value; }
 
         public OfertyRazem()

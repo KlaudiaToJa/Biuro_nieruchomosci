@@ -120,11 +120,6 @@ public partial class MainWindow : Window
             bool? ret = okno.ShowDialog();
         }
 
-        private void ButtonWyswietlArchiwum_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ButtonPrzegladajListeKlientow_Click(object sender, RoutedEventArgs e)
         {
             OknoListaKlientow okno = new OknoListaKlientow();
@@ -136,13 +131,6 @@ public partial class MainWindow : Window
         {
             OknoListaPracownikow okno = new OknoListaPracownikow();
             bool? ret = okno.ShowDialog();
-        }
-
-        private void ButtonPrzegladajAktualneOferty_Click(object sender, RoutedEventArgs e)
-        {
-            OknoOferty okno = new OknoOferty();
-            bool? ret = okno.ShowDialog();
-
         }
 
         private void ButtonDodajOferte_Click(object sender, RoutedEventArgs e)
@@ -161,6 +149,12 @@ public partial class MainWindow : Window
                 listaOfert.DodajOferte(oferta); //dodajemy oferte
                 listaOfert.ZapiszXMLOferty("listaOfert.xml"); // zapisujemy nowy plik z taka sama nazwa, wiec sie zastepuje
             }
+        }
+
+        private void ButtonWyswietlOferty_Click(object sender, RoutedEventArgs e)
+        {
+            OknoOferty okno = new OknoOferty();
+            bool? ret = okno.ShowDialog();
         }
     }
 }

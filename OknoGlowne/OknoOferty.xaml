@@ -28,13 +28,13 @@
         <ListView x:Name="ListViewOferty" HorizontalAlignment="Left" Height="285" Margin="312,87,0,0" VerticalAlignment="Top" Width="753">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Klient.Imie}" Header="Imię klienta" Width="90"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Klient.Nazwisko}" Header="Nazwisko klienta" Width="90"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Imie}" Header="Imię opiekuna" Width="90"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Nazwisko}" Header="Nazwisko opiekuna" Width="110"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Oferta.DataWystawienia}" Header="Data" Width="70"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=UmowaPosrednictwaSprzedazy.Nieruchomosc}" Header="Nieruchomość" Width="90"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Nieruchomosc.Miejscowosc}" Header="Miejscowość" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Wlasciciel.Imie}" Header="Imię klienta" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Wlasciciel.Nazwisko}" Header="Nazwisko klienta" Width="110"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.OpiekunKlienta.Imie}" Header="Imię opiekuna" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.OpiekunKlienta.Nazwisko}" Header="Nazwisko opiekuna" Width="110"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DataWystawienia}" Header="Data" Width="70"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Cena}" Header="Cena" Width="90"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Miejscowosc}" Header="Miejscowość" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>

@@ -9,8 +9,8 @@ namespace BiuroNieruchomosci
         static int _numer = 0;
         string _idOferty;
         string _opis;
-       public DateTime _dataWystawienia;
-       public UmowaPosrednictwaSprzedazy _umowa;
+        public DateTime _dataWystawienia;
+        public UmowaPosrednictwaSprzedazy _umowa;
         public bool czyAktywna;
 
         public static int Numer { get => _numer; set => _numer = value; }
@@ -31,19 +31,19 @@ namespace BiuroNieruchomosci
 
         public Oferta(string opis, UmowaPosrednictwaSprzedazy umowa)
         {
-            _opis = opis;
-            _umowa = umowa;
+            Opis = opis;
+            Umowa = umowa;
             _idOferty = $"{Umowa.NumerUmowy}/O{Numer}";
         }
 
         public void Archiwizuj()
         {
-            this.czyAktywna = false;
+            CzyAktywna = false;
         }
 
         public override string ToString()
         {
-            return $"ID: {IdOferty} Data wystawienia: {_dataWystawienia.ToString("dd-MM-yyyy")} Opis: {this._opis} ";
+            return $"ID: {IdOferty} Data wystawienia: {DataWystawienia.ToString("dd-MM-yyyy")} Opis: {Opis} ";
         }
     }
 }

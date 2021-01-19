@@ -34,7 +34,7 @@ namespace OknoGlowne
 
             if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
-                _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaNieruchomosci.xml");
+                _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
             }
             else
             {
@@ -43,9 +43,8 @@ namespace OknoGlowne
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            if (_wszystkieOferty is object)
+            if (_wszystkieOferty.ListaOfert is object)
             {
-                
                 ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
             }
         }
@@ -56,7 +55,7 @@ namespace OknoGlowne
 
             if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
-                _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaNieruchomosci.xml");
+                _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
             }
             else
             {
@@ -71,8 +70,6 @@ namespace OknoGlowne
 
             if (CheckBoxArchiwum.IsChecked == false)
             {
-
-                
                 if (TextBoxImieKlienta.Text != "")
                 {
                     //_nowaLista.ListaOfert = _nowaLista.filtrujImieKlienta(TextBoxImieKlienta.Text, true);
@@ -108,7 +105,6 @@ namespace OknoGlowne
                     ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
             }
-
            else
             {
                 if (TextBoxImieKlienta.Text != "")
@@ -146,9 +142,8 @@ namespace OknoGlowne
                     _wszystkieOferty.filtrujDate(TextBoxData.Text, false);
                     ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 }
-
             }
-
+            ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
         }
     }
 }
