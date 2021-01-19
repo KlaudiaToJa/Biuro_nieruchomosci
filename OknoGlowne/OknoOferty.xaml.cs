@@ -110,5 +110,30 @@ namespace OknoGlowne
 
             ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_nowaLista.ListaOfert);
         }
+
+        private void ButtonUsungOferte_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListViewOferty.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnej oferty.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            Oferta k = (Oferta)ListViewOferty.SelectedItem;
+            string message = $"Czy na pewno chcesz usunac oferte {k.IdOferty} data wystawienia: {k._dataWystawienia.ToString("dd-MM-yyyy")}?";
+            string title = "Usuwanie oferty";
+
+            if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _wszystkieOferty.UsunOferte(k.IdOferty);
+                _wszystkieOferty.ZapiszXMLOferty("listaOfert.xml");
+                string m = "Pomyslnie usunieto oferte.";
+                string t = "Sukces";
+                ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
+                MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
     }
 }

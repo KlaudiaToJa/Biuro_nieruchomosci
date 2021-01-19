@@ -218,9 +218,32 @@ namespace OknoGlowne
            Nieruchomosc n = listBoxNieruchomosci.SelectedItem as Nieruchomosc;
            
            OknoSzczegolyNieruchomosci okno = new OknoSzczegolyNieruchomosci(n);
-            if ((bool)okno.ShowDialog())
-                MessageBox.Show("Udalo sie");
+           okno.ShowDialog();
+        }
 
+        private void ButtonUsunNieruchomosc_Click(object sender, RoutedEventArgs e)
+        {
+            if (listBoxNieruchomosci.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnej nieruchomosci.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            Nieruchomosc k = (Nieruchomosc)listBoxNieruchomosci.SelectedItem;
+            string message = $"Czy na pewno chcesz usunac nieruchomosc {k.IdNieruchomosci} {k.Miejscowosc} cena: {k.Cena:C}?";
+            string title = "Usuwanie nieruchomosci";
+
+            if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _caloscNieruchomosci.UsunNieruchomosc(k.IdNieruchomosci);
+                _caloscNieruchomosci.ZapiszXML("listaNieruchomosci.xml");
+                string m = "Pomyslnie usunieto nieruchomosc.";
+                string t = "Sukces";
+                listBoxNieruchomosci.ItemsSource = new ObservableCollection<Nieruchomosc>(_caloscNieruchomosci.ListaNieruchomosci);
+                MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }

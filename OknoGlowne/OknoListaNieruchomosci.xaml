@@ -44,6 +44,7 @@
         <CheckBox Name="CheckBoxParking" Content="Parking" HorizontalAlignment="Left" Height="24" Margin="17,385,0,0" VerticalAlignment="Top" Width="80"/>
         <CheckBox Name="CheckBoxUmeblowane" Content="Umeblowane" HorizontalAlignment="Left" Height="24" Margin="97,361,0,0" VerticalAlignment="Top" Width="94"/>
         <Button x:Name="ButtonWyczyscFiltry" Content="Wyczyść filtry" HorizontalAlignment="Left" Margin="10,414,0,0" VerticalAlignment="Top" Width="75" Click="ButtonWyczyscFiltry_Click"/>
+        <Button Name="ButtonUsunNieruchomosc" Content="Usun nieruchomosc" HorizontalAlignment="Left" Margin="569,414,0,0" VerticalAlignment="Top" Width="121" Click="ButtonUsunNieruchomosc_Click"/>
 
     </Grid>
 </Window>

@@ -6,12 +6,12 @@ namespace BiuroNieruchomosci
     [Serializable]
     public class Oferta
     {
-        static int _numer = 0;
         string _idOferty;
         string _opis;
         public DateTime _dataWystawienia;
         public UmowaPosrednictwaSprzedazy _umowa;
         public bool czyAktywna;
+        private static int _numer;
 
         public static int Numer { get => _numer; set => _numer = value; }
         public string IdOferty { get => _idOferty; }
@@ -20,13 +20,17 @@ namespace BiuroNieruchomosci
         public UmowaPosrednictwaSprzedazy Umowa { get => _umowa; set => _umowa = value; }
         public bool CzyAktywna { get => czyAktywna; set => czyAktywna = value; }
 
+        static Oferta()
+        {
+            Numer = 0;
+        }
+
         public Oferta()
         {
             Opis = string.Empty;
             DataWystawienia = DateTime.Now;
-            Numer++;
-            this.czyAktywna = true;
-
+            ++Numer;
+            CzyAktywna = true;
         }
 
         public Oferta(string opis, UmowaPosrednictwaSprzedazy umowa)
