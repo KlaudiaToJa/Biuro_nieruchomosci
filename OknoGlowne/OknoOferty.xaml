@@ -16,7 +16,7 @@
 
         <TextBox Name="TextBoxNazwiskoKlienta" HorizontalAlignment="Left" Height="23" Margin="152,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
-        <Button Name="ButtonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="196,377,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button Name="ButtonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="196,377,0,0" VerticalAlignment="Top" Width="76" Click="ButtonFiltruj_Click"/>
         <Label Name="Label" Content="Imię opiekuna" HorizontalAlignment="Left" Margin="16,83,0,0" VerticalAlignment="Top"/>
         <TextBox Name="TextBoxImieOpiekuna" HorizontalAlignment="Left" Height="23" Margin="152,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Nazwisko opiekuna" HorizontalAlignment="Left" Margin="16,114,0,0" VerticalAlignment="Top"/>

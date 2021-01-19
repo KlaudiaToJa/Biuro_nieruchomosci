@@ -66,9 +66,8 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych nieruchomosci. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
             }
-            
+
             //otwiera wszystkie ify po kolei, zatem lista nieruchomosci bedzie sie aktualizowac z kazda kolejna :)
             if (textBoxMiejscowosc.Text != "")
             {
@@ -171,8 +170,8 @@ namespace OknoGlowne
             {
                 _nowaLista.ListaNieruchomosci = _nowaLista.filtrujUmeblowane();
             }
-            //po tych wszystkich ifach zamieniam widoczna liste w boxie na nowa:
 
+            //po tych wszystkich ifach zamieniam widoczna liste w boxie na nowa:
             listBoxNieruchomosci.ItemsSource = new ObservableCollection<Nieruchomosc>(_nowaLista.ListaNieruchomosci);
         }
 

@@ -54,12 +54,12 @@ namespace BiuroNieruchomosci
             }
         }
 
-        public List<Oferta> filtrujImieKlienta(string imie, bool czyAktywna)
+        public List<Oferta> filtrujImieKlienta(string imie)
         {
             List<Oferta> wyniki = new List<Oferta>();
-            foreach(Oferta oferta in this._listaOfert)
+            foreach(Oferta oferta in ListaOfert)
             {
-                if(oferta.Umowa.Klient.Imie.ToUpper() == imie.ToUpper()  && oferta.CzyAktywna == czyAktywna)
+                if(oferta.Umowa.Klient.Imie.ToUpper() == imie.ToUpper())
                 {
                     wyniki.Add(oferta);
                     
@@ -68,13 +68,12 @@ namespace BiuroNieruchomosci
             return wyniki;
         }
         
-
-        public List<Oferta> filtrujNazwiskoKlienta(string nazwisko, bool czyAktywna)
+        public List<Oferta> filtrujNazwiskoKlienta(string nazwisko)
         {
             List<Oferta> wyniki = new List<Oferta>();
-            foreach(Oferta oferta in this._listaOfert)
+            foreach(Oferta oferta in ListaOfert)
             {
-                if(oferta.Umowa.Klient.Nazwisko.ToUpper() == nazwisko.ToUpper() && oferta.CzyAktywna == czyAktywna)
+                if(oferta.Umowa.Klient.Nazwisko.ToUpper() == nazwisko.ToUpper())
                 {
                     wyniki.Add(oferta);
                 }
@@ -82,31 +81,15 @@ namespace BiuroNieruchomosci
             return wyniki;
         }
 
-        public List<Oferta> filtrujDate(string data, bool czyAktywna)
+        public List<Oferta> filtrujDate(string data)
         {
             
             List<Oferta> wyniki = new List<Oferta>();
             DateTime dataFiltr;
             DateTime.TryParseExact(data, new[] { "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out dataFiltr);
-            foreach (Oferta oferta in this._listaOfert)
+            foreach (Oferta oferta in ListaOfert)
             {
-                if ((oferta.Umowa.DataZawarcia.Year == dataFiltr.Year && oferta.Umowa.DataZawarcia.Month == dataFiltr.Month || oferta.Umowa.DataZawarcia == dataFiltr) && oferta.CzyAktywna == czyAktywna)
-                {
-                    wyniki.Add(oferta);
-                }
-            }
-
-
-            return wyniki;
-        }
-
-
-        public List<Oferta> filtrujImieOpiekuna(string imie, bool czyAktywna)
-        {
-            List<Oferta> wyniki = new List<Oferta>();
-            foreach (Oferta oferta in this._listaOfert)
-            {
-                if (oferta.Umowa.OpiekunKlienta.Imie.ToUpper() == imie.ToUpper() && oferta.CzyAktywna == czyAktywna)
+                if ((oferta.Umowa.DataZawarcia.Year == dataFiltr.Year && oferta.Umowa.DataZawarcia.Month == dataFiltr.Month || oferta.Umowa.DataZawarcia == dataFiltr))
                 {
                     wyniki.Add(oferta);
                 }
@@ -114,12 +97,25 @@ namespace BiuroNieruchomosci
             return wyniki;
         }
 
-        public List<Oferta> filtrujNazwiskoOpiekuna(string nazwisko, bool czyAktywna)
+        public List<Oferta> filtrujImieOpiekuna(string imie)
         {
             List<Oferta> wyniki = new List<Oferta>();
-            foreach (Oferta oferta in this._listaOfert)
+            foreach (Oferta oferta in ListaOfert)
             {
-                if (oferta.Umowa.OpiekunKlienta.Nazwisko.ToUpper() == nazwisko.ToUpper() && oferta.CzyAktywna == czyAktywna)
+                if (oferta.Umowa.OpiekunKlienta.Imie.ToUpper() == imie.ToUpper())
+                {
+                    wyniki.Add(oferta);
+                }
+            }
+            return wyniki;
+        }
+
+        public List<Oferta> filtrujNazwiskoOpiekuna(string nazwisko)
+        {
+            List<Oferta> wyniki = new List<Oferta>();
+            foreach (Oferta oferta in ListaOfert)
+            {
+                if (oferta.Umowa.OpiekunKlienta.Nazwisko.ToUpper() == nazwisko.ToUpper())
                 {
                     wyniki.Add(oferta);
                 }
@@ -130,11 +126,13 @@ namespace BiuroNieruchomosci
          public List<Oferta> PrzegladajOferty(bool czyAktywna)
         {
             List<Oferta> wyniki = new List<Oferta>();
-            foreach(Oferta oferta in this._listaOfert)
-                if(oferta.CzyAktywna == czyAktywna)
+            foreach (Oferta oferta in ListaOfert)
+            {
+                if (oferta.CzyAktywna == czyAktywna)
                 {
                     wyniki.Add(oferta);
                 }
+            }
             return wyniki;
         }
     }

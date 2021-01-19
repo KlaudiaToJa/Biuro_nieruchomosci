@@ -11,15 +11,15 @@ namespace BiuroNieruchomosci
         void DodajOferte(Oferta o);
         void UsunOferte(string idOferty);
 
-        List<Oferta> filtrujImieKlienta(string imie, bool czyAktywna);
+        List<Oferta> filtrujImieKlienta(string imie);
 
-        List<Oferta> filtrujNazwiskoKlienta(string nazwisko, bool czyAktywna);
+        List<Oferta> filtrujNazwiskoKlienta(string nazwisko);
 
-        List<Oferta> filtrujDate(string data, bool czyAktywna);
+        List<Oferta> filtrujDate(string data);
 
-        List<Oferta> filtrujImieOpiekuna(string imie, bool czyAktywna);
+        List<Oferta> filtrujImieOpiekuna(string imie);
 
-        List<Oferta> filtrujNazwiskoOpiekuna(string nazwisko, bool czyAktywna);
+        List<Oferta> filtrujNazwiskoOpiekuna(string nazwisko);
 
         List<Oferta> PrzegladajOferty(bool czyAktywna);
     }
