@@ -15,7 +15,7 @@ Powyższa aplikacja została stworzona w celu obsługi biura nieruchomości.
 * Dodawanie oraz usuwanie nieruchomości z bazy wraz z jej specyfikacjami 
 * Dodawanie oraz usuwanie pracowników z bazy
 * Dodawanie oferty wraz z jej opisem
-* Wyszukiwanie nieruchomości w bazie na podstawie wybranych przez użytkownika filtrów
+* Wyszukiwanie nieruchomości w bazie na podstawie wybranych przez użytkownika filtrów. Mozliwosc wyswietlenia szczegolow danej nieruchomosci.
 * Wyszukiwanie zarówno aktywnych jak i zarchiwizowanych ofert w bazie na podstawie wybranych przez użytkownika filtrów
 * Wyszukiwanie pracowników w bazie wraz z opcjami sortowania po nazwisku lub po miejscowości
 * Tworzenie umowy pośrednictwa sprzedaży oraz umowy pośrednictwa kupna wraz z możliwością ustawienia prowizji oraz przypisania klienta jak i opiekuna klienta (pracownika) 
