@@ -220,6 +220,17 @@ namespace BiuroNieruchomosci
             }
             return wyniki;
         }
+
+
+
+        /// <summary>
+        /// Sortuje alfabetycznie miejscowosci za pomoca Comparison: (x, y) => x.Umowa.Nieruchomosc.Miejscowosc.CompareTo(y.Miejscowosc))
+        /// </summary>
+        public void SortujMiejscowosciami()
+        {
+            ListaOfert.Sort((x, y) => x.Umowa.Nieruchomosc.Miejscowosc.CompareTo(y.Umowa.Nieruchomosc.Miejscowosc));
+           
+        }
     }
 }
 

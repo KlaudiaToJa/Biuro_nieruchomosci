@@ -35,11 +35,12 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=DataWystawienia}" Header="Data" Width="70"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Cena}" Header="Cena" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Miejscowosc}" Header="Miejscowość" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.IdNieruchomosci}" Header="Ïd Nieruchomosci" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.IdNieruchomosci}" Header="Id Nieruchomosci" Width="137"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Name="ButtonUsungOferte" Content="Usun oferte" HorizontalAlignment="Left" Margin="990,377,0,0" VerticalAlignment="Top" Width="75" Click="ButtonUsungOferte_Click"/>
+        <Button Name="ButtonUsungOferte" Content="Usun oferte" HorizontalAlignment="Left" Margin="963,372,0,0" VerticalAlignment="Top" Width="132" Click="ButtonUsungOferte_Click" Height="32"/>
+        <Button Content="Sortuj miastami" HorizontalAlignment="Left" Margin="818,372,0,0" VerticalAlignment="Top" Width="132" Click="buttonSortujMiastami_Click" Height="32"/>
 
     </Grid>
 </Window>
