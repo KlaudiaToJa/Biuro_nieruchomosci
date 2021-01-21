@@ -1,8 +1,8 @@
-# Biuro_nieruchomosci - instrukcja użytkownika
+# Biuro_nieruchomosci - instrukcja użytkownika 
 
 
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
-W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami.
+W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami. Plik **ContentsMerged.css** służy do modyfikowania stylu dokumentacji w przeglądarce.
 
 
 ## Informacje na temat aplikacji
@@ -19,9 +19,16 @@ Powyższa aplikacja została stworzona w celu obsługi biura nieruchomości.
 * Wyszukiwanie zarówno aktywnych jak i zarchiwizowanych ofert w bazie na podstawie wybranych przez użytkownika filtrów
 * Wyszukiwanie pracowników w bazie wraz z opcjami sortowania po nazwisku lub po miejscowości
 * Tworzenie umowy pośrednictwa sprzedaży oraz umowy pośrednictwa kupna wraz z możliwością ustawienia prowizji oraz przypisania klienta jak i opiekuna klienta (pracownika) 
+* Ustalanie prowizji od danej umowy dla biura nieruchomości.
 
 
 ## Korzystanie z aplikacji
+
+Po otwarciu aplikacji wyświetla się interfejs użytkownika, za pomocą którego dokonać można wszystkich wspomnianych powyżej operacji. Należy pamietać, by na początku wprowadzić do bazy dane klienta, pracownika oraz nieruchomości, ponieważ funkcjonalności takie jak tworzenie ofert czy umów opierają się właśnie na tych trzech podstawowych fundamentach modelu. 
+Aplikacja została zaprojektowana w sposób intuicyjny, z troską o zapewnienie wygodnego produktu do obsługi podstawowej działalności biura nieruchomości
+
+
+# Biuro_nieruchomosci - raport 
 
 
 
