@@ -4,6 +4,22 @@
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
 W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami. Plik **ContentsMerged.css** służy do modyfikowania stylu dokumentacji w przeglądarce.
 
+## Struktura projektu
+
+Poniżej przedstawiony został diagram UML Biura_nieruchomości. Klasy oznaczone kolorem niebieskim są klasami abstrakcyjnymi. 
+
+Model zaprojektowany został w myśl zasad OOP, opierając się na mechanizmach kompozycji, dziedziczenia i agregacji. Ponadto  zaimplementowane zostały również interfejsy, takie jak **IOferuje**, a także **IComparable**, **IEquatable**.
+
+
+Wśród innych zasad Object Oriented Programming, które stanowiły podstawę tworzenia diagramu, można wymienić:
+
+* hermetyzacja
+* abstrakcja
+* polimorfizm
+* dziedziczenie
+* Liskov substitution principle (klasa dziedzicząca pwoinna być dobrym odpowiednikiem klasy bazowej)
+* KISS
+
 
 ![alt text](https://github.com/KlaudiaToJa/Biuro_nieruchomosci//blob/master/diagram_uml.jpg?raw=true)
 
