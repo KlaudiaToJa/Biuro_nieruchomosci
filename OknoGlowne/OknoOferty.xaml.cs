@@ -31,10 +31,10 @@ namespace OknoGlowne
         {
             InitializeComponent();
 
-
             if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
                 _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
+                _nowaLista = _wszystkieOferty;
             }
             else
             {
@@ -110,6 +110,7 @@ namespace OknoGlowne
 
             ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_nowaLista.ListaOfert);
         }
+
         private void buttonSortujMiastami_Click(object sender, RoutedEventArgs e)
         {
             if (_nowaLista.ListaOfert.Count > 0)
@@ -119,7 +120,7 @@ namespace OknoGlowne
             }
             else
             {
-                string message = "Nie wprowadzono zadnych pracownikow.";
+                string message = "Okno ofert jest puste.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -147,6 +148,18 @@ namespace OknoGlowne
                 ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
             }
+        }
+
+        private void ButtonWyczyscFiltry_Click(object sender, RoutedEventArgs e)
+        {
+            ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
+
+            TextBoxImieKlienta.Text = "";
+            TextBoxNazwiskoKlienta.Text = "";
+            TextBoxImieOpiekuna.Text = "";
+            TextBoxNazwiskoOpiekuna.Text = "";
+            TextBoxData.Text = "";
+            CheckBoxArchiwum.IsChecked = false;
         }
     }
 }

@@ -44,7 +44,8 @@
             </ListView.View>
         </ListView>
         <Button Name="ButtonUsungOferte" Content="Usun oferte" HorizontalAlignment="Left" Margin="1069,376,0,0" VerticalAlignment="Top" Width="132" Click="ButtonUsungOferte_Click" Height="32" Grid.ColumnSpan="2"/>
-        <Button Content="Sortuj miastami" HorizontalAlignment="Left" Margin="913,377,0,0" VerticalAlignment="Top" Width="132" Click="buttonSortujMiastami_Click" Height="32"/>
+        <Button Name="ButtonSortujMiastami" Content="Sortuj miastami" HorizontalAlignment="Left" Margin="913,377,0,0" VerticalAlignment="Top" Width="132" Click="buttonSortujMiastami_Click" Height="32"/>
+        <Button Name="ButtonWyczyscFiltry" Content="Wyczysc filtry" HorizontalAlignment="Left" Margin="16,376,0,0" VerticalAlignment="Top" Width="75" Click="ButtonWyczyscFiltry_Click"/>
 
     </Grid>
 </Window>

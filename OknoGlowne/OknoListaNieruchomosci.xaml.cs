@@ -177,8 +177,7 @@ namespace OknoGlowne
 
         private void ButtonWyczyscFiltry_Click(object sender, RoutedEventArgs e)
         {
-            
-           listBoxNieruchomosci.ItemsSource = new ObservableCollection<Nieruchomosc>(_caloscNieruchomosci.ListaNieruchomosci);
+            listBoxNieruchomosci.ItemsSource = new ObservableCollection<Nieruchomosc>(_caloscNieruchomosci.ListaNieruchomosci);
             
             textBoxMiejscowosc.Text = "";
             textBoxCenaOd.Text = "";
