@@ -19,7 +19,8 @@ Powyższa aplikacja została stworzona w celu obsługi biura nieruchomości.
 * Wyszukiwanie zarówno aktywnych jak i zarchiwizowanych ofert w bazie na podstawie wybranych przez użytkownika filtrów
 * Wyszukiwanie pracowników w bazie wraz z opcjami sortowania po nazwisku lub po miejscowości
 * Tworzenie umowy pośrednictwa sprzedaży oraz umowy pośrednictwa kupna wraz z możliwością ustawienia prowizji oraz przypisania klienta jak i opiekuna klienta (pracownika) 
-* Ustalanie prowizji od danej umowy dla biura nieruchomości.
+* Ustalanie prowizji od danej umowy dla biura nieruchomości
+* Automatyczne sprawdzanie dostępności klienta w bazie na podstawie numeru PESEL
 
 
 ## Korzystanie z aplikacji
