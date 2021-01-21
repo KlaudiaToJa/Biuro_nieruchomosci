@@ -34,10 +34,11 @@ namespace OknoGlowne
             if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
                 _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
-                _nowaLista = _wszystkieOferty;
+                //_nowaLista = _wszystkieOferty;
             }
             else
             {
+                
                 string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);

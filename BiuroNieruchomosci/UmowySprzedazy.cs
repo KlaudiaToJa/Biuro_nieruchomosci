@@ -119,15 +119,25 @@ namespace BiuroNieruchomosci
         /// </returns>
         public static UmowySprzedazy OdczytajXML(string plik)
         {
-            if (!File.Exists(plik))
+            if (File.Exists(plik))
             {
-                return null;
+                UmowySprzedazy umowySprzedazy = new UmowySprzedazy();
+                using (StreamReader reader = new StreamReader(plik))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(UmowySprzedazy));
+                    umowySprzedazy =  (UmowySprzedazy)serializer.Deserialize(reader);
+                    if (!umowySprzedazy.ListaUmow.Count.Equals(0))
+                    {
+                        int liczba_znakow = umowySprzedazy.ListaUmow[umowySprzedazy.ListaUmow.Count - 1].NumerUmowy.IndexOf("/");
+                        string id_ostatnie = umowySprzedazy.ListaUmow[umowySprzedazy.ListaUmow.Count - 1].NumerUmowy.Substring(0, liczba_znakow);
+                        int numer_pom;
+                        int.TryParse(id_ostatnie, out numer_pom);
+                        UmowaPosrednictwaSprzedazy.Numer = numer_pom;
+                    }
+                    return umowySprzedazy;
+                }
             }
-            using (StreamReader reader = new StreamReader(plik))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(UmowySprzedazy));
-                return (UmowySprzedazy)serializer.Deserialize(reader);
-            }
+            return null;
         }
     }
 }

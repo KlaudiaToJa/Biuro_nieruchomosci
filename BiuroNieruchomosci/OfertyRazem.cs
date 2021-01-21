@@ -38,13 +38,15 @@ namespace BiuroNieruchomosci
         /// </param>
         public void UsunOferte(string idOferty)
         {
+            Oferta oferta = new Oferta();
             foreach (Oferta o in ListaOfert)
             {
                 if (o.IdOferty == idOferty)
                 {
-                    ListaOfert.Remove(o);
+                    oferta = o;
                 }
             }
+            ListaOfert.Remove(oferta);
         }
 
         /// <summary>
@@ -74,15 +76,25 @@ namespace BiuroNieruchomosci
         /// </returns>
         public static OfertyRazem OdczytajXMLOferty (string plik)
         {
-            if (!File.Exists(plik))
+            if (File.Exists(plik))
             {
-                return null;
+                OfertyRazem oferty = new OfertyRazem();
+                using (StreamReader reader = new StreamReader(plik))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(OfertyRazem));
+                    oferty =  (OfertyRazem)serializer.Deserialize(reader);
+                    if (!oferty._listaOfert.Count.Equals(0))
+                    {
+                        int liczba_znakow = oferty._listaOfert[oferty._listaOfert.Count - 1]._idOferty.IndexOf("/");
+                        string id_ostatnie = oferty._listaOfert[oferty._listaOfert.Count - 1]._idOferty.Substring(0, liczba_znakow);
+                        int numer_pom;
+                        int.TryParse(id_ostatnie, out numer_pom);
+                        Oferta.Numer = numer_pom;
+                    }
+                }
+                return oferty;
             }
-            using (StreamReader reader = new StreamReader(plik))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(OfertyRazem));
-                return (OfertyRazem)serializer.Deserialize(reader);
-            }
+            return null;
         }
 
         /// <summary>

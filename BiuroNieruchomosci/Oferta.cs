@@ -14,7 +14,7 @@ namespace BiuroNieruchomosci
         public DateTime _dataWystawienia;
         public UmowaPosrednictwaSprzedazy _umowa;
         public bool czyAktywna;
-        private static int _numer;
+       [NonSerialized] private static int _numer;
 
         public static int Numer { get => _numer; set => _numer = value; }
         public string IdOferty { get => _idOferty; }
@@ -33,6 +33,7 @@ namespace BiuroNieruchomosci
             Opis = string.Empty;
             DataWystawienia = DateTime.Now;
             ++Numer;
+            _idOferty = $"{Numer}/O/{DateTime.Now.Year}";
             CzyAktywna = true;
         }
 
@@ -40,9 +41,7 @@ namespace BiuroNieruchomosci
         {
             Opis = opis;
             Umowa = umowa;
-            _idOferty = $"{Umowa.NumerUmowy}/O{Numer}";
-
-
+            
         }
         /// <summary>
         /// Archiwizowanie oferty poprzed przypisanie polu CzyAktywna wartosci false

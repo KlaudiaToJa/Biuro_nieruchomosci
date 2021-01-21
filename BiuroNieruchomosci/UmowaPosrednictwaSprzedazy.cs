@@ -8,15 +8,20 @@ namespace BiuroNieruchomosci
     public class UmowaPosrednictwaSprzedazy : Umowa
     {
         Nieruchomosc _nieruchomosc;
-        static int _numer = 0;
-        string _numerUmowy;
+        [NonSerialized]static int _numer;
+        public string _numerUmowy;
 
         public Nieruchomosc Nieruchomosc { get => _nieruchomosc; set => _nieruchomosc = value; }
         public static int Numer { get => _numer; set => _numer = value; }
         public string NumerUmowy { get => _numerUmowy; set => _numerUmowy = value; }
 
+        static UmowaPosrednictwaSprzedazy()
+        {
+            _numer = 0;
+        }
         public UmowaPosrednictwaSprzedazy() : base()
         {
+            Numer++;
             NumerUmowy = $"{Numer}/S/{DataZawarcia.Year}";
         }
 
