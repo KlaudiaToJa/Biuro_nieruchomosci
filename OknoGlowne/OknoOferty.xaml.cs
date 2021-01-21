@@ -38,7 +38,6 @@ namespace OknoGlowne
             }
             else
             {
-                
                 string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);

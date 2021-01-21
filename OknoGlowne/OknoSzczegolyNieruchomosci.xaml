@@ -59,6 +59,6 @@
         <Label x:Name ="LblUmeblowane" Content="Umeblowane" HorizontalAlignment="Left" Height="26" Margin="323.4,240,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <Button Name ="ButtonPowrot" Content="Powrót" HorizontalAlignment="Left" Height="36" Margin="491,381,0,0" VerticalAlignment="Top" Width="100" Click="ButtonPowrot_Click" Grid.Column="1"/>
         <Button Name="ButtonPokazOferty" Content="Pokaz oferty" HorizontalAlignment="Left" Margin="18,315,0,0" VerticalAlignment="Top" Width="101" Height="36" Click="ButtonPokazOferty_Click"/>
-        <Button Name="ButtonPokazUmowy" Content="Pokaz umowy" HorizontalAlignment="Left" Margin="18,368,0,0" VerticalAlignment="Top" Width="101" Height="36"/>
+        <Button Name="ButtonPokazUmowy" Content="Pokaz umowy" HorizontalAlignment="Left" Margin="18,368,0,0" VerticalAlignment="Top" Width="101" Height="36" Click="ButtonPokazUmowy_Click"/>
     </Grid>
 </Window>

@@ -1,6 +1,8 @@
 ﻿using BiuroNieruchomosci;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,8 @@ namespace OknoGlowne
     /// </summary>
     public partial class OknoSzczegolyNieruchomosci : Window
     {
-       Nieruchomosc _nieruchomosc;
+        Nieruchomosc _nieruchomosc = new Nieruchomosc();
+
         public OknoSzczegolyNieruchomosci()
         {
             InitializeComponent();
@@ -66,6 +69,43 @@ namespace OknoGlowne
         }
 
         private void ButtonPokazOferty_Click(object sender, RoutedEventArgs e)
+        {
+            OfertyRazem of = new OfertyRazem();
+            if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                of = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
+            }
+            else
+            {
+                string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            List<Oferta> nowa = new List<Oferta>();
+            foreach(Oferta o in of.ListaOfert)
+            {
+                if(o.Umowa.Nieruchomosc.IdNieruchomosci == _nieruchomosc.IdNieruchomosci)
+                {
+                    nowa.Add(o);
+                }
+            }
+            of.ListaOfert = nowa;
+
+            if(nowa.Count == 0)
+            {
+                string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                OknoOferty okno = new OknoOferty();
+                okno.ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(of.ListaOfert);
+                okno.ShowDialog();
+            }
+        }
+
+        private void ButtonPokazUmowy_Click(object sender, RoutedEventArgs e)
         {
 
         }
