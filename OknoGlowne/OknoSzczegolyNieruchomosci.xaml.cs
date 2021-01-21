@@ -64,5 +64,10 @@ namespace OknoGlowne
         {
             this.Close();
         }
+
+        private void ButtonPokazOferty_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

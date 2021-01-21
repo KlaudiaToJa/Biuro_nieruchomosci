@@ -7,7 +7,7 @@ namespace BiuroNieruchomosci
     /// Klasa zawierajaca pola oraz metody obiektu Oferta.
     /// </summary>
     [Serializable]
-    public class Oferta 
+    public class Oferta : ICloneable
     {
         public string _idOferty;
         string _opis;
@@ -60,6 +60,11 @@ namespace BiuroNieruchomosci
         public override string ToString()
         {
             return $"ID: {IdOferty} Data wystawienia: {DataWystawienia.ToString("dd-MM-yyyy")} Opis: {Opis} ";
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone(); //skopiuje wszystkie elementy, ktore sa w klasie; stworzy obiekt o takich samych wartoscia pól
         }
     }
 }

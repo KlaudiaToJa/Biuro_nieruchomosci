@@ -19,7 +19,7 @@ namespace BiuroNieruchomosci
 
         List<Oferta> filtrujNazwiskoKlienta(string nazwisko);
 
-        List<Oferta> filtrujDate(string data);
+        List<Oferta> filtrujDate(DateTime data);
 
         List<Oferta> filtrujImieOpiekuna(string imie);
 

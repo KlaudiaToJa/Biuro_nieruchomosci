@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OknoGlowne"
         mc:Ignorable="d"
-        Title="OknoSzczegolyNieruchomosci" Height="450" Width="800">
+        Title="OknoSzczegolyNieruchomosci" Height="470" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="121*"/>
@@ -57,6 +57,8 @@
         <TextBox x:Name ="TextBoxParking" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <TextBox x:Name ="TextBoxUmeblowane" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblUmeblowane" Content="Umeblowane" HorizontalAlignment="Left" Height="26" Margin="323.4,240,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <Button Name ="ButtonPowrot" Content="Powrót" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="456.4,390,0,0" VerticalAlignment="Top" Width="74" Click="ButtonPowrot_Click"/>
+        <Button Name ="ButtonPowrot" Content="Powrót" HorizontalAlignment="Left" Height="36" Margin="491,381,0,0" VerticalAlignment="Top" Width="100" Click="ButtonPowrot_Click" Grid.Column="1"/>
+        <Button Name="ButtonPokazOferty" Content="Pokaz oferty" HorizontalAlignment="Left" Margin="18,315,0,0" VerticalAlignment="Top" Width="101" Height="36" Click="ButtonPokazOferty_Click"/>
+        <Button Name="ButtonPokazUmowy" Content="Pokaz umowy" HorizontalAlignment="Left" Margin="18,368,0,0" VerticalAlignment="Top" Width="101" Height="36"/>
     </Grid>
 </Window>

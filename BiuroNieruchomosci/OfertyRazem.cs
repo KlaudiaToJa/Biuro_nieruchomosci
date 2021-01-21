@@ -9,7 +9,7 @@ namespace BiuroNieruchomosci
     /// Klasa OfertyRazem agreguje oferty (obiekty Oferta). 
     /// </summary>
     [Serializable]
-    public class OfertyRazem : IOferuje
+    public class OfertyRazem : IOferuje, ICloneable
     {
         List<Oferta> _listaOfert = new List<Oferta>();
         public List<Oferta> ListaOfert { get => _listaOfert; set => _listaOfert = value; }
@@ -111,7 +111,7 @@ namespace BiuroNieruchomosci
             List<Oferta> wyniki = new List<Oferta>();
             foreach(Oferta oferta in ListaOfert)
             {
-                if(oferta.Umowa.Klient.Imie.ToUpper() == imie.ToUpper())
+                if(oferta.Umowa.Nieruchomosc.Wlasciciel.Imie.ToUpper() == imie.ToUpper())
                 {
                     wyniki.Add(oferta);
                     
@@ -134,7 +134,7 @@ namespace BiuroNieruchomosci
             List<Oferta> wyniki = new List<Oferta>();
             foreach(Oferta oferta in ListaOfert)
             {
-                if(oferta.Umowa.Klient.Nazwisko.ToUpper() == nazwisko.ToUpper())
+                if(oferta.Umowa.Nieruchomosc.Wlasciciel.Nazwisko.ToUpper() == nazwisko.ToUpper())
                 {
                     wyniki.Add(oferta);
                 }
@@ -151,15 +151,12 @@ namespace BiuroNieruchomosci
         /// <returns>
         /// Lista zawierajaca odfiltrowane obiekty
         /// </returns>
-        public List<Oferta> filtrujDate(string data)
+        public List<Oferta> filtrujDate(DateTime data)
         {
-            
             List<Oferta> wyniki = new List<Oferta>();
-            DateTime dataFiltr;
-            DateTime.TryParseExact(data, new[] { "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out dataFiltr);
             foreach (Oferta oferta in ListaOfert)
             {
-                if ((oferta.DataWystawienia.Year == dataFiltr.Year && oferta.DataWystawienia.Month == dataFiltr.Month || oferta.DataWystawienia == dataFiltr))
+                if (oferta.DataWystawienia.Date.CompareTo(DateTime.Today.Date) == 0)
                 {
                     wyniki.Add(oferta);
                 }
@@ -234,7 +231,6 @@ namespace BiuroNieruchomosci
         }
 
 
-
         /// <summary>
         /// Sortuje alfabetycznie miejscowosci za pomoca Comparison: (x, y) => x.Umowa.Nieruchomosc.Miejscowosc.CompareTo(y.Miejscowosc))
         /// </summary>
@@ -242,6 +238,16 @@ namespace BiuroNieruchomosci
         {
             ListaOfert.Sort((x, y) => x.Umowa.Nieruchomosc.Miejscowosc.CompareTo(y.Umowa.Nieruchomosc.Miejscowosc));
            
+        }
+
+        /// <summary>
+        /// Glebokie klonowanie obiektu OfertyRazem
+        /// </summary>
+        public object Clone()
+        {
+            OfertyRazem noweOferty = new OfertyRazem();
+            ListaOfert.ForEach(cz => noweOferty.ListaOfert.Add((Oferta)cz.Clone())); //skrocony zapis petli foreach
+            return noweOferty;
         }
     }
 }

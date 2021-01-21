@@ -34,7 +34,7 @@ namespace OknoGlowne
             if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
                 _wszystkieOferty = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
-                //_nowaLista = _wszystkieOferty;
+                _nowaLista = (OfertyRazem)_wszystkieOferty.Clone();
             }
             else
             {
@@ -53,16 +53,7 @@ namespace OknoGlowne
         //filtrowanie zlozone
         private void ButtonFiltruj_Click(object sender, RoutedEventArgs e)
         {
-            if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
-            {
-                _nowaLista = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml");
-            }
-            else
-            {
-                string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
-                string title = "Brak danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            _nowaLista = (OfertyRazem)_wszystkieOferty.Clone();
 
             if (_nowaLista.ListaOfert.Count == 0)
             {
@@ -72,7 +63,7 @@ namespace OknoGlowne
                 return;
             }
 
-            //otwiera wszystkie ify po kolei, zatem lista nieruchomosci bedzie sie aktualizowac z kazda kolejna :)
+            //otwiera wszystkie ify po kolei, zatem lista nieruchomosci bedzie sie aktualizowac z kazda kolejna.
             //sprawdzamy, czy checkbox jest zaznaczony - wtedy filtrujemy po archiwum
 
             if (CheckBoxArchiwum.IsChecked == false)
@@ -108,9 +99,18 @@ namespace OknoGlowne
 
             if (TextBoxData.Text != "")
             {
-                _nowaLista.ListaOfert = _nowaLista.filtrujDate(TextBoxData.Text);
+                DateTime dataFiltr;
+                DateTime.TryParseExact(TextBoxData.Text, new[] { "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out dataFiltr);
+                if(dataFiltr.Year == 1)
+                {
+                    string message = "Data powinna zostać wpisana w formacie dd-MM-yyyy";
+                    string title = "Zła forma";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    TextBoxData.Focus(); // po kliknieciu OK na MessageBox, kursor ustawia sie automatycznie w odpowiednim polu
+                    return;
+                }
+                _nowaLista.ListaOfert = _nowaLista.filtrujDate(dataFiltr);
             }
-
             ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_nowaLista.ListaOfert);
         }
 
