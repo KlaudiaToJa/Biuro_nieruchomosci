@@ -47,9 +47,24 @@ namespace OknoGlowne
         private void buttonSzczegolyNieruchomosci_Click(object sender, RoutedEventArgs e)
         {
             OknoSzczegolyNieruchomosci okno = new OknoSzczegolyNieruchomosci(_oferta.Umowa.Nieruchomosc);
-            bool? ret = okno.ShowDialog();
+            okno.ShowDialog();
         }
 
-        //dodac mozliwosc edytowania!
+        private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        private void ButtonAktualizuj_Click(object sender, RoutedEventArgs e)
+        {
+            string mess = "Czy na pewno chcesz edytowac dane?";
+            string tit = "Edycja danych";
+            if(MessageBox.Show(mess, tit, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _oferta.Opis = txtBoxOpis.Text;
+            }
+            MessageBox.Show("Zaktualizowano opis.", "Sukces!", MessageBoxButton.OK);
+            DialogResult = true;
+        }
     }
 }

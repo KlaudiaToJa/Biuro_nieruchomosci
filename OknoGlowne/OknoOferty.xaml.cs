@@ -46,7 +46,7 @@ namespace OknoGlowne
 
             if (_wszystkieOferty.ListaOfert is object)
             {
-                ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
+                ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert.Where(x => x.czyAktywna == true)); //wyswietlenie aktywnych ofert
             }
         }
 
@@ -78,10 +78,12 @@ namespace OknoGlowne
             if (CheckBoxArchiwum.IsChecked == false)
             {
                 _nowaLista.ListaOfert = _nowaLista.PrzegladajOferty(true);
+                lblOferty.Content = "Oferty - aktywne";
             }
             else
             {
                 _nowaLista.ListaOfert = _nowaLista.PrzegladajOferty(false);
+                lblOferty.Content = "Oferty - archiwum";
             }
 
             if (TextBoxImieKlienta.Text != "")
@@ -161,6 +163,55 @@ namespace OknoGlowne
             TextBoxNazwiskoOpiekuna.Text = "";
             TextBoxData.Text = "";
             CheckBoxArchiwum.IsChecked = false;
+        }
+
+        private void ButtonSzczegolyOferty_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListViewOferty.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnej oferty.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            Oferta k = (Oferta)ListViewOferty.SelectedItem;
+            OknoSzczegolyOfert okienko = new OknoSzczegolyOfert(k);
+            bool? ret = okienko.ShowDialog();
+            if(ret == true)
+            {
+                _wszystkieOferty.ListaOfert.Find(x => x.IdOferty == k.IdOferty).Opis = k.Opis;
+                _wszystkieOferty.ZapiszXMLOferty("listaOfert.xml");
+            }
+        }
+
+        private void ButtonArchiwizujOferte_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListViewOferty.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnej oferty.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            Oferta k = (Oferta)ListViewOferty.SelectedItem;
+
+            if(k.czyAktywna == false)
+            {
+                string mess = "Oferta juz jest zarchiwizowana.";
+                string tit = "Bledne polecenie";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if(MessageBox.Show("Czy na pewno chcesz zarchiwizowac oferte? Tej operacji nie mozna juz cofnac.", "Archiwizowanie oferty", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                _wszystkieOferty.ListaOfert.Find(x => x.IdOferty == k.IdOferty).czyAktywna = false;
+                ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert.Where(x => x.czyAktywna == false));
+                CheckBoxArchiwum.IsChecked = true;
+                _wszystkieOferty.ZapiszXMLOferty("listaOfert.xml");
+            }
         }
     }
 }

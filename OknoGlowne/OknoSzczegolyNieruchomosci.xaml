@@ -12,50 +12,50 @@
             <ColumnDefinition Width="276*"/>
         </Grid.ColumnDefinitions>
         <Label Name ="DaneNieruchomosci" Content="Dane nieruchomości" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="206.4,10,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.486,0.52"/>
-        <TextBox Name ="TextBoxMiekscowosc" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox Name ="TextBoxMiekscowosc" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblMiejscowosc" Content="Miejscowość" HorizontalAlignment="Left" Height="26" Margin="11.4,54,0,0" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <Label x:Name ="LblUlica" Content="Ulica" HorizontalAlignment="Left" Height="26" Margin="11.4,85,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxUlica" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxUlica" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblNumerDomu" Content="Nrumer domu" HorizontalAlignment="Left" Height="26" Margin="11.4,116,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxNumerDomu" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
-        <TextBox x:Name ="TextBoxNumerMieszkania" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxNumerDomu" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxNumerMieszkania" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblNumerMieszkania" Content="Nrumer mieszkania" HorizontalAlignment="Left" Height="26" Margin="11.4,147,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxPowierzchnia" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxPowierzchnia" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblPowierzchniaCalkowita" Content="Powierzchnia całkowita" HorizontalAlignment="Left" Height="26" Margin="11.4,178,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxLiczbaPokojow" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxLiczbaPokojow" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblLiczbaPokojow" Content="Liczba pokojów" HorizontalAlignment="Left" Height="26" Margin="11.4,209,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxPietro" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxPietro" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblPietro" Content="Piętro/Liczba pięter" HorizontalAlignment="Left" Height="26" Margin="11.4,240,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxWysokoscOplat" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxWysokoscOplat" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblWysokoscOplat" Content="Wysokość opłat" HorizontalAlignment="Left" Height="26" Margin="11.4,271,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxTypNieruchomosci" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxTypNieruchomosci" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblTypNieruchomosci" Content="Typ nieruchomości" HorizontalAlignment="Left" Height="26" Margin="11.4,302,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxRodzajNieruchomosci" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
+        <TextBox x:Name ="TextBoxRodzajNieruchomosci" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="209"/>
         <Label x:Name ="LblRodzajNieruchomosci" Content="Rodzaj nieruchomości" HorizontalAlignment="Left" Height="26" Margin="11.4,364,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxTypTransakcji" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxTypTransakcji" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="143.4,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblTypTransakcji" Content="Typ transakcji" HorizontalAlignment="Left" Height="26" Margin="11.4,338,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <Label x:Name ="LblStandard" Content="Standard" HorizontalAlignment="Left" Height="26" Margin="323.4,54,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxStandard" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxStandard" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblRynek" Content="Rynek" HorizontalAlignment="Left" Height="26" Margin="323.4,85,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxRynek" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
-        <TextBox x:Name ="TextBoxRodzajKuchni" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxRynek" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxRodzajKuchni" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblRodzajKuchni" Content="Rodzaj kuchni" HorizontalAlignment="Left" Height="26" Margin="323.4,116,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <Label x:Name ="LblCena" Content="Cena" HorizontalAlignment="Left" Height="26" Margin="323.4,147,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxCena" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxCena" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="DaneWlasciciela" Content="Dane wlasciciela" HorizontalAlignment="Left" Height="26" Margin="65,10,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.486,0.52"/>
         <Label x:Name ="LblImie" Content="Imie" HorizontalAlignment="Left" Height="26" Margin="10,54,0,0" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.486,0.52"/>
-        <TextBox x:Name ="TextBoxImie" HorizontalAlignment="Left" Height="26" Margin="121,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxImie" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="121,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblNazwisko" Content="Nazwisko" HorizontalAlignment="Left" Height="26" Margin="10,85,0,0" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.486,0.52"/>
-        <TextBox x:Name ="TextBoxNazwisko" HorizontalAlignment="Left" Height="26" Margin="121,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
-        <TextBox x:Name ="TextBoxTelefon" HorizontalAlignment="Left" Height="26" Margin="121,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxNazwisko" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="121,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxTelefon" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="121,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblTelefon" Content="Numer telefonu" HorizontalAlignment="Left" Height="26" Margin="10,116,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.486,0.52"/>
         <Label x:Name ="LblMail" Content="e-mail" HorizontalAlignment="Left" Height="26" Margin="10,142,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.486,0.52"/>
-        <TextBox x:Name ="TextBoxMail" HorizontalAlignment="Left" Height="26" Margin="121,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxMail" IsReadOnly="True" HorizontalAlignment="Left" Height="26" Margin="121,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblBalkon" Content="Balkon" HorizontalAlignment="Left" Height="26" Margin="323.4,178,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxBalkon" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxBalkon" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblParking" Content="Parking" HorizontalAlignment="Left" Height="26" Margin="323.4,209,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
-        <TextBox x:Name ="TextBoxParking" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
-        <TextBox x:Name ="TextBoxUmeblowane" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxParking" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name ="TextBoxUmeblowane" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="419.4,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
         <Label x:Name ="LblUmeblowane" Content="Umeblowane" HorizontalAlignment="Left" Height="26" Margin="323.4,240,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.486,0.52" Grid.Column="1"/>
         <Button Name ="ButtonPowrot" Content="Powrót" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="456.4,390,0,0" VerticalAlignment="Top" Width="74" Click="ButtonPowrot_Click"/>
     </Grid>

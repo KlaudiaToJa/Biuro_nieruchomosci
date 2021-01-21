@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OknoGlowne"
         mc:Ignorable="d"
-        Title="OknoSzczegolyOfert" Height="450" Width="800">
+        Title="OknoSzczegolyOfert" Height="400" Width="550">
     <Grid>
-        <Label Content="ID oferty" HorizontalAlignment="Left" Margin="113,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Data wystawienia oferty" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Status" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Szczegolowe dane nieruchomosci:" HorizontalAlignment="Left" Margin="390,20,0,0" VerticalAlignment="Top" Height="28"/>
-        <TextBox Name="txtBoxStatus" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
-        <TextBox Name="txtBoxIdOferty" HorizontalAlignment="Left" Height="23" Margin="113,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
-        <TextBox Name="txtBoxDataWystawienia" HorizontalAlignment="Left" Height="23" Margin="220,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+        <Label Content="ID oferty" HorizontalAlignment="Left" Margin="238,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data wystawienia oferty" HorizontalAlignment="Left" Margin="364,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Status" HorizontalAlignment="Left" Margin="74,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Szczegolowe dane nieruchomosci:" HorizontalAlignment="Left" Margin="199,284,0,0" VerticalAlignment="Top" Height="28"/>
+        <TextBox Name="txtBoxStatus" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="74,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74"/>
+        <TextBox Name="txtBoxIdOferty" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="231,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <TextBox Name="txtBoxDataWystawienia" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="364,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
         <Label Content="Opis:" HorizontalAlignment="Left" Margin="11,83,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxOpis" HorizontalAlignment="Left" Height="295" TextWrapping="Wrap" VerticalAlignment="Top" Width="345" Margin="11,114,0,0"/>
-        <Button Name="buttonSzczegolyNieruchomosci" Content="Pokaz nieruchomosc" HorizontalAlignment="Left" Margin="601,19,0,0" VerticalAlignment="Top" Width="136" Height="29" Click="buttonSzczegolyNieruchomosci_Click"/>
-        <Label Content="tu ambitnie planuje zdjecie xD" HorizontalAlignment="Left" Margin="535,209,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtBoxOpis" BorderThickness="4" HorizontalAlignment="Left" Height="164" TextWrapping="Wrap" VerticalAlignment="Top" Width="521" Margin="11,114,0,0"/>
+        <Button Name="buttonSzczegolyNieruchomosci" Content="Pokaz nieruchomosc" HorizontalAlignment="Left" Margin="396,283,0,0" VerticalAlignment="Top" Width="136" Height="29" Click="buttonSzczegolyNieruchomosci_Click"/>
+        <Button Name="ButtonAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="11,332,0,0" VerticalAlignment="Top" Width="75" Height="27" Click="ButtonAnuluj_Click"/>
+        <Button Name="ButtonAktualizuj" Content="Aktualizuj opis" HorizontalAlignment="Left" Margin="11,284,0,0" VerticalAlignment="Top" Width="137" Height="28" Click="ButtonAktualizuj_Click"/>
     </Grid>
 </Window>
