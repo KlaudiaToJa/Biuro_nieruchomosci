@@ -79,9 +79,106 @@ namespace OknoGlowne
 
         private void ButtonZatwierdz_Click(object sender, RoutedEventArgs e)
         {
-
             // trzeba dodac sprawdzanie czy zadne z okienek nie jest puste, a jesli puste to ustawic na null (ale trzeba
             // w miare logicznie, zeby nie dalo sie na przyklad dodac bez ceny albo miejscowosci bo szanujmy sie xD
+            if (ComboBoxWlasciciel.Text.Equals("") || txtBoxMiejscowosc.Text.Equals("") || txtBoxPowierzchniaCalkowita.Text.Equals("") ||
+                txtBoxWysokoscOplat.Text.Equals("") || ComboBoxTypNieruchomosci.Text.Equals("") || ComboBoxRodzajNieruchomosci.Text.Equals("") ||
+                ComboBoxTypTransakcji.Text.Equals("") || ComboBoxStandard.Text.Equals("") || ComboBoxRynek.Text.Equals("") ||
+                ComboBoxRodzajKuchni.Text.Equals("") || txtBoxCena.Text.Equals(""))
+            {
+                string message = "Nie zostały uzupełnione podstawowe dane dotyczące nieruchmości. Wypełnij pola oznaczone gwiazdką";
+                string title = "Błąd danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                txtBoxPowierzchniaCalkowita.Focus();
+                return;
+            }
+
+            if (ComboBoxTypNieruchomosci.Text.Equals("Mieszkanie"))
+            {
+                if(txtBoxNumerDomu.Text.Equals("") || txtBoxNumerMieszkania.Text.Equals("") || txtBoxUlica.Text.Equals("") ||
+                    txtBoxLiczbaPokojow.Text.Equals("") || txtBoxPietro.Text.Equals("") || ComboBoxWlasciciel.Text.Equals("") || 
+                    txtBoxMiejscowosc.Text.Equals("") || txtBoxPowierzchniaCalkowita.Text.Equals("") || txtBoxWysokoscOplat.Text.Equals("") || 
+                    ComboBoxTypNieruchomosci.Text.Equals("") || ComboBoxRodzajNieruchomosci.Text.Equals("") ||
+                    ComboBoxTypTransakcji.Text.Equals("") || ComboBoxStandard.Text.Equals("") || ComboBoxRynek.Text.Equals("") ||
+                    ComboBoxRodzajKuchni.Text.Equals("") || txtBoxCena.Text.Equals(""))
+                {
+                    string message = "Nie zostały uzupełnione podstawowe dane dotyczące typu nierchomości - mieszkanie. Mieszkanie powinno dodatkowo zawierać" +
+                        "inforamcje o: Ulica, Nr domu, Nr mieszkania, Liczba pokoi, Piętro.";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtBoxPowierzchniaCalkowita.Focus();
+                    return;
+                }
+            }
+
+            if (ComboBoxTypNieruchomosci.Text.Equals("Dom"))
+            {
+                if (txtBoxLiczbaPokojow.Text.Equals("") || txtBoxPietro.Text.Equals("") || ComboBoxWlasciciel.Text.Equals("") || txtBoxMiejscowosc.Text.Equals("") || txtBoxPowierzchniaCalkowita.Text.Equals("") ||
+                txtBoxWysokoscOplat.Text.Equals("") || ComboBoxTypNieruchomosci.Text.Equals("") || ComboBoxRodzajNieruchomosci.Text.Equals("") ||
+                ComboBoxTypTransakcji.Text.Equals("") || ComboBoxStandard.Text.Equals("") || ComboBoxRynek.Text.Equals("") ||
+                ComboBoxRodzajKuchni.Text.Equals("") || txtBoxCena.Text.Equals(""))
+                {
+                    string message = "Nie zostały uzupełnione podstawowe dane dotyczące typu nierchomości - dom." +
+                        "Dom powienien dodatkowo zawierać" +
+                        "inforamcje o: Liczba pokoi, Liczba pięter.";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtBoxPowierzchniaCalkowita.Focus();
+                    return;
+                }
+            }
+
+            if( ComboBoxTypNieruchomosci.Text.Equals("Działka"))
+            {
+                if ((bool)CheckBoxBalkon.IsChecked || (bool)CheckBoxUmeblowane.IsChecked || (bool)CheckBoxParking.IsChecked)
+                {
+                    string message = "Zostału wypełnione dane nieodpowiednie dla typu nieruchomości - działka. Odznacz checkboxa.";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtBoxPowierzchniaCalkowita.Focus();
+                    return;
+                }
+
+            }
+            if (ComboBoxTypNieruchomosci.Text.Equals("Magazyn"))
+            {
+                if ((bool)CheckBoxBalkon.IsChecked || (bool)CheckBoxUmeblowane.IsChecked)
+                {
+                    string message = "Zostału wypełnione dane nieodpowiednie dla typu nieruchomości - magazyn. Odznacz checkboxa.";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtBoxPowierzchniaCalkowita.Focus();
+                    return;
+                }
+            }
+
+            if (ComboBoxTypNieruchomosci.Text.Equals("Lokal") || ComboBoxTypNieruchomosci.Text.Equals("Obiekt"))
+            {
+                if (txtBoxNumerDomu.Text.Equals("") ||  txtBoxUlica.Text.Equals("") || txtBoxPietro.Text.Equals("") || ComboBoxWlasciciel.Text.Equals("") ||
+                  txtBoxMiejscowosc.Text.Equals("") || txtBoxPowierzchniaCalkowita.Text.Equals("") || txtBoxWysokoscOplat.Text.Equals("") ||
+                  ComboBoxTypNieruchomosci.Text.Equals("") || ComboBoxRodzajNieruchomosci.Text.Equals("") ||
+                  ComboBoxTypTransakcji.Text.Equals("") || ComboBoxStandard.Text.Equals("") || ComboBoxRynek.Text.Equals("") ||
+                  ComboBoxRodzajKuchni.Text.Equals("") || txtBoxCena.Text.Equals(""))
+                {
+                    
+                    string message_l = "Nie zostały uzupełnione podstawowe dane dotyczące typu nierchomości - lokal. " +
+                        "Lokal powinien dodatkowo zawierać informacje  o: Numer budynku, Ulica, Piętro.";
+                    string message_o = "Nie zostały uzupełnione podstawowe dane dotyczące typu nierchomości - obiekt." +
+                        "Obiekt powinien dodatkowo zawierać informacje  o: Numer budynku, Ulica, Liczba pięter.";
+                    string title = "Błąd danych";
+                    if (ComboBoxTypNieruchomosci.Text.Equals("Lokal"))
+                    {
+                        MessageBox.Show(message_l, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    if (ComboBoxTypNieruchomosci.Text.Equals("Obiekt"))
+                    {
+                        MessageBox.Show(message_o, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    txtBoxPowierzchniaCalkowita.Focus();
+                    return;
+                }
+            }
+
             _nieruchomosc.Wlasciciel = (Klient)ComboBoxWlasciciel.SelectedItem;
             _nieruchomosc.Miejscowosc = txtBoxMiejscowosc.Text;
             _nieruchomosc.Ulica = txtBoxUlica.Text;
@@ -104,41 +201,50 @@ namespace OknoGlowne
             }
             _nieruchomosc.Powierzchnia = pom;
 
-            if (!(int.TryParse(txtBoxLiczbaPokojow.Text, out pom1)))
+            if (!txtBoxLiczbaPokojow.Text.Equals(""))
             {
-                string message = "Liczba pokojów została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
-                string title = "Błąd danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                if (!(int.TryParse(txtBoxLiczbaPokojow.Text, out pom1)))
+                {
+                    string message = "Liczba pokojów została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                _nieruchomosc.LiczbaPokojow = pom1;
             }
-            _nieruchomosc.LiczbaPokojow = pom1;
 
-            if (!(int.TryParse(txtBoxPietro.Text, out pom1)))
+            if (!txtBoxPietro.Text.Equals(""))
             {
-                string message = "Liczba pieter została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
-                string title = "Błąd danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                if (!(int.TryParse(txtBoxPietro.Text, out pom1)))
+                {
+                    string message = "Liczba pieter została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                _nieruchomosc.Pietro = pom1;
             }
-            _nieruchomosc.Pietro = pom1;
 
+           
             if (!(double.TryParse(txtBoxWysokoscOplat.Text, out pom)))
             {
-                string message = "Wysokość opłat została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
-                string title = "Błąd danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                    string message = "Wysokość opłat została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
+                    string title = "Błąd danych";
+                    MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
             }
-            _nieruchomosc.WysokoscOplat = pom;
+              _nieruchomosc.WysokoscOplat = pom;
 
+          
             if (!(double.TryParse(txtBoxCena.Text, out pom)))
             {
-                string message = "Cena została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
-                string title = "Błąd danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                  string message = "Cena została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
+                  string title = "Błąd danych";
+                  MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                  return;
             }
-            _nieruchomosc.Cena = pom;
+                _nieruchomosc.Cena = pom;
+           
 
             _nieruchomosc.TypNieruchomosci1 = (Nieruchomosc.TypNieruchomosci)ComboBoxTypNieruchomosci.SelectedItem;
             _nieruchomosc.TypTransakcji1 = (Nieruchomosc.TypTransakcji)ComboBoxTypTransakcji.SelectedItem;

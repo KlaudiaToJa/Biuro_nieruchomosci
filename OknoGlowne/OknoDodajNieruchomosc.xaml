@@ -47,5 +47,16 @@
         <CheckBox Name="CheckBoxParking" Content="Parking" HorizontalAlignment="Left" Margin="693,180,0,0" VerticalAlignment="Top"/>
         <Label Content="Rodzaj kuchni" HorizontalAlignment="Left" Margin="320,311,0,0" VerticalAlignment="Top"/>
         <ComboBox Name="ComboBoxRodzajKuchni" HorizontalAlignment="Left" Margin="460,314,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="281,54,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="281,97,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="276,275,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="0.455,1.117"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="276,403,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="586,96,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="585,136,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="585,184,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="586,226,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="586,271,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="586,314,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
+        <Label Content="*" HorizontalAlignment="Left" Height="22" Margin="711,385,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="20.708,-13.348"/>
     </Grid>
 </Window>

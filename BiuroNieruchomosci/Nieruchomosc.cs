@@ -10,8 +10,8 @@ namespace BiuroNieruchomosci
         public enum TypNieruchomosci { Mieszkanie, Działka, Dom, Lokal, Magazyn, Obiekt }
         public enum RodzajNieruchomosci { WłasnośćHipoteczna, PrawoWłasnościoweBezKsięgiWieczystej, PrawoWłasnościoweZKsięgą }
         public enum TypTransakcji { Sprzedaż, Wynajem }
-        public enum RodzajKuchni { Aneks, Oddzielna }
-        public enum Standard { Wysoki, DoOdświeżenia, DoRemontu, PodKlucz, StanDeweloperski, StanSurowy }
+        public enum RodzajKuchni { Aneks, Oddzielna, Brak }
+        public enum Standard { Wysoki, DoOdświeżenia, DoRemontu, PodKlucz, StanDeweloperski, StanSurowy, Brak }
         public enum Rynek { Wtórny, Pierwotny }
 
         [NonSerialized] private static int numer;
