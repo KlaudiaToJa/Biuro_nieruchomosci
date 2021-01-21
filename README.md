@@ -1,4 +1,4 @@
-# Biuro_nieruchomosci - instrukcja użytkownika 
+# Biuro_nieruchomosci - raport
 
 
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
@@ -24,6 +24,7 @@ Wśród innych zasad Object Oriented Programming, które stanowiły podstawę tw
 ![alt text](https://github.com/KlaudiaToJa/Biuro_nieruchomosci//blob/master/diagram_uml.jpg?raw=true)
 
 
+# Instrukcja użytkownika
 
 ## Informacje na temat aplikacji
 
@@ -49,7 +50,7 @@ Po otwarciu aplikacji wyświetla się interfejs użytkownika, za pomocą któreg
 Aplikacja została zaprojektowana w sposób intuicyjny, z troską o zapewnienie wygodnego produktu do obsługi podstawowej działalności biura nieruchomości
 
 
-# Biuro_nieruchomosci - raport 
+# Podział obowiązków
 
 
 
