@@ -4,6 +4,7 @@ namespace BiuroNieruchomosci
     /// <summary>
     /// Klasa zawierajaca pola oraz metody obiektu Nieruchomosc.
     /// </summary>
+    [Serializable]
     public class Nieruchomosc : IComparable<Nieruchomosc>
     {
         public enum TypNieruchomosci { Mieszkanie, Działka, Dom, Lokal, Magazyn, Obiekt }
@@ -13,9 +14,9 @@ namespace BiuroNieruchomosci
         public enum Standard { Wysoki, DoOdświeżenia, DoRemontu, PodKlucz, StanDeweloperski, StanSurowy }
         public enum Rynek { Wtórny, Pierwotny }
 
-        private static int numer;
+        [NonSerialized] private static int numer;
 
-        string _idNieruchomosci;
+        public string _idNieruchomosci;
         string _ulica;
         string _miejscowosc;
         string _numerDomu;

@@ -10,6 +10,7 @@ namespace BiuroNieruchomosci
     /// <summary>
     /// Klasa WszystkieNieruchomosci agreguje obiekty typu Nieruchomosc.
     /// </summary>
+    [Serializable]
     public class WszystkieNieruchomosci
     {
         List<Nieruchomosc> listaNieruchomosci;
@@ -74,15 +75,25 @@ namespace BiuroNieruchomosci
         /// </returns>
         public static WszystkieNieruchomosci OdczytajXML(string plik)
         {
-            if (!File.Exists(plik))
+            if (File.Exists(plik))
             {
-                return null;
+                WszystkieNieruchomosci wszystkieNieruchomosci = new WszystkieNieruchomosci();
+                using (StreamReader reader = new StreamReader(plik))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(WszystkieNieruchomosci));
+                    wszystkieNieruchomosci = (WszystkieNieruchomosci)serializer.Deserialize(reader);
+                    if(!wszystkieNieruchomosci.listaNieruchomosci.Count.Equals(0))
+                    {
+                        int liczba_znakow = wszystkieNieruchomosci.listaNieruchomosci[wszystkieNieruchomosci.listaNieruchomosci.Count - 1].IdNieruchomosci.IndexOf("/");
+                        string id_ostatnie = wszystkieNieruchomosci.listaNieruchomosci[wszystkieNieruchomosci.listaNieruchomosci.Count - 1].IdNieruchomosci.Substring(0, liczba_znakow);
+                        int numer_pom;
+                        int.TryParse(id_ostatnie, out numer_pom);
+                        Nieruchomosc.Numer = numer_pom;
+                    }
+                }
+                return wszystkieNieruchomosci;
             }
-            using (StreamReader reader = new StreamReader(plik))
-            {
-                XmlSerializer serializer = new XmlSerializer(typeof(WszystkieNieruchomosci));
-                return (WszystkieNieruchomosci)serializer.Deserialize(reader);
-            }
+            return null;
         }
 
 
