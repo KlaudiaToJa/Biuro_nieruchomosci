@@ -47,7 +47,13 @@ namespace OknoGlowne
         private void buttonSzczegolyNieruchomosci_Click(object sender, RoutedEventArgs e)
         {
             OknoSzczegolyNieruchomosci okno = new OknoSzczegolyNieruchomosci(_oferta.Umowa.Nieruchomosc);
-            okno.ShowDialog();
+
+            this.Hide();
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+            if (okno.IsActive == false)
+            {
+                this.Show();
+            }
         }
 
         private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)

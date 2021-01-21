@@ -176,7 +176,14 @@ namespace OknoGlowne
 
             Oferta k = (Oferta)ListViewOferty.SelectedItem;
             OknoSzczegolyOfert okienko = new OknoSzczegolyOfert(k);
+
+            this.Hide();
             bool? ret = okienko.ShowDialog();
+            if (okienko.IsActive == false)
+            {
+                this.Show();
+            }
+
             if(ret == true)
             {
                 _wszystkieOferty.ListaOfert.Find(x => x.IdOferty == k.IdOferty).Opis = k.Opis;

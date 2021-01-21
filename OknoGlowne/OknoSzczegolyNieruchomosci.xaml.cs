@@ -101,7 +101,10 @@ namespace OknoGlowne
             {
                 OknoOferty okno = new OknoOferty();
                 okno.ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(of.ListaOfert);
-                okno.ShowDialog();
+                okno.ButtonFiltruj.IsEnabled = false; // wylacza mozliwosc uzycia przycisku
+                okno.ButtonWyczyscFiltry.IsEnabled = false;
+                okno.ButtonUsungOferte.IsEnabled = false;
+                okno.ButtonArchiwizujOferte.IsEnabled = false;
             }
         }
 

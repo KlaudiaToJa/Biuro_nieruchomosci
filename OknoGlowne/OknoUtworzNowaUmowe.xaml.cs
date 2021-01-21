@@ -40,7 +40,13 @@ namespace OknoGlowne
 
             UmowaPosrednictwaSprzedazy um = new UmowaPosrednictwaSprzedazy();
             OknoUmowaSprzedazy okno = new OknoUmowaSprzedazy(um); //inicjalizowanie okna
+
+            this.Hide();
             bool? ret = okno.ShowDialog(); //wywołanie okna
+            if (okno.IsActive == false)
+            {
+                this.Show();
+            }
 
             if (ret == true)
             {
@@ -60,9 +66,15 @@ namespace OknoGlowne
 
             UmowaPosrednictwaKupna um = new UmowaPosrednictwaKupna();
             OknoUmowaKupna okno = new OknoUmowaKupna(um); //inicjalizowanie okna
-            bool? ret = okno.ShowDialog(); //wywołanie okna
 
-            if(ret == true)
+            this.Hide();
+            bool? ret = okno.ShowDialog(); //wywołanie okna
+            if (okno.IsActive == false)
+            {
+                this.Show();
+            }
+
+            if (ret == true)
             {
                 umowy.DodajUmowe(um);
                 umowy.ZapiszXML("listaUmowyKupna.xml");
