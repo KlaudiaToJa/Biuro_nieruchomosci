@@ -1,12 +1,9 @@
 ﻿using System;
 namespace BiuroNieruchomosci
 {
-    //NIE DZIALA NADAWANIE ID NIERUCHOMOSCIOM!!!!! PRZYNAJMNIEJ W GUI. DLACZEGO?? XD NO I CZY NUMER BEDZIE SIE ZMIENIAC NA PEWNO?
-    //SKORO OTWIERAMY PROGRAM OD NOWA I OD NOWA. MOZE WARTO TEN NUMER JAKOS SCIAGAC Z OSTATNIEJ DODANEJ NIERUCHOMOSCI CZY COS
-    //TAKIEGO, BO TAK TO CIAGLE MAM WRAZENIE BEDZIE ID Z NUMEREM 1... ALE MOZE SIE MYLE
-
-    //poprawic tez jakos wyswietlanie danych o nieruchomosci, zeby ladnie bylo w okienku w gui. 
-
+    /// <summary>
+    /// Klasa zawierajaca pola oraz metody obiektu Nieruchomosc.
+    /// </summary>
     public class Nieruchomosc : IComparable<Nieruchomosc>
     {
         public enum TypNieruchomosci { Mieszkanie, Działka, Dom, Lokal, Magazyn, Obiekt }
@@ -71,7 +68,7 @@ namespace BiuroNieruchomosci
             _idNieruchomosci = $"{Numer}/{DateTime.Now.Year}";
         }
 
-        // nie tworze dodatkowego konstruktora, bo da sie w GUI uzupelniac to ladnie nullami :)
+       
         public Nieruchomosc(Klient wlasciciel, string miejscowosc, string ulica, string numerDomu,
             string numerMieszkania, double cena, double powierzchnia, int liczbaPokojow, int pietro,
             bool balkon, bool umeblowane, bool parking, double wysokoscOplat, TypNieruchomosci typNieruchomosci,
@@ -98,11 +95,30 @@ namespace BiuroNieruchomosci
             RodzajKuchni1 = rodzajKuchni;
         }
 
+        /// <summary>
+        /// Nadpisanie metody ToString
+        /// </summary>
+        /// <returns>
+        /// Atrybuty obiektu Nieruchomosc: _idNieruchomosci, Miejscowosc, Ulica, NumerDomu, Numer Mieszkania, Powierzchnia, Cena w formacie string
+        /// </returns>
         public override string ToString()
         {
             return $"{_idNieruchomosci} {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, {Powierzchnia} m^2, cena: {Cena:C}";
         }
 
+        /// <summary>
+        /// Porównuje bieżące wystąpienie z innym obiektem tego samego typu za pomoca atrybutu Cena i zwraca liczbę całkowitą, która wskazuje, czy bieżące wystąpienie poprzedza,
+        /// następuje po lub występuje w tym samym położeniu, co inny obiekt w porządku sortowania.
+        /// 
+        /// </summary>
+        /// <param name="other">
+        /// obiekt typu Nieruchomosc
+        /// </param>
+        /// <returns>
+        /// Mniej niż zero:	To wystąpienie poprzedza other w porządku sortowania. 
+        /// Zero: To wystąpienie występuje w tym samym położeniu w kolejności sortowania, jak other.
+        /// Większe od zera: To wystąpienie następuje po other w kolejności sortowania.
+        /// </returns>
         public int CompareTo(Nieruchomosc other)
         {
             return _cena.CompareTo(other.Cena);

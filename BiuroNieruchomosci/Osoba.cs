@@ -3,12 +3,16 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 
 
-//NIE WIEM CZY STRING OVERRIDE NIE DO POPRAWKI, BO NIE UZYWALISMY TAKICH CUDOW XD
 
 namespace BiuroNieruchomosci
 {
+    /// <summary>
+    /// Klasa abstrakcyjna Osoba, ktora tworzy wzor dla innych klas, wykorzystujacych te same atrybuty: Klient, Pracownik.
+    /// Nie można utworzyć instancji klasy abstrakcyjnej. Celem klasy abstrakcyjnej jest zapewnienie wspólnej definicji klasy bazowej, 
+    /// która może być współużytkowana przez wiele klas pochodnych.
+    /// </summary>
     [Serializable]
-    public class Osoba
+    public abstract class Osoba
     {
         string _imie;
         string _nazwisko;
@@ -26,6 +30,9 @@ namespace BiuroNieruchomosci
         public string Nazwisko { get => _nazwisko; set => _nazwisko = value; }
         public DateTime DataUrodzenia { get => _dataUrodzenia; set => _dataUrodzenia = value; }
 
+        /// <summary>
+        /// Zastosowanie wyrazenia regularnego sprawdzajacego poprawnosc adresu email w setterze Email.
+        /// </summary>
         public string Email
         {
             get => _email;
@@ -36,7 +43,7 @@ namespace BiuroNieruchomosci
                 {
                     _email = value;
                 }
-
+                //else throw new FormatException();
             }
         }
 
@@ -44,6 +51,10 @@ namespace BiuroNieruchomosci
         public string Ulica { get => _ulica; set => _ulica = value; }
         public string NumerDomu { get => _numerDomu; set => _numerDomu = value; }
         public string NumerMieszkania { get => _numerMieszkania; set => _numerMieszkania = value; }
+        
+        /// <summary>
+        /// Zastosowanie wyrazenia regularnego sprawdzajacego poprawnosc numeru telefonu w setterze Telefon.
+        /// </summary>
         public string NrTelefonu 
         { 
             get => _nrTelefonu;
@@ -97,5 +108,6 @@ namespace BiuroNieruchomosci
         {
             NumerMieszkania = numermieszkania;
         }
+
     }
 }

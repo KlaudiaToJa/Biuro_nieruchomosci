@@ -4,11 +4,14 @@ using System.IO;
 using System.Xml.Serialization;
 
 
-//WYRZUCILAM ZBIOROWOSC, SPRAWDZCIE MOZE CZY DA SIE JAKOS Z NIĄ ZEBY DZIALALO (Klaudia)
+
 
 
 namespace BiuroNieruchomosci
 {
+    /// <summary>
+    /// Klasa Pracownicy agreguje pracownikow (obiekty  typu Pracownik). 
+    /// </summary>
     [Serializable]
     public class Pracownicy
     {
@@ -21,11 +24,23 @@ namespace BiuroNieruchomosci
 
         }
 
+        /// <summary>
+        /// Dodawanie obiektu typu pracownik do listy pracownikow
+        /// </summary>
+        /// <param name="p">
+        /// Obiekt typu pracownik
+        /// </param>
         public void DodajPracownika(Pracownik p)
         {
             ListaPracownikow.Add(p);
         }
 
+        /// <summary>
+        /// Usuwanie obiektu typu pracownik z listy pracownikow
+        /// </summary>
+        /// <param name="p">
+        /// Obiekt typu Pracownik
+        /// </param>
         public void UsunPracownika(Pracownik p)
         {
             foreach (Pracownik o in ListaPracownikow)
@@ -38,6 +53,15 @@ namespace BiuroNieruchomosci
             }
         }
 
+        /// <summary>
+        /// Sprawdzanie po numerze PESEL czy Pracownik znajduje sie w bazie
+        /// </summary>
+        /// <param name="pesel">
+        /// PESEL pracownika
+        /// </param>
+        /// <returns>
+        /// True jesli Pracownik znajduje sie w bazie, False w przeciwnym wypadku
+        /// </returns>
         public bool CzyJestWBazie(string pesel)
         {
             foreach (Pracownik k in ListaPracownikow)
@@ -49,7 +73,12 @@ namespace BiuroNieruchomosci
             }
             return false;
         }
-
+        /// <summary>
+        /// Serializacja do XML
+        /// </summary>
+        /// <param name="plik">
+        /// Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+        /// </param>
         public void ZapiszXML(string plik)
         {
             using (StreamWriter writer = new StreamWriter(plik)) //otwieramy strumien
@@ -58,7 +87,15 @@ namespace BiuroNieruchomosci
                 serializer.Serialize(writer, this);
             }
         }
-
+        /// <summary>
+        /// Deserializacja pliku XML
+        /// </summary>
+        /// <param name="plik">
+        /// Plik, z ktorego chcemy deserializowac XML.
+        /// </param>
+        /// <returns>
+        /// Zdeserializowany obiekt
+        /// </returns>
         public static Pracownicy OdczytajXML(string plik)
         {
             if (!File.Exists(plik))
@@ -71,12 +108,17 @@ namespace BiuroNieruchomosci
                 return (Pracownicy)serializer.Deserialize(reader);
             }
         }
-
+        /// <summary>
+        /// Sortuje alfabetycznie nazwiska pracownikow za pomoca metody CompareTo()
+        /// </summary>
         public void SortujNazwiskaImiona()
         {
             ListaPracownikow.Sort();
         }
 
+        /// <summary>
+        /// Sortuje alfabetycznie miejscowosci za pomoca Comparison: (x, y) => x.Miejscowosc.CompareTo(y.Miejscowosc))
+        /// </summary>
         public void SortujMiejscowosciami()
         {
             ListaPracownikow.Sort((x, y) => x.Miejscowosc.CompareTo(y.Miejscowosc));

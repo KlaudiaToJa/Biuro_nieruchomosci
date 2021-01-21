@@ -90,7 +90,7 @@ namespace OknoGlowne
 
             if (TextBoxNazwiskoKlienta.Text != "")
             {
-                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text);
+                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxNazwiskoKlienta.Text);
             }
 
             if (TextBoxImieOpiekuna.Text != "")
@@ -98,9 +98,9 @@ namespace OknoGlowne
                 _nowaLista.ListaOfert = _nowaLista.filtrujImieOpiekuna(TextBoxImieOpiekuna.Text);
             }
 
-            if (TextBoxNazwiskoKlienta.Text != "")
+            if (TextBoxNazwiskoOpiekuna.Text != "")
             {
-                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoKlienta(TextBoxImieKlienta.Text);
+                _nowaLista.ListaOfert = _nowaLista.filtrujNazwiskoOpiekuna(TextBoxNazwiskoOpiekuna.Text);
             }
 
             if (TextBoxData.Text != "")
@@ -110,7 +110,20 @@ namespace OknoGlowne
 
             ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_nowaLista.ListaOfert);
         }
-
+        private void buttonSortujMiastami_Click(object sender, RoutedEventArgs e)
+        {
+            if (_nowaLista.ListaOfert.Count > 0)
+            {
+                _nowaLista.SortujMiejscowosciami();
+                ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_nowaLista.ListaOfert);
+            }
+            else
+            {
+                string message = "Nie wprowadzono zadnych pracownikow.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
         private void ButtonUsungOferte_Click(object sender, RoutedEventArgs e)
         {
             if (ListViewOferty.SelectedIndex == -1)

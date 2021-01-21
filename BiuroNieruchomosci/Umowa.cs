@@ -3,6 +3,11 @@ using System.Globalization;
 
 namespace BiuroNieruchomosci
 {
+    /// <summary>
+    /// Klasa abstrakcyjna Umowa, ktora tworzy wzor dla innych klas, wykorzystujacych te same atrybuty i metody: UmowaPosrednictwaKupna, UmowaPosrednictwaSprzedazy.
+    /// Nie można utworzyć instancji klasy abstrakcyjnej. Celem klasy abstrakcyjnej jest zapewnienie wspólnej definicji klasy bazowej, 
+    /// która może być współużytkowana przez wiele klas pochodnych.
+    /// </summary>
     public abstract class Umowa
     {
         Pracownik _opiekunKlienta;

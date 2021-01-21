@@ -3,10 +3,13 @@ using System.Globalization;
 
 namespace BiuroNieruchomosci
 {
+    /// <summary>
+    /// Klasa zawierajaca pola oraz metody obiektu Oferta.
+    /// </summary>
     [Serializable]
     public class Oferta
     {
-        string _idOferty;
+        public string _idOferty;
         string _opis;
         public DateTime _dataWystawienia;
         public UmowaPosrednictwaSprzedazy _umowa;
@@ -38,13 +41,23 @@ namespace BiuroNieruchomosci
             Opis = opis;
             Umowa = umowa;
             _idOferty = $"{Umowa.NumerUmowy}/O{Numer}";
-        }
 
+
+        }
+        /// <summary>
+        /// Archiwizowanie oferty poprzed przypisanie polu CzyAktywna wartosci false
+        /// </summary>
         public void Archiwizuj()
         {
             CzyAktywna = false;
         }
 
+        /// <summary>
+        /// Nadpisanie metody ToString
+        /// </summary>
+        /// <returns>
+        /// Atrybuty obiektu Klient: IdOferty, DataWystawienia, Opis w formacie string
+        /// </returns>
         public override string ToString()
         {
             return $"ID: {IdOferty} Data wystawienia: {DataWystawienia.ToString("dd-MM-yyyy")} Opis: {Opis} ";
