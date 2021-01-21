@@ -23,6 +23,7 @@ namespace OknoGlowne
     {
         Oferta _oferta = new Oferta();
         UmowySprzedazy _umowy = new UmowySprzedazy();
+        OfertyRazem _ofertyRazem = new OfertyRazem();
 
         public OknoDodajOferte()
         {
@@ -32,16 +33,24 @@ namespace OknoGlowne
             {
                 _umowy = (UmowySprzedazy)UmowySprzedazy.OdczytajXML("listaUmowySprzedazy.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
             }
+
+            if (File.Exists("listaOfert.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                _ofertyRazem = (OfertyRazem)OfertyRazem.OdczytajXMLOferty("listaOfert.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
+            }
+
             foreach (UmowaPosrednictwaSprzedazy u in _umowy.ListaUmow)
             {
-                if(DateTime.Compare(u.DataZakonczenia, DateTime.Today) >= 0)
+                //dodawanie do comboBox nieruchomosci tylko z tych umow, ktore w danym momencie nie stracily jeszcze waznosci i nie posiadaja jeszcze utworzonej oferty
+                if(DateTime.Compare(u.DataZakonczenia, DateTime.Today) >= 0 && !_ofertyRazem.ListaOfert.Exists(k => k.Umowa.NumerUmowy == u.NumerUmowy))
                 {
                     ComboBoxNieruchomosci.Items.Add(u.Nieruchomosc); // dodawanie elementow do listy rozwijanej
                 }
             }
+
             if(ComboBoxNieruchomosci.Items.Count == 0)
             {
-                string message = "Nie znaleziono zadnych trwajacych umow posrednictwa sprzedazy, a to na ich podstawie tworzone sa oferty. Sprobuj najpierw dodac umowy.";
+                string message = "Brak trwajacych umow posrednictwa sprzedazy lub wystawiono oferty do wszystkich nieruchomosci.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -74,20 +83,14 @@ namespace OknoGlowne
                 return;
             }
 
-            foreach(UmowaPosrednictwaSprzedazy u in _umowy.ListaUmow)
-            {
-                if(u.Nieruchomosc == ComboBoxNieruchomosci.SelectedItem)
-                {
-                    _oferta.Umowa = u;
-                    break;
-                }
-            }
+            Nieruchomosc n = (Nieruchomosc)ComboBoxNieruchomosci.SelectedItem;
 
+            _oferta.Umowa = _umowy.ListaUmow.Find(x => x.Nieruchomosc.IdNieruchomosci == n.IdNieruchomosci);
             _oferta.Opis = textBoxOpis.Text;
             DialogResult = true;
             string a = "Wlasnie dodales nowa oferte.";
             string b = "Sukces!";
-            MessageBox.Show(a, b, MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show(a, b, MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

@@ -122,7 +122,7 @@ namespace OknoGlowne
             bool isNumber = double.TryParse(txtBoxProwizja.Text, out pom);
             if (!isNumber)
             {
-                string message = "Prowizja została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
+                string message = "Prowizja została wpisana w złym formacie - być może użyto kropki zamiast przecinka?  Prowizje 2% zapisz jako 2,00.";
                 string title = "Błąd danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
