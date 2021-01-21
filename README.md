@@ -4,6 +4,11 @@
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
 W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami. Plik **ContentsMerged.css** służy do modyfikowania stylu dokumentacji w przeglądarce.
 
+```
+![alt text](https://github.com/KlaudiaToJa/Biuro_nieruchomosci//blob/master/diagram_uml.jpg?raw=true)
+
+
+```
 
 ## Informacje na temat aplikacji
 
