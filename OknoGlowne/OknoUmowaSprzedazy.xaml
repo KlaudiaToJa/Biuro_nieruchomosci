@@ -12,7 +12,7 @@
         <ComboBox Name="ComboBoxNieruchomosc" HorizontalAlignment="Left" Margin="153,172,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Pracownik" HorizontalAlignment="Left" Margin="51,128,0,0" VerticalAlignment="Top"/>
         <Label Content="Nieruchomość" HorizontalAlignment="Left" Margin="51,168,0,0" VerticalAlignment="Top"/>
-        <Label Content="Prowizja" HorizontalAlignment="Left" Margin="313,126,0,0" VerticalAlignment="Top"/>
+        <Label Content="Prowizja [np. 2,00 (%)]" HorizontalAlignment="Left" Margin="313,126,0,0" VerticalAlignment="Top"/>
         <TextBox Name="txtBoxProwizja" HorizontalAlignment="Left" Height="23" Margin="471,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Data zawarcia umowy" HorizontalAlignment="Left" Margin="313,174,0,0" VerticalAlignment="Top" Width="137"/>
         <TextBox Name="txtBoxDataZawarciaUmowy" HorizontalAlignment="Left" Height="23" Margin="471,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

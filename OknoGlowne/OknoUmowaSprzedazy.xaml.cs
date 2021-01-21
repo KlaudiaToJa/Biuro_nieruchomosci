@@ -153,6 +153,8 @@ namespace OknoGlowne
                 return;
             }
 
+            Nieruchomosc n = (Nieruchomosc)ComboBoxNieruchomosc.SelectedItem;
+
             //sprawdzanie, czy wybrana nieruchomosc jest juz zwiazana z jakas nieprzedawniona umowa:
             if (File.Exists("listaUmowySprzedazy.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
             {
@@ -161,9 +163,9 @@ namespace OknoGlowne
 
             if (_umowyRazem.ListaUmow.Count > 0)
             {
-                foreach(UmowaPosrednictwaSprzedazy um in _umowyRazem.ListaUmow)
+                foreach (UmowaPosrednictwaSprzedazy um in _umowyRazem.ListaUmow)
                 {
-                    if(um.Nieruchomosc == (Nieruchomosc)ComboBoxNieruchomosc.SelectedItem && um.DataZakonczenia.CompareTo(DateTime.Today) > 0)
+                    if (um.Nieruchomosc.IdNieruchomosci == n.IdNieruchomosci)
                     {
                         string message = $"Do wybranej nieruchomosci utworzono juz umowe i jest wazna. Wygasa {um.DataZakonczenia.ToString("dd-MM-yyyy")}";
                         string title = "Nie mozna dodac umowy";
@@ -177,14 +179,14 @@ namespace OknoGlowne
             bool isNumber = double.TryParse(txtBoxProwizja.Text, out pom);
             if (!isNumber)
             {
-                string message = "Prowizja została wpisana w złym formacie - być może użyto kropki zamiast przecinka?";
+                string message = "Prowizja została wpisana w złym formacie - być może użyto kropki zamiast przecinka? Prowizje 2% zapisz jako 2,00.";
                 string title = "Błąd danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             _umowa.Prowizja = pom;
             _umowa.OpiekunKlienta = (Pracownik)ComboBoxPracownik.SelectedItem;
-            _umowa.Nieruchomosc = (Nieruchomosc)ComboBoxNieruchomosc.SelectedItem;
+            _umowa.Nieruchomosc = n;
             string[] formatDaty = { "dd-MM-yyyy" };
             DateTime.TryParseExact(txtBoxDataZakonczeniaUmowy.Text, formatDaty, null, System.Globalization.DateTimeStyles.None, out DateTime dataZakonczenia);
             DateTime.TryParseExact(txtBoxDataZawarciaUmowy.Text, formatDaty, null, System.Globalization.DateTimeStyles.None, out DateTime dataZawarcia);
