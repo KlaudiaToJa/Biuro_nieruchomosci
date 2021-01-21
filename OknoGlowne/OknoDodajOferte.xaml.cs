@@ -39,6 +39,12 @@ namespace OknoGlowne
                     ComboBoxNieruchomosci.Items.Add(u.Nieruchomosc); // dodawanie elementow do listy rozwijanej
                 }
             }
+            if(ComboBoxNieruchomosci.Items.Count == 0)
+            {
+                string message = "Nie znaleziono zadnych trwajacych umow posrednictwa sprzedazy, a to na ich podstawie tworzone sa oferty. Sprobuj najpierw dodac umowy.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public OknoDodajOferte(Oferta o) : this()
@@ -79,6 +85,9 @@ namespace OknoGlowne
 
             _oferta.Opis = textBoxOpis.Text;
             DialogResult = true;
+            string a = "Wlasnie dodales nowa oferte.";
+            string b = "Sukces!";
+            MessageBox.Show(a, b, MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }
