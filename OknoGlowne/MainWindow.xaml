@@ -11,7 +11,7 @@
         <Button Name="ButtonDodajNowegoKlienta" Content="Dodaj nowego klienta" HorizontalAlignment="Left" Margin="43,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonDodajNowegoKlienta_Click"/>
         <Button Name="ButtonDodajNieruchomosc" Content="Dodaj  nieruchomość" HorizontalAlignment="Left" Margin="43,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonDodajNieruchomosc_Click"/>
         <Button Name="ButtonDodajPracownika" Content="Dodaj pracownika" HorizontalAlignment="Left" Margin="43,248,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonDodajPracownika_Click"/>
-        <Button Name="ButtonWyswietlOferty" Content="Wyświetl oferty" HorizontalAlignment="Left" Margin="565,248,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonWyswietlOferty_Click"/>
+        <Button Name="ButtonWyswietlOferty" Content="Wyświetl utworzone oferty" HorizontalAlignment="Left" Margin="565,248,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonWyswietlOferty_Click"/>
         <Button Name="ButtonPrzegladajListeNieruchomosci" Content="Przeglądaj listę nieruchomości" HorizontalAlignment="Left" Margin="565,56,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonPrzegladajListeNieruchomosci_Click"/>
         <Button Name="ButtonPrzegladajListeKlientow" Content="Przeglądaj listę klientów" HorizontalAlignment="Left" Margin="565,121,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonPrzegladajListeKlientow_Click"/>
         <Button Name="ButtonPrzegladajListePracownikow" Content="Przeglądaj listę pracowników" HorizontalAlignment="Left" Margin="565,184,0,0" VerticalAlignment="Top" Width="231" Height="40" Click="ButtonPrzegladajListePracownikow_Click"/>
