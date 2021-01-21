@@ -84,8 +84,8 @@ namespace BiuroNieruchomosci
                     wszystkieNieruchomosci = (WszystkieNieruchomosci)serializer.Deserialize(reader);
                     if(!wszystkieNieruchomosci.listaNieruchomosci.Count.Equals(0))
                     {
-                        string id = wszystkieNieruchomosci.listaNieruchomosci[0].IdNieruchomosci;
-                        string id_ostatnie = id.Substring(0, id.Length - 5);
+                        int liczba_znakow = wszystkieNieruchomosci.listaNieruchomosci[wszystkieNieruchomosci.listaNieruchomosci.Count - 1].IdNieruchomosci.IndexOf("/");
+                        string id_ostatnie = wszystkieNieruchomosci.listaNieruchomosci[wszystkieNieruchomosci.listaNieruchomosci.Count - 1].IdNieruchomosci.Substring(0, liczba_znakow);
                         int numer_pom;
                         int.TryParse(id_ostatnie, out numer_pom);
                         Nieruchomosc.Numer = numer_pom;
