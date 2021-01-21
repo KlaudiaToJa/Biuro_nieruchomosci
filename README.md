@@ -2,7 +2,7 @@
 
 
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
-W dokumetacji opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami.
+W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami.
 
 
 ## Informacje na temat aplikacji
