@@ -27,6 +27,7 @@ namespace OknoGlowne
     public partial class OknoUmowaSprzedazy : Window
     {
         UmowaPosrednictwaSprzedazy _umowa = new UmowaPosrednictwaSprzedazy();
+        UmowySprzedazy _umowyRazem = new UmowySprzedazy();
 
         Pracownicy DanePracownikow = new Pracownicy();
         WszystkieNieruchomosci DaneNieruchomosci = new WszystkieNieruchomosci();
@@ -150,6 +151,26 @@ namespace OknoGlowne
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
+            }
+
+            //sprawdzanie, czy wybrana nieruchomosc jest juz zwiazana z jakas nieprzedawniona umowa:
+            if (File.Exists("listaUmowySprzedazy.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                _umowyRazem = (UmowySprzedazy)UmowySprzedazy.OdczytajXML("listaUmowySprzedazy.xml"); // pliki o stalej nazwie, w ktorym przechowywane sa dane klientow
+            }
+
+            if (_umowyRazem.ListaUmow.Count > 0)
+            {
+                foreach(UmowaPosrednictwaSprzedazy um in _umowyRazem.ListaUmow)
+                {
+                    if(um.Nieruchomosc == (Nieruchomosc)ComboBoxNieruchomosc.SelectedItem && um.DataZakonczenia.CompareTo(DateTime.Today) > 0)
+                    {
+                        string message = $"Do wybranej nieruchomosci utworzono juz umowe i jest wazna. Wygasa {um.DataZakonczenia.ToString("dd-MM-yyyy")}";
+                        string title = "Nie mozna dodac umowy";
+                        MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+                }
             }
 
             double pom;

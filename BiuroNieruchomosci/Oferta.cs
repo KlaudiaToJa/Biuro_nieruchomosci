@@ -7,7 +7,7 @@ namespace BiuroNieruchomosci
     /// Klasa zawierajaca pola oraz metody obiektu Oferta.
     /// </summary>
     [Serializable]
-    public class Oferta
+    public class Oferta 
     {
         public string _idOferty;
         string _opis;

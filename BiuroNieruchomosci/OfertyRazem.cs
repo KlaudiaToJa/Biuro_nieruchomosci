@@ -34,7 +34,7 @@ namespace BiuroNieruchomosci
         /// Usuwanie obiektu typu oferta z listy ofert
         /// </summary>
         /// <param name="idOferty">
-        /// Obiekt typu Oferta
+        /// string zawierajacy id oferty, ktora chcemy usunac
         /// </param>
         public void UsunOferte(string idOferty)
         {
