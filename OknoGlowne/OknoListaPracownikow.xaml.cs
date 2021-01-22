@@ -35,10 +35,9 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych pracownikow. Sprobuj ich najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                this.Close();
             }
 
-            if (_pracownicy is object)
+            if (_pracownicy.ListaPracownikow.Count > 0)
             {
                 listViewPracownicy.ItemsSource = new ObservableCollection<Pracownik>(_pracownicy.ListaPracownikow);
             }

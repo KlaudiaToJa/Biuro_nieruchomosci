@@ -16,9 +16,6 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoDodajPracownika.xaml
-    /// </summary>
     public partial class OknoDodajPracownika : Window
     {
         Pracownik _pracownik = new Pracownik(); 

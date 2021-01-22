@@ -48,11 +48,6 @@ namespace OknoGlowne
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
-            if(_uSprzedazy.ListaUmow.Count + _uKupna.ListaUmow.Count == 0)
-            {
-                this.Close();
-            }
-
             if(_uSprzedazy.ListaUmow.Count > 0)
             {
                 ListViewUmowySprzedazy.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow);

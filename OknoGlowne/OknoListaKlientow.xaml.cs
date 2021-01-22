@@ -18,9 +18,6 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoListaKlientow.xaml
-    /// </summary>
     public partial class OknoListaKlientow : Window
     {
         Klienci _klienci = new Klienci();
@@ -38,10 +35,9 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych klientow. Sprobuj ich najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
-                this.Close();
             }
 
-            if (_klienci is object)
+            if (_klienci.ListaKlientow.Count > 0)
             {
                 listViewKlienci.ItemsSource = new ObservableCollection<Klient>(_klienci.ListaKlientow);
             }
