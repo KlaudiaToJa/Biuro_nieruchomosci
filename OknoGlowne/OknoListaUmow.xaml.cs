@@ -81,7 +81,20 @@ namespace OknoGlowne
 
         private void buttonSzczegolyNieruchomosci_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (ListViewUmowySprzedazy.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnej umowy posrednictwa sprzedazy.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            UmowaPosrednictwaSprzedazy n = (UmowaPosrednictwaSprzedazy)ListViewUmowySprzedazy.SelectedItem;
+            if (!(ListViewUmowySprzedazy.SelectedIndex == -1))
+            {
+                OknoSzczegolyNieruchomosci ok = new OknoSzczegolyNieruchomosci(n.Nieruchomosc);
+                ok.ShowDialog();
+            }
         }
 
         private void buttonSortNazwKlientow_Click(object sender, RoutedEventArgs e)
