@@ -46,6 +46,7 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych umow posrednictwa kupna.";
                 string title = "Brak danych.";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
+                
             }
 
             if(_uSprzedazy.ListaUmow.Count > 0)
