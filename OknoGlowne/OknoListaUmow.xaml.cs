@@ -102,6 +102,45 @@ namespace OknoGlowne
 
         private void buttonUsunUmowe_Click(object sender, RoutedEventArgs e)
         {
+            if (ListViewUmowyKupna.SelectedIndex == -1 || ListViewUmowySprzedazy.SelectedIndex == -1)
+            {
+                string mess = "Nie zaznaczono zadnej umowy.";
+                string tit = "Brak zaznaczenia";
+                MessageBox.Show(mess, tit, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (!(ListViewUmowyKupna.SelectedIndex == -1))
+            {
+                UmowaPosrednictwaKupna u_kupna  = (UmowaPosrednictwaKupna)ListViewUmowyKupna.SelectedItem;
+                string message = $"Czy na pewno chcesz usunac umowe kupna {u_kupna.NrUmowy},  opiekun: {u_kupna.OpiekunKlienta}, data zawarcia: {u_kupna.DataZawarcia}?";
+                string title = "Usuwanie umowy kupna";
+
+                if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    _uKupna.UsunUmowe(u_kupna.NrUmowy);
+                    _uKupna.ZapiszXML("listaUmowyKupna.xml");
+                    string m = "Pomyslnie usunieto umowe kupna.";
+                    string t = "Sukces";
+                    ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaKupna>(_uKupna.ListaUmow);
+                    MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            if (!(ListViewUmowySprzedazy.SelectedIndex == -1))
+            {
+                UmowaPosrednictwaSprzedazy u_sprzedazy = (UmowaPosrednictwaSprzedazy)ListViewUmowySprzedazy.SelectedItem;
+                string message = $"Czy na pewno chcesz usunac umowe sprzedaży {u_sprzedazy.NumerUmowy},  opiekun: {u_sprzedazy.OpiekunKlienta}, data zawarcia: {u_sprzedazy.DataZawarcia}?";
+                string title = "Usuwanie umowy sprzedaży";
+
+                if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    _uSprzedazy.UsunUmowe(u_sprzedazy.NumerUmowy);
+                    _uSprzedazy.ZapiszXML("listaUmowySprzedazy.xml");
+                    string m = "Pomyslnie usunieto umowe sprzedaży.";
+                    string t = "Sukces";
+                    ListViewUmowySprzedazy.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow);
+                    MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
 
         }
 
