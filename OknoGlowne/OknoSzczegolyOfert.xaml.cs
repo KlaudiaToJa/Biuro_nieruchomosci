@@ -16,9 +16,6 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoSzczegolyOfert.xaml
-    /// </summary>
     public partial class OknoSzczegolyOfert : Window
     {
         Oferta _oferta = new Oferta();

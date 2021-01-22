@@ -18,17 +18,9 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
-    /// Okno MainWindow jest glownym oknem programu. Z jego poziomu wywolywane sa okna podrzedne, odpowiednio wedlug Buttons:
-    /// "Dodaj oferte" - wywoluje okno OknoDodajOferte
-    /// </summary>
-    /// 
 
-public partial class MainWindow : Window
+    public partial class MainWindow : Window
     {
-        public object MessageBoxButtons { get; private set; }
-
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +29,7 @@ public partial class MainWindow : Window
         private void ButtonUtworzNowaUmowe_Click(object sender, RoutedEventArgs e)
         {
             OknoUtworzNowaUmowe okno = new OknoUtworzNowaUmowe(); //inicjalizowanie okna
-            bool? ret = okno.ShowDialog(); //wywołanie okna
+            okno.ShowDialog(); //wywołanie okna
         }
 
         private void ButtonDodajNowegoKlienta_Click(object sender, RoutedEventArgs e)
@@ -119,20 +111,19 @@ public partial class MainWindow : Window
         private void ButtonPrzegladajListeNieruchomosci_Click(object sender, RoutedEventArgs e)
         {
             OknoListaNieruchomosci okno = new OknoListaNieruchomosci();
-            bool? ret = okno.ShowDialog();
+            okno.ShowDialog();
         }
 
         private void ButtonPrzegladajListeKlientow_Click(object sender, RoutedEventArgs e)
         {
             OknoListaKlientow okno = new OknoListaKlientow();
-            bool? ret = okno.ShowDialog();
-
+            okno.ShowDialog();
         }
 
         private void ButtonPrzegladajListePracownikow_Click(object sender, RoutedEventArgs e)
         {
             OknoListaPracownikow okno = new OknoListaPracownikow();
-            bool? ret = okno.ShowDialog();
+            okno.ShowDialog();
         }
 
         private void ButtonDodajOferte_Click(object sender, RoutedEventArgs e)
@@ -156,13 +147,13 @@ public partial class MainWindow : Window
         private void ButtonWyswietlOferty_Click(object sender, RoutedEventArgs e)
         {
             OknoOferty okno = new OknoOferty();
-            bool? ret = okno.ShowDialog();
+            okno.ShowDialog();
         }
 
         private void ButtonWyswietlUmowy_Click(object sender, RoutedEventArgs e)
         {
             OknoListaUmow okno = new OknoListaUmow();
-            bool? ret =  okno.ShowDialog();
+            okno.ShowDialog();
         }
     }
 }

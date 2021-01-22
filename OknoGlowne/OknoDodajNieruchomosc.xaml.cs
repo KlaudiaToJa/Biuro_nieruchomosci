@@ -14,18 +14,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BiuroNieruchomosci;
 
-//SKONCZONE I DZIALA (Klaudia)
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoDodajNieruchomosc.xaml
-    /// </summary>
     public partial class OknoDodajNieruchomosc : Window
     {
         Nieruchomosc _nieruchomosc = new Nieruchomosc();
-        //WszystkieNieruchomosci _caloscNieruchomosci;
-
         Klienci DaneKlientow = new Klienci();
 
         public OknoDodajNieruchomosc()
@@ -79,8 +73,6 @@ namespace OknoGlowne
 
         private void ButtonZatwierdz_Click(object sender, RoutedEventArgs e)
         {
-            // trzeba dodac sprawdzanie czy zadne z okienek nie jest puste, a jesli puste to ustawic na null (ale trzeba
-            // w miare logicznie, zeby nie dalo sie na przyklad dodac bez ceny albo miejscowosci bo szanujmy sie xD
             if (ComboBoxWlasciciel.Text.Equals("") || txtBoxMiejscowosc.Text.Equals("") || txtBoxPowierzchniaCalkowita.Text.Equals("") ||
                 txtBoxWysokoscOplat.Text.Equals("") || ComboBoxTypNieruchomosci.Text.Equals("") || ComboBoxRodzajNieruchomosci.Text.Equals("") ||
                 ComboBoxTypTransakcji.Text.Equals("") || ComboBoxStandard.Text.Equals("") || ComboBoxRynek.Text.Equals("") ||
@@ -183,6 +175,7 @@ namespace OknoGlowne
             _nieruchomosc.Miejscowosc = txtBoxMiejscowosc.Text;
             _nieruchomosc.Ulica = txtBoxUlica.Text;
             _nieruchomosc.NumerDomu = txtBoxNumerDomu.Text;
+
             if(txtBoxNumerMieszkania.Text != "")
             {
                 _nieruchomosc.NumerMieszkania = txtBoxNumerMieszkania.Text;

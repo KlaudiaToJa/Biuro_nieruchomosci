@@ -5,18 +5,11 @@ using System.Windows;
 using BiuroNieruchomosci;
 
 
-//SKONCZONE I DZIALA (Klaudia)
-
-
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoDodajKlienta.xaml
-    /// </summary>
     public partial class OknoDodajKlienta : Window
     {
         Klient _klient = new Klient();
-        
 
         public OknoDodajKlienta()
         {

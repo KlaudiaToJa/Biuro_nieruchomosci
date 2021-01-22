@@ -14,14 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BiuroNieruchomosci;
 
-
-//TA SAMA SYTUACJA CO Z KLIENTAMI I PRACOWNIKAMI. PROPONUJE I TYM RAZEM WYRZUCIC ZBIOROWOSC I NAPISAC DO NICH FUNKCJE OSOBNO, BO TO WCALE NIE CHCE DZIALAC... (Klaudia)
-
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoUtworzNowaUmowe.xaml
-    /// </summary>
     public partial class OknoUtworzNowaUmowe : Window
     {
         public OknoUtworzNowaUmowe()

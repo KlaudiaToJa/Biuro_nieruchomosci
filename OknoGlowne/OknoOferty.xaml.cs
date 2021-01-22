@@ -18,9 +18,6 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoOferty.xaml
-    /// </summary>
     public partial class OknoOferty : Window
     {
        OfertyRazem _wszystkieOferty = new OfertyRazem();
@@ -40,9 +37,11 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                DialogResult = false;
+                this.Close();
             }
 
-            if (_wszystkieOferty.ListaOfert is object)
+            if (_wszystkieOferty.ListaOfert.Count > 0)
             {
                 ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert.Where(x => x.czyAktywna == true)); //wyswietlenie aktywnych ofert
             }

@@ -17,14 +17,10 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoListaNieruchomosci.xaml
-    /// </summary>
     public partial class OknoListaNieruchomosci : Window
     {
         WszystkieNieruchomosci _caloscNieruchomosci;
         WszystkieNieruchomosci _nowaLista = new WszystkieNieruchomosci();
-
 
         public OknoListaNieruchomosci()
         {
@@ -39,6 +35,7 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych nieruchomosci. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
 
             if (_caloscNieruchomosci is object)

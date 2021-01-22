@@ -18,9 +18,6 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoListaPracownikow.xaml
-    /// </summary>
     public partial class OknoListaPracownikow : Window
     {
         Pracownicy _pracownicy = new Pracownicy();
@@ -38,6 +35,7 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych pracownikow. Sprobuj ich najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
             }
 
             if (_pracownicy is object)

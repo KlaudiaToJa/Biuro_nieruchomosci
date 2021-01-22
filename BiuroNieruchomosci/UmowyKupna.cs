@@ -91,15 +91,6 @@ namespace BiuroNieruchomosci
             return _umowyPracownika;
         }
 
-        public void SortNazwKlientow()
-        {
-            _listaUmow.Sort((x, y) => x.Klient.Nazwisko.CompareTo(y.Klient.Nazwisko));
-        }
-        public void SortNazwPracowwnika()
-        {
-            _listaUmow.Sort((x, y) => x.OpiekunKlienta.Nazwisko.CompareTo(y.OpiekunKlienta.Nazwisko));
-        }
-
         /// <summary>
         /// Serializacja do XML
         /// </summary>

@@ -51,16 +51,6 @@ namespace BiuroNieruchomosci
             ListaUmow.Remove(u_sprzedazy);
         }
 
-        public void SortNazwKlientow()
-        {
-            _listaUmow.Sort((x, y) => x.Nieruchomosc.Wlasciciel.Nazwisko.CompareTo(y.Nieruchomosc.Wlasciciel.Nazwisko));
-        }
-
-        public void SortNazwPracowwnika()
-        {
-            _listaUmow.Sort((x, y) => x.OpiekunKlienta.Nazwisko.CompareTo(y.OpiekunKlienta.Nazwisko));
-        }
-
         /// <summary>
         /// Filtrowanie listy po wskazanwj dacie
         /// </summary>

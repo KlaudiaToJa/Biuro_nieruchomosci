@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoSzczegolyNieruchomosci.xaml
-    /// </summary>
     public partial class OknoSzczegolyNieruchomosci : Window
     {
         Nieruchomosc _nieruchomosc = new Nieruchomosc();
@@ -60,7 +57,6 @@ namespace OknoGlowne
                 TextBoxTelefon.Text = _nieruchomosc.Wlasciciel.NrTelefonu;
                 TextBoxMail.Text = _nieruchomosc.Wlasciciel.Email;
             }
-            
         }
 
         private void ButtonPowrot_Click(object sender, RoutedEventArgs e)

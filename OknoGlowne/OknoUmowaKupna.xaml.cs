@@ -15,14 +15,8 @@ using System.Windows.Shapes;
 using BiuroNieruchomosci;
 
 
-// POWINNO BYĆ CAŁE DZIAŁAJĄCE (Klaudia)
-
-
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoUmowaKupna.xaml
-    /// </summary>
     public partial class OknoUmowaKupna : Window
     {
         UmowaPosrednictwaKupna _umowa = new UmowaPosrednictwaKupna();

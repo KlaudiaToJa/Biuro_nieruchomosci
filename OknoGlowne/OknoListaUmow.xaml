@@ -40,15 +40,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <CheckBox Name="checkBoxWyswietlAktualne" Content="Wyswietl aktualne" HorizontalAlignment="Left" Margin="10,487,0,0" VerticalAlignment="Top"/>
-        <CheckBox Name="checkBoxWyswietlZakonczone" Content="Wyswietl zakonczone" HorizontalAlignment="Left" Margin="10,507,0,0" VerticalAlignment="Top"/>
-        <Button Name="buttonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="10,545,0,0" VerticalAlignment="Top" Width="132" Height="41" Click="buttonFiltruj_Click"/>
-        <Button Name="buttonWyjdz" Content="Wyjdz" HorizontalAlignment="Left" Margin="858,545,0,0" VerticalAlignment="Top" Width="172" Height="41" Click="buttonWyjdz_Click"/>
-        <Button Name="buttonSzczegolyNieruchomosci" Content="Szczegoly nieruchomosci" HorizontalAlignment="Left" Margin="585,487,0,0" VerticalAlignment="Top" Width="172" Height="41" Click="buttonSzczegolyNieruchomosci_Click"/>
-        <Button Name="buttonSortNazwPrac" Content="Nazwiskami pracownikow" HorizontalAlignment="Left" Margin="288,487,0,0" VerticalAlignment="Top" Width="168" Height="41" Click="buttonSortNazwPrac_Click"/>
-        <Label Content="Sortowanie" HorizontalAlignment="Left" Margin="338,445,0,0" VerticalAlignment="Top"/>
-        <Button Name="buttonSortNazwKlientow" Content="Nazwiskami klientow" HorizontalAlignment="Left" Margin="288,545,0,0" VerticalAlignment="Top" Width="168" Height="41" Click="buttonSortNazwKlientow_Click"/>
-        <Button Name="buttonUsunUmowe" Content="Usun umowe" HorizontalAlignment="Left" Margin="585,545,0,0" VerticalAlignment="Top" Width="172" Height="41" Click="buttonUsunUmowe_Click"/>
+        <CheckBox Name="checkBoxWyswietlAktualne" Content="Wyswietl aktualne" HorizontalAlignment="Left" Margin="10,475,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name="checkBoxWyswietlZakonczone" Content="Wyswietl zakonczone" HorizontalAlignment="Left" Margin="10,495,0,0" VerticalAlignment="Top"/>
+        <Button Name="buttonFiltruj" Content="Filtruj" HorizontalAlignment="Left" Margin="10,519,0,0" VerticalAlignment="Top" Width="132" Height="41" Click="buttonFiltruj_Click"/>
+        <Button Name="buttonWyjdz" Content="Wyjdz" HorizontalAlignment="Left" Margin="860,519,0,0" VerticalAlignment="Top" Width="172" Height="41" Click="buttonWyjdz_Click"/>
+        <Button Name="buttonSzczegolyNieruchomosci" Content="Szczegoly nieruchomosci" HorizontalAlignment="Left" Margin="325,519,0,0" VerticalAlignment="Top" Width="172" Height="41" Click="buttonSzczegolyNieruchomosci_Click"/>
+        <Button Name="buttonUsunUmowe" Content="Usun umowe" HorizontalAlignment="Left" Margin="524,519,0,0" VerticalAlignment="Top" Width="172" Height="41" Click="buttonUsunUmowe_Click"/>
         <Label Content="Umowy posrednictwa sprzedazy" FontSize="16" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top"/>
         <Label Content="Umowy posrednictwa kupna" FontSize="16" HorizontalAlignment="Left" Margin="432,228,0,0" VerticalAlignment="Top"/>
     </Grid>

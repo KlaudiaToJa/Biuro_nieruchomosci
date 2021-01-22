@@ -30,5 +30,9 @@
         <TextBox Name="txtBoxNumerMieszkania" HorizontalAlignment="Left" Height="23" Margin="171,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox Name="txtBoxEmail" HorizontalAlignment="Left" Height="23" Margin="171,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
         <TextBox Name="txtBoxNumerTelefonu" HorizontalAlignment="Left" Height="23" Margin="171,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="*" HorizontalAlignment="Left" Margin="296,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="*" HorizontalAlignment="Left" Margin="296,106,0,0" VerticalAlignment="Top"/>
+        <Label Content="*" HorizontalAlignment="Left" Margin="296,143,0,0" VerticalAlignment="Top"/>
+        <Label Content="*" HorizontalAlignment="Left" Margin="296,177,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

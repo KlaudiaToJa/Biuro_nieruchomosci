@@ -17,9 +17,6 @@ using BiuroNieruchomosci;
 
 namespace OknoGlowne
 {
-    /// <summary>
-    /// Logika interakcji dla klasy OknoListaUmow.xaml
-    /// </summary>
     public partial class OknoListaUmow : Window
     {
         UmowySprzedazy _uSprzedazy = new UmowySprzedazy();
@@ -49,6 +46,11 @@ namespace OknoGlowne
                 string message = "Nie znaleziono zadnych umow posrednictwa kupna.";
                 string title = "Brak danych.";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+            if(_uSprzedazy.ListaUmow.Count + _uKupna.ListaUmow.Count == 0)
+            {
+                this.Close();
             }
 
             if(_uSprzedazy.ListaUmow.Count > 0)
@@ -95,22 +97,6 @@ namespace OknoGlowne
                 OknoSzczegolyNieruchomosci ok = new OknoSzczegolyNieruchomosci(n.Nieruchomosc);
                 ok.ShowDialog();
             }
-        }
-
-        private void buttonSortNazwKlientow_Click(object sender, RoutedEventArgs e)
-        {
-            _uKupna.SortNazwKlientow();
-            _uSprzedazy.SortNazwKlientow();
-            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaKupna>(_uKupna.ListaUmow);
-            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow);
-        }
-
-        private void buttonSortNazwPrac_Click(object sender, RoutedEventArgs e)
-        {
-            _uKupna.SortNazwPracowwnika();
-            _uSprzedazy.SortNazwPracowwnika();
-            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaKupna>(_uKupna.ListaUmow);
-            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow);
         }
 
         private void buttonUsunUmowe_Click(object sender, RoutedEventArgs e)
