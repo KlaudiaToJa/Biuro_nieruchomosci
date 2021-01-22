@@ -48,6 +48,15 @@ namespace BiuroNieruchomosci
                 }
             }
         }
+        public void SortNazwKlientow()
+        {
+            _listaUmow.Sort((x, y) => x.Klient.Nazwisko.CompareTo(y.Klient.Nazwisko));
+        }
+
+        public void SortNazwPracowwnika()
+        {
+            _listaUmow.Sort((x, y) => x.OpiekunKlienta.Nazwisko.CompareTo(y.OpiekunKlienta.Nazwisko));
+        }
 
         /// <summary>
         /// Filtrowanie listy po wskazanwj dacie

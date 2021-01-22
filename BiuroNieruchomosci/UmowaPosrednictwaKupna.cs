@@ -20,5 +20,11 @@ namespace BiuroNieruchomosci
             ++Numer;
             NrUmowy = $"{Numer}/K/{DataZawarcia.Year}";
         }
+
+        public UmowaPosrednictwaKupna(Pracownik opiekunKlienta, double prowizja, string dataZawarcia, string dataZakonczenia, Klient klient) :
+            base(opiekunKlienta, prowizja, dataZawarcia, dataZakonczenia, klient)
+        {
+
+        }
     }
 }
