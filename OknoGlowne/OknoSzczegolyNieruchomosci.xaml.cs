@@ -77,10 +77,11 @@ namespace OknoGlowne
             }
             else
             {
-                string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
+                string message = "Nie znaleziono zadnych istniejacych ofert. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            //tworzenie listy ofert dotyczacych wybranej nieruchomosci
             List<Oferta> nowa = new List<Oferta>();
             foreach(Oferta o in of.ListaOfert)
             {
@@ -93,7 +94,7 @@ namespace OknoGlowne
 
             if(nowa.Count == 0)
             {
-                string message = "Nie znaleziono zadnych ofert. Sprobuj je najpierw dodac.";
+                string message = "Nie znaleziono zadnych ofert dotyczacych tej nieruchomosci. Sprobuj je najpierw dodac.";
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
             }

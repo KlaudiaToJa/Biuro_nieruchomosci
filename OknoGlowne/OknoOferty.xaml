@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OknoGlowne"
         mc:Ignorable="d"
-        Title="Przegladanie ofert" Height="463.5" Width="1221.477">
+        Title="Przegladanie ofert" Height="463.5" Width="1314.477">
     <Grid Margin="0,0,-8,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1175*"/>
-            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="1193*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="12*"/>
         </Grid.ColumnDefinitions>
         <Label Name="lblOferty" Content="Oferty - aktywne" HorizontalAlignment="Left" Margin="694,10,0,0" VerticalAlignment="Top" Width="202" Height="36" FontSize="17"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="362" Margin="10,10,0,0" VerticalAlignment="Top" Width="280">
@@ -29,22 +31,23 @@
         <TextBox Name="TextBoxData" HorizontalAlignment="Left" Height="23" Margin="152,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <CheckBox Name="CheckBoxArchiwum" Content="Wyswietl Archiwum" HorizontalAlignment="Left" Margin="158,344,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TextBoxImieKlienta" HorizontalAlignment="Left" Height="23" Margin="152,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListView x:Name="ListViewOferty" HorizontalAlignment="Left" Height="317" Margin="312,55,0,0" VerticalAlignment="Top" Width="899" Grid.ColumnSpan="2">
+        <ListView x:Name="ListViewOferty" HorizontalAlignment="Left" Height="317" Margin="312,55,0,0" VerticalAlignment="Top" Width="980" Grid.ColumnSpan="3">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=IdOferty}" Header="ID oferty" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Wlasciciel.Imie}" Header="Imię wlasciciela" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Wlasciciel.Nazwisko}" Header="Nazwisko wlasciciela" Width="120"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.OpiekunKlienta.Imie}" Header="Imię opiekuna" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.OpiekunKlienta.Nazwisko}" Header="Nazwisko opiekuna" Width="110"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DataWystawienia}" Header="Data" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DataWystawienia}" Header="Data wystawienia" Width="150"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Cena}" Header="Cena" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.Miejscowosc}" Header="Miejscowość" Width="110"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Umowa.Nieruchomosc.IdNieruchomosci}" Header="Id Nieruchomosci" Width="137"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Name="ButtonUsungOferte" Content="Usun oferte" HorizontalAlignment="Left" Margin="1069,376,0,0" VerticalAlignment="Top" Width="132" Click="ButtonUsungOferte_Click" Height="32" Grid.ColumnSpan="2"/>
-        <Button Name="ButtonSortujMiastami" Content="Sortuj miastami" HorizontalAlignment="Left" Margin="913,377,0,0" VerticalAlignment="Top" Width="132" Click="buttonSortujMiastami_Click" Height="32"/>
+        <Button Name="ButtonUsungOferte" Content="Usun oferte" HorizontalAlignment="Left" Margin="1160,376,0,0" VerticalAlignment="Top" Width="132" Click="ButtonUsungOferte_Click" Height="32" Grid.ColumnSpan="3"/>
+        <Button Name="ButtonSortujMiastami" Content="Sortuj miastami" HorizontalAlignment="Left" Margin="1009,377,0,0" VerticalAlignment="Top" Width="132" Click="buttonSortujMiastami_Click" Height="32"/>
         <Button Name="ButtonWyczyscFiltry" Content="Wyczysc filtry" HorizontalAlignment="Left" Margin="16,376,0,0" VerticalAlignment="Top" Width="75" Click="ButtonWyczyscFiltry_Click"/>
         <Button Name="ButtonSzczegolyOferty" Content="Szczegoly oferty" HorizontalAlignment="Left" Margin="312,377,0,0" VerticalAlignment="Top" Width="118" Height="32" Click="ButtonSzczegolyOferty_Click"/>
         <Button Name="ButtonArchiwizujOferte" Content="Archiwizuj oferte" HorizontalAlignment="Left" Margin="456,377,0,0" VerticalAlignment="Top" Width="106" Height="32" Click="ButtonArchiwizujOferte_Click"/>

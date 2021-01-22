@@ -58,7 +58,7 @@ namespace OknoGlowne
 
         private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
+            this.Close();
         }
 
         private void ButtonAktualizuj_Click(object sender, RoutedEventArgs e)

@@ -26,7 +26,6 @@ namespace OknoGlowne
        OfertyRazem _wszystkieOferty = new OfertyRazem();
        OfertyRazem _nowaLista = new OfertyRazem();
 
-
         public OknoOferty()
         {
             InitializeComponent();
