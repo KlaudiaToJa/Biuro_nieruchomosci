@@ -15,7 +15,6 @@ namespace BiuroNieruchomosci
         double _prowizja;
         DateTime _dataZawarcia;
         DateTime _dataZakonczenia;
-        Klient _klient;
 
         public Umowa()
         {
@@ -26,11 +25,10 @@ namespace BiuroNieruchomosci
 
         }
 
-        public Umowa(Pracownik opiekunKlienta, double prowizja, string dataZawarcia, string dataZakonczenia, Klient klient) : this()
+        public Umowa(Pracownik opiekunKlienta, double prowizja, string dataZawarcia, string dataZakonczenia) : this()
         {
             OpiekunKlienta = opiekunKlienta;
             Prowizja = prowizja;
-            Klient = klient;
             DateTime.TryParseExact(dataZawarcia, new[] { "dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataZawarcia);
             DateTime.TryParseExact(dataZakonczenia, new[] { "dd-MM-yyyy" }, null, DateTimeStyles.None, out _dataZakonczenia);
         }
@@ -44,7 +42,5 @@ namespace BiuroNieruchomosci
         public double Prowizja { get => _prowizja; set => _prowizja = value; }
         public DateTime DataZawarcia { get => _dataZawarcia; set => _dataZawarcia = value; }
         public DateTime DataZakonczenia { get => _dataZakonczenia; set => _dataZakonczenia = value; }
-
-        public Klient Klient { get => _klient; set => _klient = value; }
     }
 }
