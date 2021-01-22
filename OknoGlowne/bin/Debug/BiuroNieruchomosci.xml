@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BiuroNieruchomosci</name>
+    </assembly>
+    <members>
+        <member name="T:BiuroNieruchomosci.IOferuje">
+            <summary>
+            Interfejs definiuje tzw. "kontrakt". Wszystkie klasy, które implementują ten kontrakt, 
+            muszą zapewnić implementację elementów członkowskich zdefiniowanych w interfejsie. 
+            Ten interfejs zawiera metody, ktore musza zostac zaimplementowane w klasie OfertyRazem.
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.ZapiszXML(System.String)">
+            <summary>
+            Serializacja do XML
+            </summary>
+            <param name="plik">
+            Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.OdczytajXML(System.String)">
+            <summary>
+            Deserializacja pliku XML
+            </summary>
+            <param name="plik">
+            Plik, z ktorego chcemy deserializowac XML.
+            </param>
+            <returns>
+            Zdeserializowany obiekt
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.DodajKlienta(BiuroNieruchomosci.Klient)">
+            <summary>
+            Dodowanie klienta z listy
+            </summary>
+            <param name="k">
+            Obiekt typu klient
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.UsunKlienta(BiuroNieruchomosci.Klient)">
+            <summary>
+            Usuwanie klienta z listy
+            </summary>
+            <param name="klient"></param>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.CzyJestWBazie(System.String)">
+            <summary>
+            Sprawdzanie po numerze PESEL czy Klient znajduje sie w bazie
+            </summary>
+            <param name="pesel">
+            PESEL klienta
+            </param>
+            <returns>
+            True jesli Klient znajduje sie w bazie, False w przeciwnym wypadku
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.WyczyscListe">
+            <summary>
+            Czysci liste z obiektow.
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.SortujNazwiskaImiona">
+            <summary>
+            Sortuje alfabetycznie nazwiska klientow za pomoca metody CompareTo()
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klienci.SortujMiejscowosciami">
+            <summary>
+            Sortuje alfabetycznie miejscowosci za pomoca Comparison: (x, y) => x.Miejscowosc.CompareTo(y.Miejscowosc))
+            </summary>
+        </member>
+        <member name="T:BiuroNieruchomosci.Klient">
+            <summary>
+            Klasa zawierajaca pola oraz metody obiektu Klient. Dziedziczy po klasie Osoba 
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klient.CompareTo(BiuroNieruchomosci.Klient)">
+            <summary>
+            Porównuje bieżące wystąpienie z innym obiektem tego samego typu za pomoca atrybutu Nazwisko i zwraca liczbę całkowitą, która wskazuje, czy bieżące wystąpienie poprzedza,
+            następuje po lub występuje w tym samym położeniu, co inny obiekt w porządku sortowania.
+            Jesli zwracana wartosc = 0, porownywane jest biezace wystapienie z innym obiektem za pomoca atrybutu Imie.
+            </summary>
+            <param name="other">
+            obiekt typu Klient
+            </param>
+            <returns>
+            Mniej niż zero:	To wystąpienie poprzedza other w porządku sortowania.
+            Zero: To wystąpienie występuje w tym samym położeniu w kolejności sortowania, jak other.
+            Większe od zera: To wystąpienie następuje po other w kolejności sortowania.
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klient.Equals(BiuroNieruchomosci.Klient)">
+            <summary>
+            Określa, czy dwa wystąpienia obiektu są takie same za pomoca atrybutu PESEL
+            </summary>
+            <param name="other">
+            obiekt typu Klient
+            </param>
+            <returns>
+            true Jeśli określony obiekt jest równy bieżącemu obiektowi; w przeciwnym razie false .
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Klient.ToString">
+            <summary>
+            Nadpisanie metody ToString
+            </summary>
+            <returns>
+            Atrybuty obiektu Klient: Imie, Nazwisko, NrTelefonu w formacie string
+            </returns>
+        </member>
+        <member name="T:BiuroNieruchomosci.Nieruchomosc">
+            <summary>
+            Klasa zawierajaca pola oraz metody obiektu Nieruchomosc.
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Nieruchomosc.ToString">
+            <summary>
+            Nadpisanie metody ToString
+            </summary>
+            <returns>
+            Atrybuty obiektu Nieruchomosc: _idNieruchomosci, Miejscowosc, Ulica, NumerDomu, Numer Mieszkania, Powierzchnia, Cena w formacie string
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Nieruchomosc.CompareTo(BiuroNieruchomosci.Nieruchomosc)">
+            <summary>
+            Porównuje bieżące wystąpienie z innym obiektem tego samego typu za pomoca atrybutu Cena i zwraca liczbę całkowitą, która wskazuje, czy bieżące wystąpienie poprzedza,
+            następuje po lub występuje w tym samym położeniu, co inny obiekt w porządku sortowania.
+            
+            </summary>
+            <param name="other">
+            obiekt typu Nieruchomosc
+            </param>
+            <returns>
+            Mniej niż zero:	To wystąpienie poprzedza other w porządku sortowania. 
+            Zero: To wystąpienie występuje w tym samym położeniu w kolejności sortowania, jak other.
+            Większe od zera: To wystąpienie następuje po other w kolejności sortowania.
+            </returns>
+        </member>
+        <member name="T:BiuroNieruchomosci.Oferta">
+            <summary>
+            Klasa zawierajaca pola oraz metody obiektu Oferta.
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Oferta.Archiwizuj">
+            <summary>
+            Archiwizowanie oferty poprzed przypisanie polu CzyAktywna wartosci false
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Oferta.ToString">
+            <summary>
+            Nadpisanie metody ToString
+            </summary>
+            <returns>
+            Atrybuty obiektu Klient: IdOferty, DataWystawienia, Opis w formacie string
+            </returns>
+        </member>
+        <member name="T:BiuroNieruchomosci.OfertyRazem">
+            <summary>
+            Klasa OfertyRazem agreguje oferty (obiekty Oferta). 
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.DodajOferte(BiuroNieruchomosci.Oferta)">
+            <summary>
+            Dodawanie obiektu typu Oferta do listy ofert
+            </summary>
+            <param name="o">
+            obiekt typu Oferta
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.UsunOferte(System.String)">
+            <summary>
+            Usuwanie obiektu typu oferta z listy ofert
+            </summary>
+            <param name="idOferty">
+            string zawierajacy id oferty, ktora chcemy usunac
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.ZapiszXMLOferty(System.String)">
+            <summary>
+            Serializacja do XML
+            </summary>
+            <param name="plik">
+            Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.OdczytajXMLOferty(System.String)">
+            <summary>
+            Deserializacja dokumentu XML
+            </summary>
+            <param name="plik">
+            Plik, z ktorego chcemy deserializowac XML.
+            </param>
+            <returns>
+            Zdeserializowany obiekt
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.filtrujImieKlienta(System.String)">
+            <summary>
+            Filtrowanie listy po imieniu klienta
+            </summary>
+            <param name="imie">
+            Szukane imie
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.filtrujNazwiskoKlienta(System.String)">
+            <summary>
+            Filtrowanie listy po nazwisku klienta
+            </summary>
+            <param name="nazwisko">
+            Szukane nazwisko
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.filtrujDate(System.DateTime)">
+            <summary>
+            Filtrowanie listy po wskazane dacie
+            </summary>
+            <param name="data">
+            Szukana data
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.filtrujImieOpiekuna(System.String)">
+            <summary>
+            Filtrowanie listy po imieniu opiekuna klienta
+            </summary>
+            <param name="imie">
+            Szukane imie opiekuna klienta
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.filtrujNazwiskoOpiekuna(System.String)">
+            <summary>
+            Filtrowanie listy po nazwisku opiekuna klienta
+            </summary>
+            <param name="nazwisko">
+            Szukane nazwisko opiekuna klienta
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty 
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.PrzegladajOferty(System.Boolean)">
+            <summary>
+            Wyswietla liste wszystkich ofert o danym parametrze aktywnosci
+            </summary>
+            <param name="czyAktywna">
+            Okresla czy oferta jest aktywna. true = oferta aktywna; false = oferta nieaktywna
+            </param>
+            <returns>
+            Lista ofert List Oferta
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.SortujMiejscowosciami">
+            <summary>
+            Sortuje alfabetycznie miejscowosci za pomoca Comparison: (x, y) => x.Umowa.Nieruchomosc.Miejscowosc.CompareTo(y.Miejscowosc))
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.OfertyRazem.Clone">
+            <summary>
+            Glebokie klonowanie obiektu OfertyRazem
+            </summary>
+        </member>
+        <member name="T:BiuroNieruchomosci.Osoba">
+            <summary>
+            Klasa abstrakcyjna Osoba, ktora tworzy wzor dla innych klas, wykorzystujacych te same atrybuty: Klient, Pracownik.
+            Nie można utworzyć instancji klasy abstrakcyjnej. Celem klasy abstrakcyjnej jest zapewnienie wspólnej definicji klasy bazowej, 
+            która może być współużytkowana przez wiele klas pochodnych.
+            </summary>
+        </member>
+        <member name="P:BiuroNieruchomosci.Osoba.Email">
+            <summary>
+            Zastosowanie wyrazenia regularnego sprawdzajacego poprawnosc adresu email w setterze Email.
+            </summary>
+        </member>
+        <member name="P:BiuroNieruchomosci.Osoba.NrTelefonu">
+            <summary>
+            Zastosowanie wyrazenia regularnego sprawdzajacego poprawnosc numeru telefonu w setterze Telefon.
+            </summary>
+        </member>
+        <member name="T:BiuroNieruchomosci.Pracownicy">
+            <summary>
+            Klasa Pracownicy agreguje pracownikow (obiekty  typu Pracownik). 
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.DodajPracownika(BiuroNieruchomosci.Pracownik)">
+            <summary>
+            Dodawanie obiektu typu pracownik do listy pracownikow
+            </summary>
+            <param name="p">
+            Obiekt typu pracownik
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.UsunPracownika(BiuroNieruchomosci.Pracownik)">
+            <summary>
+            Usuwanie obiektu typu pracownik z listy pracownikow
+            </summary>
+            <param name="p">
+            Obiekt typu Pracownik
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.CzyJestWBazie(System.String)">
+            <summary>
+            Sprawdzanie po numerze PESEL czy Pracownik znajduje sie w bazie
+            </summary>
+            <param name="pesel">
+            PESEL pracownika
+            </param>
+            <returns>
+            True jesli Pracownik znajduje sie w bazie, False w przeciwnym wypadku
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.ZapiszXML(System.String)">
+            <summary>
+            Serializacja do XML
+            </summary>
+            <param name="plik">
+            Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.OdczytajXML(System.String)">
+            <summary>
+            Deserializacja pliku XML
+            </summary>
+            <param name="plik">
+            Plik, z ktorego chcemy deserializowac XML.
+            </param>
+            <returns>
+            Zdeserializowany obiekt
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.SortujNazwiskaImiona">
+            <summary>
+            Sortuje alfabetycznie nazwiska pracownikow za pomoca metody CompareTo()
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownicy.SortujMiejscowosciami">
+            <summary>
+            Sortuje alfabetycznie miejscowosci za pomoca Comparison: (x, y) => x.Miejscowosc.CompareTo(y.Miejscowosc))
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownik.CompareTo(BiuroNieruchomosci.Pracownik)">
+            <summary>
+            Porównuje bieżące wystąpienie z innym obiektem tego samego typu za pomoca atrybutu Nazwisko i zwraca liczbę całkowitą, która wskazuje, czy bieżące wystąpienie poprzedza,
+            następuje po lub występuje w tym samym położeniu, co inny obiekt w porządku sortowania.
+            Jesli zwracana wartosc = 0, porownywane jest biezace wystapienie z innym obiektem za pomoca atrybutu Imie.
+            </summary>
+            <param name="other">
+            obiekt typu Pracownik
+            </param>
+            <returns>
+            Mniej niż zero:	To wystąpienie poprzedza other w porządku sortowania.
+            Zero: To wystąpienie występuje w tym samym położeniu w kolejności sortowania, jak other.
+            Większe od zera: To wystąpienie następuje po other w kolejności sortowania.
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownik.Equals(BiuroNieruchomosci.Pracownik)">
+            <summary>
+            Określa, czy dwa wystąpienia obiektu są takie same za pomoca atrybutu PESEL
+            </summary>
+            <param name="other">
+            obiekt typu Pracownik
+            </param>
+            <returns>
+            true Jeśli określony obiekt jest równy bieżącemu obiektowi; w przeciwnym razie false .
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.Pracownik.ToString">
+            <summary>
+            Nadpisanie metody ToString
+            </summary>
+            <returns>
+            Atrybuty obiektu Klient: Imie, Nazwisko, NrTelefonu w formacie string
+            </returns>
+        </member>
+        <member name="T:BiuroNieruchomosci.Umowa">
+            <summary>
+            Klasa abstrakcyjna Umowa, ktora tworzy wzor dla innych klas, wykorzystujacych te same atrybuty i metody: UmowaPosrednictwaKupna, UmowaPosrednictwaSprzedazy.
+            Nie można utworzyć instancji klasy abstrakcyjnej. Celem klasy abstrakcyjnej jest zapewnienie wspólnej definicji klasy bazowej, 
+            która może być współużytkowana przez wiele klas pochodnych.
+            </summary>
+        </member>
+        <member name="T:BiuroNieruchomosci.UmowaPosrednictwaSprzedazy">
+            <summary>
+            Klasa UmowaPosrednictwaSprzedazy dziedziczy po klasie Umowa oraz komponuje obiekty typu Nieruchomosc.
+            </summary>
+        </member>
+        <member name="T:BiuroNieruchomosci.UmowyKupna">
+            <summary>
+            Klasa UmowyKupnay agreguje obiekty typu UmowaPosrednictwaKupna.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BiuroNieruchomosci.UmowyKupna.DodajUmowe(BiuroNieruchomosci.UmowaPosrednictwaKupna)" -->
+        <!-- Badly formed XML comment ignored for member "M:BiuroNieruchomosci.UmowyKupna.UsunUmowe(System.String)" -->
+        <member name="M:BiuroNieruchomosci.UmowyKupna.filtrujDataZawarcia(System.String)">
+            <summary>
+            Filtrowanie listy po wskazanwj dacie
+            </summary>
+            <param name="dataSzukana">
+            Szukana data
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty typu UmowaPosrednictwaKupna
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowyKupna.filtrujPracownik(System.String)">
+            <summary>
+            Filtrowanie listy po wskazanym argumencie PESEL nalezacym do pracownika.
+            </summary>
+            <param name="PESEL">
+            PESEL pracownika 
+            </param>
+            <returns>
+            Lista zawierajaca obiekty typu UmowaPosrednictwaKupna, ktorymi zajmuje sie dany pracownik.
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowyKupna.ZapiszXML(System.String)">
+            <summary>
+            Serializacja do XML
+            </summary>
+            <param name="plik">
+            Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowyKupna.OdczytajXML(System.String)">
+            <summary>
+            Deserializacja dokumentu XML
+            </summary>
+            <param name="plik">
+            Plik, z ktorego chcemy deserializowac XML.
+            </param>
+            <returns>
+            Zdeserializowany obiekt
+            </returns>
+        </member>
+        <member name="T:BiuroNieruchomosci.UmowySprzedazy">
+            <summary>
+            Klasa UmowySprzedazy agreguje obiekty typu UmowaPosrednictwaSprzedazy.
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowySprzedazy.DodajUmowe(BiuroNieruchomosci.UmowaPosrednictwaSprzedazy)">
+            <summary>
+            Dodawanie obiektu typu UmowaPosrednictwaSprzedazy do listy
+            </summary>
+            <param name="u">
+            Obiekt typu UmowaPosrednictwaSprzedazy
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowySprzedazy.UsunUmowe(System.String)">
+            <summary>
+            Usuwanie obiektu typu o podanym w argumencie numerze umowy
+            </summary>
+            <param name="numerUmowy">
+            Numer umowy
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowySprzedazy.filtrujDataZawarcia(System.String)">
+            <summary>
+            Filtrowanie listy po wskazanwj dacie
+            </summary>
+            <param name="dataSzukana">
+            Szukana data
+            </param>
+            <returns>
+            Lista zawierajaca odfiltrowane obiekty typu UmowaPosrednictwaSprzedazy
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowySprzedazy.filtrujPracownik(System.String)">
+            <summary>
+            Filtrowanie listy po wskazanym argumencie PESEL nalezacym do pracownika.
+            </summary>
+            <param name="PESEL">
+            PESEL pracownika 
+            </param>
+            <returns>
+            Lista zawierajaca obiekty typu UmowaPosrednictwaSprzedazy, ktorymi zajmuje sie dany pracownik.
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowySprzedazy.ZapiszXML(System.String)">
+            <summary>
+            Serializacja do XML
+            </summary>
+            <param name="plik">
+            Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.UmowySprzedazy.OdczytajXML(System.String)">
+            <summary>
+            Deserializacja dokumentu XML
+            </summary>
+            <param name="plik">
+            Plik, z ktorego chcemy deserializowac XML.
+            </param>
+            <returns>
+            Zdeserializowany obiekt
+            </returns>
+        </member>
+        <member name="T:BiuroNieruchomosci.WszystkieNieruchomosci">
+            <summary>
+            Klasa WszystkieNieruchomosci agreguje obiekty typu Nieruchomosc.
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.DodajNieruchomosc(BiuroNieruchomosci.Nieruchomosc)">
+            <summary>
+            Dodawanie obiektu typu Nieruchomosc do listy nieruchomosci
+            </summary>
+            <param name="n">
+            Obiekt typu Nieruchomosc
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.UsunNieruchomosc(System.String)">
+            <summary>
+            Usuwanie nieruchomosci z listy
+            </summary>
+            <param name="idUsuwanej">
+            Id usuwanej nieruchomosci
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.ZapiszXML(System.String)">
+            <summary>
+            Serializacja do XML
+            </summary>
+            <param name="plik">
+            Nazwa pliku, w ktorym chcemy zapisac dokument XML.
+            </param>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.OdczytajXML(System.String)">
+            <summary>
+            Deserializacja dokumentu XML
+            </summary>
+            <param name="plik">
+            Plik, z ktorego chcemy deserializowac XML.
+            </param>
+            <returns>
+            Zdeserializowany obiekt
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujCena(System.Double,System.Double)">
+            <summary>
+            Filtrowanie listy po wskazanym przedziale cenowym
+            </summary>
+            <param name="cenaDolna">
+            Dolny przedzial ceny
+            </param>
+            <param name="cenaGorna">
+            Gorny przedzial ceny
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujIloscPokojow(System.Int32)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanej ilosci pokojow
+            </summary>
+            <param name="ilosc">
+            Ilosc pokojow
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujMiejscowosc(System.String)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanej miejscowosci
+            </summary>
+            <param name="miejscowosc">
+            Miejscowosc nieruchomosci
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujPowierzchnia(System.Double,System.Double)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanym przedziale metrazu danej nieruchomosci
+            </summary>
+            <param name="powierzchniaDolna">
+            Dolny zakres szukanego metrazu
+            </param>
+            <param name="powierzchniaGorna">
+            Gorny zakres szukanego metrazu
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujTypNieruchomosci(BiuroNieruchomosci.Nieruchomosc.TypNieruchomosci)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanym typie nieruchomosci
+            </summary>
+            <param name="typ">
+            Obiekt typu Nieruchomosc.TypNieruchomosci
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujTypTransakcji(BiuroNieruchomosci.Nieruchomosc.TypTransakcji)">
+            <summary>
+             Filtrowanie listy List(Nieruchomosc) po wskazanym typie transakcji
+            </summary>
+            <param name="typ">
+            Obiekt typu Nieruchomosc.TypTransakcji
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujStandard(BiuroNieruchomosci.Nieruchomosc.Standard)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanym standardzie nieruchomosci
+            </summary>
+            <param name="typ">
+            Obiekt typu Nieruchomosc.Standard
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujRynek(BiuroNieruchomosci.Nieruchomosc.Rynek)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanym rynku nieruchomosci
+            </summary>
+            <param name="typ">
+            Obiekt typu Nieruchomosc.Rynek
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujRodzajKuchni(BiuroNieruchomosci.Nieruchomosc.RodzajKuchni)">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) po wskazanym rodzaju kuchni
+            </summary>
+            <param name="typ">
+            Obiekt typu Nieruchomosc.RodzajKuchni
+            </param>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujBalkon">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) w zaleznosci od tego czy w nieruchomosci jest balkon
+            </summary>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujParking">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) w zaleznosci od tego czy w nieruchomosci jest parking
+            </summary>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.filtrujUmeblowane">
+            <summary>
+            Filtrowanie listy List(Nieruchomosc) w zaleznosci od tego czy nieruchomosc jest umeblowana
+            </summary>
+            <returns>
+            Zwraca odfiltrowana liste typu List(Nieruchomosc)
+            </returns>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.SortujPoCenaRosnaco">
+            <summary>
+            Sortowanie listy nieruchomosci po cenie rosnaco
+            </summary>
+        </member>
+        <member name="M:BiuroNieruchomosci.WszystkieNieruchomosci.SortujPoCenaMalejaco">
+            <summary>
+            Sortowanie listy nieruchomosci po cenie malejaco
+            </summary>
+        </member>
+    </members>
+</doc>

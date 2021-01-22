@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownicy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ListaPracownikow>
+    <Pracownik>
+      <Imie>Prometeusz</Imie>
+      <Nazwisko>Odzeusowy</Nazwisko>
+      <DataUrodzenia>2000-01-03T00:00:00</DataUrodzenia>
+      <Email>prometek@onet.pl</Email>
+      <Miejscowosc>Tarnów</Miejscowosc>
+      <Ulica>Wieleńska</Ulica>
+      <NumerDomu>12</NumerDomu>
+      <NumerMieszkania />
+      <NrTelefonu>887990928</NrTelefonu>
+      <PESEL>12334556789</PESEL>
+    </Pracownik>
+    <Pracownik>
+      <Imie>Wolfgang</Imie>
+      <Nazwisko>Mozart</Nazwisko>
+      <DataUrodzenia>1987-01-01T00:00:00</DataUrodzenia>
+      <Email>amadeusz@gmail.com</Email>
+      <Miejscowosc>Warszawa</Miejscowosc>
+      <Ulica>Muzykalna</Ulica>
+      <NumerDomu>9</NumerDomu>
+      <NumerMieszkania>3A</NumerMieszkania>
+      <NrTelefonu>889009899</NrTelefonu>
+      <PESEL>22322378987</PESEL>
+    </Pracownik>
+  </ListaPracownikow>
+</Pracownicy>
