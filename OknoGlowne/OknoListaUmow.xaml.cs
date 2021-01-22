@@ -67,7 +67,7 @@ namespace OknoGlowne
 
         private void buttonFiltruj_Click(object sender, RoutedEventArgs e)
         {
-            if(checkBoxWyswietlAktualne.IsChecked == true)
+            if (checkBoxWyswietlAktualne.IsChecked == true)
             {
                 ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaKupna>(_uKupna.ListaUmow.Where(x => x.DataZakonczenia.Date.CompareTo(DateTime.Today.Date) >= 0));
                 ListViewUmowySprzedazy.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow.Where(x => x.DataZakonczenia.Date.CompareTo(DateTime.Today.Date) >= 0));

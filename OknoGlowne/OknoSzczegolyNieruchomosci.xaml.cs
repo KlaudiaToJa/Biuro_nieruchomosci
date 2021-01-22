@@ -86,9 +86,11 @@ namespace OknoGlowne
             okno.ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(of.ListaOfert.Where(x => x.Umowa.Nieruchomosc.IdNieruchomosci == _nieruchomosc.IdNieruchomosci));
             okno.ButtonFiltruj.IsEnabled = false; // wylacza mozliwosc uzycia przycisku
             okno.ButtonWyczyscFiltry.IsEnabled = false;
-            okno.ButtonUsungOferte.IsEnabled = false;
-            okno.ButtonArchiwizujOferte.IsEnabled = false;
-            okno.ShowDialog();
+            bool? ret = okno.ShowDialog();
+            if(ret == true)
+            {
+                okno.Close();
+            }
         }
 
         private void ButtonPokazUmowy_Click(object sender, RoutedEventArgs e)
@@ -106,11 +108,15 @@ namespace OknoGlowne
             }
 
             OknoListaUmow okno = new OknoListaUmow();
-            okno.ListViewUmowyKupna.ItemsSource = null;
+            okno.ListViewUmowyKupna.ItemsSource = null; //umowy kupna nie sa powiazane z zadna nieruchomoscia
             okno.ListViewUmowySprzedazy.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(of.ListaUmow.Where(x => x.Nieruchomosc.IdNieruchomosci == _nieruchomosc.IdNieruchomosci));
             okno.buttonUsunUmowe.IsEnabled = false; // wylaczanie mozliwosci usuwania
             okno.buttonSzczegolyNieruchomosci.IsEnabled = false; //poniewaz to z okna szczegolow w tym przypadku wywoluje okno umow
-            okno.ShowDialog();
+            bool? ret = okno.ShowDialog();
+            if(ret == true)
+            {
+                okno.Close();
+            }
         }
     }
 }

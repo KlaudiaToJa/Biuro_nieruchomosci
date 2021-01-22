@@ -104,7 +104,7 @@ namespace BiuroNieruchomosci
         /// </returns>
         public override string ToString()
         {
-            return $"{_idNieruchomosci} {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, {Powierzchnia} m^2, cena: {Cena:C}";
+            return $"ID: {_idNieruchomosci}, {Miejscowosc} ul. {Ulica} {NumerDomu}/{NumerMieszkania}, powierzchnia: {Powierzchnia} m^2, cena: {Cena:C}";
         }
 
         /// <summary>
