@@ -156,5 +156,11 @@ public partial class MainWindow : Window
             OknoOferty okno = new OknoOferty();
             bool? ret = okno.ShowDialog();
         }
+
+        private void ButtonWyswietlUmowy_Click(object sender, RoutedEventArgs e)
+        {
+            OknoListaUmow okno = new OknoListaUmow();
+            bool? ret =  okno.ShowDialog();
+        }
     }
 }

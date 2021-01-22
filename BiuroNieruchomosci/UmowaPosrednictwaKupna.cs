@@ -17,7 +17,7 @@ namespace BiuroNieruchomosci
             
         public UmowaPosrednictwaKupna() : base()
         {
-            Numer = Numer++;
+            ++Numer;
             NrUmowy = $"{Numer}/K/{DataZawarcia.Year}";
         }
     }

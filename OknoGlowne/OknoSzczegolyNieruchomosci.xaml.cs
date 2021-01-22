@@ -81,37 +81,36 @@ namespace OknoGlowne
                 string title = "Brak danych";
                 MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            //tworzenie listy ofert dotyczacych wybranej nieruchomosci
-            List<Oferta> nowa = new List<Oferta>();
-            foreach(Oferta o in of.ListaOfert)
-            {
-                if(o.Umowa.Nieruchomosc.IdNieruchomosci == _nieruchomosc.IdNieruchomosci)
-                {
-                    nowa.Add(o);
-                }
-            }
-            of.ListaOfert = nowa;
 
-            if(nowa.Count == 0)
-            {
-                string message = "Nie znaleziono zadnych ofert dotyczacych tej nieruchomosci. Sprobuj je najpierw dodac.";
-                string title = "Brak danych";
-                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else
-            {
-                OknoOferty okno = new OknoOferty();
-                okno.ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(of.ListaOfert);
-                okno.ButtonFiltruj.IsEnabled = false; // wylacza mozliwosc uzycia przycisku
-                okno.ButtonWyczyscFiltry.IsEnabled = false;
-                okno.ButtonUsungOferte.IsEnabled = false;
-                okno.ButtonArchiwizujOferte.IsEnabled = false;
-            }
+            OknoOferty okno = new OknoOferty();
+            okno.ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(of.ListaOfert.Where(x => x.Umowa.Nieruchomosc.IdNieruchomosci == _nieruchomosc.IdNieruchomosci));
+            okno.ButtonFiltruj.IsEnabled = false; // wylacza mozliwosc uzycia przycisku
+            okno.ButtonWyczyscFiltry.IsEnabled = false;
+            okno.ButtonUsungOferte.IsEnabled = false;
+            okno.ButtonArchiwizujOferte.IsEnabled = false;
+            okno.ShowDialog();
         }
 
         private void ButtonPokazUmowy_Click(object sender, RoutedEventArgs e)
         {
+            UmowySprzedazy of = new UmowySprzedazy();
+            if (File.Exists("listaUmowySprzedazy.xml")) // sprawdzenie, czy plik został już utworzony - jesli tak, odczytuje
+            {
+                of = (UmowySprzedazy)UmowySprzedazy.OdczytajXML("listaUmowySprzedazy.xml");
+            }
+            else
+            {
+                string message = "Nie znaleziono zadnych istniejacych umow sprzedazy. Sprobuj je najpierw dodac.";
+                string title = "Brak danych";
+                MessageBox.Show(message, title, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
+            OknoListaUmow okno = new OknoListaUmow();
+            okno.ListViewUmowyKupna.ItemsSource = null;
+            okno.ListViewUmowySprzedazy.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(of.ListaUmow.Where(x => x.Nieruchomosc.IdNieruchomosci == _nieruchomosc.IdNieruchomosci));
+            okno.buttonUsunUmowe.IsEnabled = false; // wylaczanie mozliwosci usuwania
+            okno.buttonSzczegolyNieruchomosci.IsEnabled = false; //poniewaz to z okna szczegolow w tym przypadku wywoluje okno umow
+            okno.ShowDialog();
         }
     }
 }

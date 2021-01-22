@@ -95,6 +95,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OknoListaUmow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OknoSzczegolyNieruchomosci.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +145,9 @@
     </Compile>
     <Compile Include="OknoListaPracownikow.xaml.cs">
       <DependentUpon>OknoListaPracownikow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OknoListaUmow.xaml.cs">
+      <DependentUpon>OknoListaUmow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OknoSzczegolyNieruchomosci.xaml.cs">
       <DependentUpon>OknoSzczegolyNieruchomosci.xaml</DependentUpon>
