@@ -20,6 +20,8 @@ namespace OknoGlowne
 {
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
+    /// Okno MainWindow jest glownym oknem programu. Z jego poziomu wywolywane sa okna podrzedne, odpowiednio wedlug Buttons:
+    /// "Dodaj oferte" - wywoluje okno OknoDodajOferte
     /// </summary>
     /// 
 
