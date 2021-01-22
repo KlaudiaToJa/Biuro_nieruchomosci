@@ -111,6 +111,7 @@ namespace OknoGlowne
 
         private void buttonSortujMiastami_Click(object sender, RoutedEventArgs e)
         {
+            ButtonFiltruj_Click(sender, e); // by zapobiec mieszaniu ofert zarchiwizowanych z aktualnymi
             if (_nowaLista.ListaOfert.Count > 0)
             {
                 _nowaLista.SortujMiejscowosciami();
