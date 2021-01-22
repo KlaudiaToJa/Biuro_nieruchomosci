@@ -38,13 +38,15 @@ namespace BiuroNieruchomosci
         /// </param>
         public void UsunUmowe(string numerUmowy)
         {
+            UmowaPosrednictwaKupna u_kupna = new UmowaPosrednictwaKupna();
             foreach (UmowaPosrednictwaKupna u in ListaUmow)
             {
                 if (u.NrUmowy == numerUmowy)
                 {
-                    ListaUmow.Remove(u);
+                    u_kupna = u;
                 }
             }
+            ListaUmow.Remove(u_kupna);
         }
         /// <summary>
         /// Filtrowanie listy po wskazanwj dacie
@@ -87,6 +89,15 @@ namespace BiuroNieruchomosci
                 }
             }
             return _umowyPracownika;
+        }
+
+        public void SortNazwKlientow()
+        {
+            _listaUmow.Sort((x, y) => x.Klient.Nazwisko.CompareTo(y.Klient.Nazwisko));
+        }
+        public void SortNazwPracowwnika()
+        {
+            _listaUmow.Sort((x, y) => x.OpiekunKlienta.Nazwisko.CompareTo(y.OpiekunKlienta.Nazwisko));
         }
 
         /// <summary>

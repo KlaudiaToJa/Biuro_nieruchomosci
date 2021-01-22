@@ -8,6 +8,7 @@ namespace BiuroNieruchomosci
     /// Nie można utworzyć instancji klasy abstrakcyjnej. Celem klasy abstrakcyjnej jest zapewnienie wspólnej definicji klasy bazowej, 
     /// która może być współużytkowana przez wiele klas pochodnych.
     /// </summary>
+    [Serializable]
     public abstract class Umowa
     {
         Pracownik _opiekunKlienta;

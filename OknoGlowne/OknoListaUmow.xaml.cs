@@ -81,17 +81,23 @@ namespace OknoGlowne
 
         private void buttonSzczegolyNieruchomosci_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void buttonSortNazwKlientow_Click(object sender, RoutedEventArgs e)
         {
-
+            _uKupna.SortNazwKlientow();
+            _uSprzedazy.SortNazwKlientow();
+            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaKupna>(_uKupna.ListaUmow);
+            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow);
         }
 
         private void buttonSortNazwPrac_Click(object sender, RoutedEventArgs e)
         {
-
+            _uKupna.SortNazwPracowwnika();
+            _uSprzedazy.SortNazwPracowwnika();
+            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaKupna>(_uKupna.ListaUmow);
+            ListViewUmowyKupna.ItemsSource = new ObservableCollection<UmowaPosrednictwaSprzedazy>(_uSprzedazy.ListaUmow);
         }
 
         private void buttonUsunUmowe_Click(object sender, RoutedEventArgs e)

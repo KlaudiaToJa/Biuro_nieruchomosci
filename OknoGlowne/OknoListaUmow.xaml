@@ -17,7 +17,7 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=NumerUmowy}" Header="Numer umowy" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Nieruchomosc.Wlasciciel.Imie}" Header="Imie klienta" Width="110"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Nieruchomosc.Wlasciciel.Nazwisko}" Header="Nazwisko klienta" Width="137"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Imie}" Header="Imię pracownika" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Imie}" Header="Imie pracownika" Width="100"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Nazwisko}" Header="Nazwisko pracownika" Width="120"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Prowizja}" Header="Prowizja" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=DataZawarcia}" Header="Data zawarcia" Width="130"/>
@@ -32,7 +32,7 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=NrUmowy}" Header="Nr umowy" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Klient.Imie}" Header="Imie klienta" Width="120"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Klient.Nazwisko}" Header="Nazwisko klienta" Width="147"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Imie}" Header="Imię pracownika" Width="120"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Imie}" Header="Imie pracownika" Width="120"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=OpiekunKlienta.Nazwisko}" Header="Nazwisko pracownika" Width="147"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=Prowizja}" Header="Prowizja" Width="90"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=DataZawarcia}" Header="Data zawarcia" Width="150"/>

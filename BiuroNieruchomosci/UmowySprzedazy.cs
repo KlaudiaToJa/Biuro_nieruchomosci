@@ -40,13 +40,24 @@ namespace BiuroNieruchomosci
        /// </param>
         public void UsunUmowe (string numerUmowy)
         {
+            UmowaPosrednictwaSprzedazy u_sprzedazy = new UmowaPosrednictwaSprzedazy();
             foreach (UmowaPosrednictwaSprzedazy u in ListaUmow)
             {
                 if(u.NumerUmowy == numerUmowy)
                 {
-                    ListaUmow.Remove(u);
+                    u_sprzedazy = u;
                 }
             }
+            ListaUmow.Remove(u_sprzedazy);
+        }
+        public void SortNazwKlientow()
+        {
+            _listaUmow.Sort((x, y) => x.Klient.Nazwisko.CompareTo(y.Klient.Nazwisko));
+        }
+
+        public void SortNazwPracowwnika()
+        {
+            _listaUmow.Sort((x, y) => x.OpiekunKlienta.Nazwisko.CompareTo(y.OpiekunKlienta.Nazwisko));
         }
 
         /// <summary>

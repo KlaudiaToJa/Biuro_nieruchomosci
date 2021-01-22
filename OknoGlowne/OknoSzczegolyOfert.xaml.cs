@@ -54,6 +54,7 @@ namespace OknoGlowne
             {
                 this.Show();
             }
+          
         }
 
         private void ButtonAnuluj_Click(object sender, RoutedEventArgs e)
