@@ -14,15 +14,6 @@ namespace UnitTests
             Assert.AreEqual("Kowalski", klient.Nazwisko);
         }
 
-        /*[TestMethod]
-        [ExpectedException(typeof(System.FormatException))]
-        public void TestWujatkuNumeruTel()
-        {
-            Klient klient = new Klient("Jan", "Kowalski", "", "", "Wroclaw", "6", "m.klo", "");
-          
-        }*/
-
-
         [TestMethod]
         public void testDodajOferte()
         {
@@ -30,8 +21,6 @@ namespace UnitTests
             Oferta oferta = new Oferta();
             oferty.DodajOferte(oferta);
             Assert.AreEqual(1, oferty.ListaOfert.Count);
-          
-
         }
 
         [TestMethod]
@@ -43,7 +32,5 @@ namespace UnitTests
             Assert.IsTrue(k2.Equals(k1));
 
         }
-
-        
     }
 }
