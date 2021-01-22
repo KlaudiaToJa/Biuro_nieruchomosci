@@ -148,6 +148,7 @@ namespace OknoGlowne
                 string t = "Sukces";
                 ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert);
                 MessageBox.Show(m, t, MessageBoxButton.OK, MessageBoxImage.Information);
+                DialogResult = true;
             }
         }
 
@@ -216,6 +217,7 @@ namespace OknoGlowne
                 ListViewOferty.ItemsSource = new ObservableCollection<Oferta>(_wszystkieOferty.ListaOfert.Where(x => x.czyAktywna == false));
                 CheckBoxArchiwum.IsChecked = true;
                 _wszystkieOferty.ZapiszXMLOferty("listaOfert.xml");
+                DialogResult = true;
             }
         }
     }
