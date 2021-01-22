@@ -21,7 +21,7 @@ Wśród innych zasad Object Oriented Programming, które stanowiły podstawę tw
 * KISS
 
 
-![alt text](https://github.com/KlaudiaToJa/Biuro_nieruchomosci//blob/master/diagram_uml.jpg?raw=true)
+![alt text](https://github.com/KlaudiaToJa/Biuro_nieruchomosci//blob/master/diagram_uml_poprawiony.jpg?raw=true)
 
 
 # Instrukcja użytkownika
