@@ -102,7 +102,7 @@ namespace OknoGlowne
 
         private void buttonUsunUmowe_Click(object sender, RoutedEventArgs e)
         {
-            if (ListViewUmowyKupna.SelectedIndex == -1 || ListViewUmowySprzedazy.SelectedIndex == -1)
+            if (ListViewUmowyKupna.SelectedIndex == -1 && ListViewUmowySprzedazy.SelectedIndex == -1)
             {
                 string mess = "Nie zaznaczono zadnej umowy.";
                 string tit = "Brak zaznaczenia";
