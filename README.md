@@ -49,184 +49,103 @@ Powyższa aplikacja została stworzona w celu obsługi biura nieruchomości.
 Po otwarciu aplikacji wyświetla się interfejs użytkownika, za pomocą którego dokonać można wszystkich wspomnianych powyżej operacji. Należy pamietać, by na początku wprowadzić do bazy dane klienta, pracownika oraz nieruchomości, ponieważ funkcjonalności takie jak tworzenie ofert czy umów opierają się właśnie na tych trzech podstawowych fundamentach modelu. 
 Aplikacja została zaprojektowana w sposób intuicyjny, z troską o zapewnienie wygodnego produktu do obsługi podstawowej działalności biura nieruchomości
 
+# Raport oraz podział obowiązków
+
+**SKŁAD ZESPOŁU**
+
+* Majka Miezianko  
+
+* Klaudia Pajor  
+
+* Milena Pawlikiewicz  
+
+* Anna Pietryka 
+
+ETAPY TWORZENIA PROGRAMU  
+
+Po stworzeniu dokładnego konspektu programu, najrozsądniejszym wydawało się podzielenie pracy na etapy takie, by możliwie najczęściej weryfikować poprawność utworzonych już części kodu – co pozwoliło budować program od części najprostszych do tych najbardziej złożonych bez ryzyka wystąpienia skomplikowanych błędów pod koniec pracy, a przy tym na bieżąco dostosowywać program do ostatecznej wizji projektu.  
+
+By to osiągnąć, pracowano w grupach maksymalnie dwuosobowych synchronicznie, implementując partie kodu dotyczące analogicznych aspektów programu. Następnie na wspólny chat utworzony na portalu społecznościowym przekazywano podsumowanie wykonanej pracy, w ten sposób dostarczając pozostałym osobom informacje o bieżących zmianach, dzięki czemu bez zbędnej utraty czasu na zgłębianie najnowszych aktualizacji mogły przejść do wykonywania swojej części pracy. 
+
+Do synchronicznej pracy użyty został system kontroli wersji Git oraz hostingowy serwis internetowy GitHub.  
+
+ELEMENTY PROGRAMU ORAZ OSOBY ODPOWIEDZIALNE 
 
 # Podział obowiązków
 
+Projekt klas: Klaudia Pajor, Majka Miezianko, Anna Pietryka
+
+Raport oraz opis projektu: Klaudia Pajor, Majka Miezianko
+
+Projekt UML: Majka Miezianko
+
 Interfejs 
 
-IOferuje 
-
-Majka Miezianko 
+IOferuje: Majka Miezianko 
 
 Klasy 
 
-Klienci 
+Klienci : Milena Pawlikiewicz, Majka Miezianko, Anna Pietryka, Klaudia Pajor 
 
-Milena Pawlikiewicz 
+Klient  : Milena Pawlikiewicz, Nieruchomosc, Klaudia Pajor, Anna Pietryka 
 
-Majka Miezianko 
+Oferta  : Milena Pawlikiewicz, Anna Pietryka, OfertyRazem, Anna Pietryka, Majka Miezianko 
 
-Anna Pietryka 
+Osoba : Milena Pawlikiewicz, Majka Miezianko
 
-Klaudia Pajor 
+Pracownicy : Milena Pawlikiewicz, Anna Pietryka 
 
-Klient 
+Pracownik : Milena Pawlikiewicz 
 
-Milena Pawlikiewicz 
 
-Nieruchomosc 
 
-Klaudia Pajor 
+Umowa : Milena Pawlikiewicz 
 
-Anna Pietryka 
+UmowaPosrednictwaKupna : Milena Pawlikiewicz 
 
-Oferta 
+UmowaPosrednictwaSprzedazy : Milena Pawlikiewicz 
 
-Milena Pawlikiewicz 
+UmowyKupna : Milena Pawlikiewicz, Anna Pietryka, Klaudia Pajor 
 
-Anna Pietryka 
+UmowySprzedazy : Milena Pawlikiewicz, Anna Pietryka, Klaudia Pajor 
 
-OfertyRazem 
-
-Anna Pietryka 
-
-Majka Miezianko 
-
-Osoba 
-
-Milena Pawlikiewicz 
-
-Pracownicy 
-
-Milena Pawlikiewicz 
-
-Anna Pietryka 
-
-Pracownik 
-
-Milena Pawlikiewicz 
-
-Program 
-
-Umowa 
-
-Milena Pawlikiewicz 
-
-UmowaPosrednictwaKupna 
-
-Milena Pawlikiewicz 
-
-UmowaPosrednictwaSprzedazy 
-
-Milena Pawlikiewicz 
-
-UmowyKupna 
-
-Milena Pawlikiewicz 
-
-Anna Pietryka 
-
-Klaudia Pajor 
-
-UmowySprzedazy 
-
-Milena Pawlikiewicz 
-
-Anna Pietryka 
-
-Klaudia Pajor 
-
-WszystkieNieruchomosci 
-
-Anna Pietryka 
-
-Klaudia Pajor 
+WszystkieNieruchomosci : Anna Pietryka, Klaudia Pajor 
 
 Okna 
 
-MainWindow 
+MainWindow : Klaudia Pajor 
 
-Klaudia Pajor 
+OknoDodajKlienta : Klaudia Pajor 
 
-OknoDodajKlienta 
+OknoDodajNieruchomosc : Klaudia Pajor, Anna Pietryka 
 
-Klaudia Pajor 
+OknoDodajOferte : Klaudia Pajor, Majka Miezianko 
 
-OknoDodajNieruchomosc 
+OknoDodajPracownika : Klaudia Pajor 
 
-Klaudia Pajor 
+OknoListaKlientow : Klaudia Pajor 
 
-Anna Pietryka 
+OknoListaNieruchomosci : Anna Pietryka, Klaudia Pajor 
 
-OknoDodajOferte 
+OknoListaPracownikow : Klaudia Pajor 
 
-Klaudia Pajor 
+OknoListaUmow : Klaudia Pajor, Anna Pietryka 
 
-Majka Miezianko 
+OknoOferty : Majka Miezianko,  Klaudia Pajor, Anna Pietryka 
 
-OknoDodajPracownika 
+OknoSzczegolyNieruchomosci : Anna Pietryka, Klaudia Pajor 
 
-Klaudia Pajor 
+OknoSzczegolyOfert : Klaudia Pajor 
 
-OknoListaKlientow 
+OknoUmowaKupna : Klaudia Pajor 
 
-Klaudia Pajor 
+OknoUmowaSprzedazy : Klaudia Pajor 
 
-OknoListaNieruchomosci 
+OknoUtworzNowaUmowe : Klaudia Pajor 
 
-Anna Pietryka 
+UnitTests : Majka Miezianko 
 
-Klaudia Pajor 
-
-OknoListaPracownikow 
-
-Klaudia Pajor 
-
-OknoListaUmow 
-
-Klaudia Pajor 
-
-Anna Pietryka 
-
-OknoOferty 
-
-Majka Miezianko  
-
-Klaudia Pajor 
-
-Anna Pietryka 
-
-OknoSzczegolyNieruchomosci 
-
-Anna Pietryka 
-
-Klaudia Pajor 
-
-OknoSzczegolyOfert 
-
-Klaudia Pajor 
-
-OknoUmowaKupna 
-
-Klaudia Pajor 
-
-OknoUmowaSprzedazy 
-
-Klaudia Pajor 
-
-OknoUtworzNowaUmowe 
-
-Klaudia Pajor 
-
-UnitTests 
-
-UnitTest1 
-
-Majka Miezianko 
-
-Dokumentacja 
-
-Majka Miezianko 
+Dokumentacja : Majka Miezianko 
 
 
 
