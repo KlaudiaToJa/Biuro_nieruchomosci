@@ -4,7 +4,7 @@
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
 W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami. Plik **ContentsMerged.css** służy do modyfikowania stylu dokumentacji w przeglądarce.
 
-## Struktura projektu
+### Struktura projektu
 
 Poniżej przedstawiony został diagram UML Biura_nieruchomości. Klasy oznaczone kolorem niebieskim są klasami abstrakcyjnymi. 
 
@@ -24,13 +24,13 @@ Wśród innych zasad Object Oriented Programming, które stanowiły podstawę tw
 ![alt text](https://github.com/KlaudiaToJa/Biuro_nieruchomosci//blob/master/diagram_uml_poprawiony.jpg?raw=true)
 
 
-# Instrukcja użytkownika
+## Instrukcja użytkownika
 
-## Informacje na temat aplikacji
+### Informacje na temat aplikacji
 
 Powyższa aplikacja została stworzona w celu obsługi biura nieruchomości. 
 
-## Dostępne funkcjonalności:
+### Dostępne funkcjonalności:
 
 * Dodawanie oraz usuwanie klienta z bazy
 * Dodawanie oraz usuwanie nieruchomości z bazy wraz z jej specyfikacjami 
@@ -44,12 +44,12 @@ Powyższa aplikacja została stworzona w celu obsługi biura nieruchomości.
 * Automatyczne sprawdzanie dostępności klienta w bazie na podstawie numeru PESEL
 
 
-## Korzystanie z aplikacji
+### Korzystanie z aplikacji
 
 Po otwarciu aplikacji wyświetla się interfejs użytkownika, za pomocą którego dokonać można wszystkich wspomnianych powyżej operacji. Należy pamietać, by na początku wprowadzić do bazy dane klienta, pracownika oraz nieruchomości, ponieważ funkcjonalności takie jak tworzenie ofert czy umów opierają się właśnie na tych trzech podstawowych fundamentach modelu. 
 Aplikacja została zaprojektowana w sposób intuicyjny, z troską o zapewnienie wygodnego produktu do obsługi podstawowej działalności biura nieruchomości
 
-# Raport oraz podział obowiązków
+## Raport oraz podział obowiązków
 
 **SKŁAD ZESPOŁU**
 
@@ -61,7 +61,7 @@ Aplikacja została zaprojektowana w sposób intuicyjny, z troską o zapewnienie 
 
 * Anna Pietryka 
 
-ETAPY TWORZENIA PROGRAMU  
+### ETAPY TWORZENIA PROGRAMU  
 
 Po stworzeniu dokładnego konspektu programu, najrozsądniejszym wydawało się podzielenie pracy na etapy takie, by możliwie najczęściej weryfikować poprawność utworzonych już części kodu – co pozwoliło budować program od części najprostszych do tych najbardziej złożonych bez ryzyka wystąpienia skomplikowanych błędów pod koniec pracy, a przy tym na bieżąco dostosowywać program do ostatecznej wizji projektu.  
 
@@ -69,9 +69,9 @@ By to osiągnąć, pracowano w grupach maksymalnie dwuosobowych synchronicznie, 
 
 Do synchronicznej pracy użyty został system kontroli wersji Git oraz hostingowy serwis internetowy GitHub.  
 
-ELEMENTY PROGRAMU ORAZ OSOBY ODPOWIEDZIALNE 
+### ELEMENTY PROGRAMU ORAZ OSOBY ODPOWIEDZIALNE 
 
-# Podział obowiązków
+Podział obowiązków
 
 Projekt klas: Klaudia Pajor, Majka Miezianko, Anna Pietryka
 
