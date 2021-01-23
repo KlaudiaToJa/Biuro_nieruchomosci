@@ -4,7 +4,7 @@
 W celu zapoznania się z dokumentacją programu należy pobrać folder **Dokumentacja**, a następnie otworzyć poszczególne pliki za pomocą domyślnej przeglądarki.
 W każdym pliku znajduje się dokumetacja, w której opisane są klasy, jak również zawarte w nich metody wraz z parametrami oraz zwracanymmi wartościami. Plik **ContentsMerged.css** służy do modyfikowania stylu dokumentacji w przeglądarce.
 
-### Struktura projektu
+## Struktura projektu
 
 Poniżej przedstawiony został diagram UML Biura_nieruchomości. Klasy oznaczone kolorem niebieskim są klasami abstrakcyjnymi. 
 
