@@ -52,6 +52,182 @@ Aplikacja została zaprojektowana w sposób intuicyjny, z troską o zapewnienie 
 
 # Podział obowiązków
 
+Interfejs 
+
+IOferuje 
+
+Majka Miezianko 
+
+Klasy 
+
+Klienci 
+
+Milena Pawlikiewicz 
+
+Majka Miezianko 
+
+Anna Pietryka 
+
+Klaudia Pajor 
+
+Klient 
+
+Milena Pawlikiewicz 
+
+Nieruchomosc 
+
+Klaudia Pajor 
+
+Anna Pietryka 
+
+Oferta 
+
+Milena Pawlikiewicz 
+
+Anna Pietryka 
+
+OfertyRazem 
+
+Anna Pietryka 
+
+Majka Miezianko 
+
+Osoba 
+
+Milena Pawlikiewicz 
+
+Pracownicy 
+
+Milena Pawlikiewicz 
+
+Anna Pietryka 
+
+Pracownik 
+
+Milena Pawlikiewicz 
+
+Program 
+
+Umowa 
+
+Milena Pawlikiewicz 
+
+UmowaPosrednictwaKupna 
+
+Milena Pawlikiewicz 
+
+UmowaPosrednictwaSprzedazy 
+
+Milena Pawlikiewicz 
+
+UmowyKupna 
+
+Milena Pawlikiewicz 
+
+Anna Pietryka 
+
+Klaudia Pajor 
+
+UmowySprzedazy 
+
+Milena Pawlikiewicz 
+
+Anna Pietryka 
+
+Klaudia Pajor 
+
+WszystkieNieruchomosci 
+
+Anna Pietryka 
+
+Klaudia Pajor 
+
+Okna 
+
+MainWindow 
+
+Klaudia Pajor 
+
+OknoDodajKlienta 
+
+Klaudia Pajor 
+
+OknoDodajNieruchomosc 
+
+Klaudia Pajor 
+
+Anna Pietryka 
+
+OknoDodajOferte 
+
+Klaudia Pajor 
+
+Majka Miezianko 
+
+OknoDodajPracownika 
+
+Klaudia Pajor 
+
+OknoListaKlientow 
+
+Klaudia Pajor 
+
+OknoListaNieruchomosci 
+
+Anna Pietryka 
+
+Klaudia Pajor 
+
+OknoListaPracownikow 
+
+Klaudia Pajor 
+
+OknoListaUmow 
+
+Klaudia Pajor 
+
+Anna Pietryka 
+
+OknoOferty 
+
+Majka Miezianko  
+
+Klaudia Pajor 
+
+Anna Pietryka 
+
+OknoSzczegolyNieruchomosci 
+
+Anna Pietryka 
+
+Klaudia Pajor 
+
+OknoSzczegolyOfert 
+
+Klaudia Pajor 
+
+OknoUmowaKupna 
+
+Klaudia Pajor 
+
+OknoUmowaSprzedazy 
+
+Klaudia Pajor 
+
+OknoUtworzNowaUmowe 
+
+Klaudia Pajor 
+
+UnitTests 
+
+UnitTest1 
+
+Majka Miezianko 
+
+Dokumentacja 
+
+Majka Miezianko 
+
 
 
 
