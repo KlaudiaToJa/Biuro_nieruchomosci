@@ -56,7 +56,7 @@
         </Nieruchomosc>
         <NumerUmowy>1/S/2021</NumerUmowy>
       </_umowa>
-      <czyAktywna>true</czyAktywna>
+      <czyAktywna>false</czyAktywna>
       <Opis>Jedyna w swoim rodzaju.</Opis>
       <DataWystawienia>2021-01-22T19:38:55.3886399+01:00</DataWystawienia>
       <Umowa>
@@ -111,7 +111,7 @@
         </Nieruchomosc>
         <NumerUmowy>1/S/2021</NumerUmowy>
       </Umowa>
-      <CzyAktywna>true</CzyAktywna>
+      <CzyAktywna>false</CzyAktywna>
     </Oferta>
     <Oferta>
       <_idOferty>4/O/2021</_idOferty>

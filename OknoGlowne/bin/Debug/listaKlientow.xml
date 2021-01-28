@@ -97,5 +97,17 @@
       <NrTelefonu>456665123</NrTelefonu>
       <PESEL>23477609856</PESEL>
     </Klient>
+    <Klient>
+      <Imie>Agnieszka</Imie>
+      <Nazwisko>Zając</Nazwisko>
+      <DataUrodzenia>1999-10-10T00:00:00</DataUrodzenia>
+      <Email>aguszka@poczta.com</Email>
+      <Miejscowosc>Wadowice</Miejscowosc>
+      <Ulica>Kolorowa</Ulica>
+      <NumerDomu>19a</NumerDomu>
+      <NumerMieszkania />
+      <NrTelefonu>243511789</NrTelefonu>
+      <PESEL>45637887345</PESEL>
+    </Klient>
   </ListaKlientow>
 </Klienci>

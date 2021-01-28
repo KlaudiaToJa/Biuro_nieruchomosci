@@ -94,5 +94,36 @@
         <PESEL>23467888765</PESEL>
       </Klient>
     </UmowaPosrednictwaKupna>
+    <UmowaPosrednictwaKupna>
+      <OpiekunKlienta>
+        <Imie>Prometeusz</Imie>
+        <Nazwisko>Odzeusowy</Nazwisko>
+        <DataUrodzenia>2000-01-03T00:00:00</DataUrodzenia>
+        <Email>prometek@onet.pl</Email>
+        <Miejscowosc>Tarnów</Miejscowosc>
+        <Ulica>Wieleńska</Ulica>
+        <NumerDomu>12</NumerDomu>
+        <NumerMieszkania />
+        <NrTelefonu>887990928</NrTelefonu>
+        <PESEL>12334556789</PESEL>
+      </OpiekunKlienta>
+      <Prowizja>2</Prowizja>
+      <DataZawarcia>2021-01-28T00:00:00</DataZawarcia>
+      <DataZakonczenia>2021-09-28T00:00:00</DataZakonczenia>
+      <_nrUmowy>4/K/2021</_nrUmowy>
+      <NrUmowy>4/K/2021</NrUmowy>
+      <Klient>
+        <Imie>Agnieszka</Imie>
+        <Nazwisko>Zając</Nazwisko>
+        <DataUrodzenia>1999-10-10T00:00:00</DataUrodzenia>
+        <Email>aguszka@poczta.com</Email>
+        <Miejscowosc>Wadowice</Miejscowosc>
+        <Ulica>Kolorowa</Ulica>
+        <NumerDomu>19a</NumerDomu>
+        <NumerMieszkania />
+        <NrTelefonu>243511789</NrTelefonu>
+        <PESEL>45637887345</PESEL>
+      </Klient>
+    </UmowaPosrednictwaKupna>
   </ListaUmow>
 </UmowyKupna>

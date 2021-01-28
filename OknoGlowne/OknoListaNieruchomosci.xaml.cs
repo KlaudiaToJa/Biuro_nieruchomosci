@@ -135,7 +135,7 @@ namespace OknoGlowne
             }
             if (ComboBoxStandard.Text != "")
             {
-                _nowaLista.ListaNieruchomosci = _nowaLista.filtrujStandard((Nieruchomosc.Standard)ComboBoxRynek.SelectedItem);
+                _nowaLista.ListaNieruchomosci = _nowaLista.filtrujStandard((Nieruchomosc.Standard)ComboBoxStandard.SelectedItem);
             }
             if(textBoxIloscPokoi.Text != "")
             {
@@ -152,7 +152,7 @@ namespace OknoGlowne
             }
             if (ComboBoxRodzajKuchni.Text != "")
             {
-                _nowaLista.ListaNieruchomosci = _nowaLista.filtrujRodzajKuchni((Nieruchomosc.RodzajKuchni)ComboBoxRynek.SelectedItem);
+                _nowaLista.ListaNieruchomosci = _nowaLista.filtrujRodzajKuchni((Nieruchomosc.RodzajKuchni)ComboBoxRodzajKuchni.SelectedItem);
             }
             if ((bool)CheckBoxBalkon.IsChecked)
             {
